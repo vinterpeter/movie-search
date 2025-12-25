@@ -6,9 +6,11 @@ interface HeaderProps {
   onSearch: (query: string) => void;
   totalResults: number;
   mediaType: MediaType;
+  onWatchlistClick: () => void;
+  watchlistCount: number;
 }
 
-export const Header = ({ onSearch, totalResults, mediaType }: HeaderProps) => {
+export const Header = ({ onSearch, totalResults, mediaType, onWatchlistClick, watchlistCount }: HeaderProps) => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -32,27 +34,36 @@ export const Header = ({ onSearch, totalResults, mediaType }: HeaderProps) => {
           <p>Streaming újdonságok kategória és értékelés szerint</p>
         </div>
 
-        <form className="header__search" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder={searchPlaceholder}
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="header__search-input"
-          />
-          {searchQuery && (
-            <button
-              type="button"
-              className="header__search-clear"
-              onClick={handleClear}
-            >
-              ✕
+        <div className="header__actions">
+          <form className="header__search" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder={searchPlaceholder}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="header__search-input"
+            />
+            {searchQuery && (
+              <button
+                type="button"
+                className="header__search-clear"
+                onClick={handleClear}
+              >
+                ✕
+              </button>
+            )}
+            <button type="submit" className="header__search-button">
+              Keresés
             </button>
-          )}
-          <button type="submit" className="header__search-button">
-            Keresés
+          </form>
+
+          <button className="header__watchlist-btn" onClick={onWatchlistClick}>
+            📋 Watchlist
+            {watchlistCount > 0 && (
+              <span className="header__watchlist-count">{watchlistCount}</span>
+            )}
           </button>
-        </form>
+        </div>
 
         {totalResults > 0 && (
           <p className="header__results">{totalResults} {resultText} található</p>

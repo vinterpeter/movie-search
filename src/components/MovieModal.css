@@ -76,11 +76,17 @@
   border-radius: 12px 0 0 12px;
 }
 
-/* Trailer button */
+/* Poster buttons */
+.poster-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+}
+
 .trailer-button {
   width: 100%;
   padding: 12px;
-  margin-top: 12px;
   background: #dc2626;
   border: none;
   border-radius: 8px;
@@ -93,6 +99,31 @@
 
 .trailer-button:hover {
   background: #b91c1c;
+}
+
+.watchlist-button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.watchlist-button:hover {
+  background: #1d4ed8;
+}
+
+.watchlist-button.in-list {
+  background: #16a34a;
+}
+
+.watchlist-button.in-list:hover {
+  background: #dc2626;
 }
 
 /* Trailer overlay */

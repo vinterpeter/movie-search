@@ -1,0 +1,253 @@
+.watchlist-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.watchlist-panel {
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  background: #1a1a2e;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.watchlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #2d2d44;
+}
+
+.watchlist-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.watchlist-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.2s;
+}
+
+.watchlist-close:hover {
+  color: #fff;
+}
+
+.watchlist-loading,
+.watchlist-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: #888;
+  text-align: center;
+}
+
+.watchlist-loading .spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #2d2d44;
+  border-top-color: #e50914;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.watchlist-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.watchlist-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: #16213e;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: opacity 0.2s;
+}
+
+.watchlist-item.watched {
+  opacity: 0.6;
+}
+
+.watchlist-item-poster {
+  flex-shrink: 0;
+  width: 60px;
+  height: 90px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.watchlist-item-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.watchlist-item-poster .no-poster {
+  width: 100%;
+  height: 100%;
+  background: #2d2d44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 1.5rem;
+}
+
+.watchlist-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.watchlist-item-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.watchlist-item-title:hover {
+  color: #e50914;
+}
+
+.watchlist-item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.media-type-badge {
+  background: #2d2d44;
+  color: #aaa;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.release-year {
+  color: #888;
+}
+
+.rating {
+  color: #ffc107;
+}
+
+.availability-status {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.availability-status.available {
+  color: #4caf50;
+}
+
+.availability-status.unavailable {
+  color: #f44336;
+}
+
+.availability-status.checking {
+  color: #888;
+}
+
+.provider-names {
+  color: #aaa;
+  font-size: 0.75rem;
+}
+
+.watchlist-item-added {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.watchlist-item-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.watchlist-item-actions button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.watchlist-item-actions button:hover {
+  opacity: 1;
+}
+
+.btn-watched.active {
+  opacity: 1;
+}
+
+.watchlist-footer {
+  padding: 1rem;
+  border-top: 1px solid #2d2d44;
+}
+
+.btn-refresh {
+  width: 100%;
+  padding: 0.75rem;
+  background: #2d2d44;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-refresh:hover {
+  background: #3d3d54;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .watchlist-panel {
+    max-width: 100%;
+  }
+}

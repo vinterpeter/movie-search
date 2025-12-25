@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import type { Movie, TVShow, MovieDetails, TVShowDetails, WatchProviderResult, Video, MediaType } from '../types/movie';
 import { getMovieDetails, getMovieWatchProviders, getTVDetails, getTVWatchProvidersForShow, getVideos, getBestTrailer } from '../api/tmdb';
 import { getImageUrl, IMAGE_SIZES } from '../api/config';
+import { useWatchlist } from '../hooks/useWatchlist';
 import './MovieModal.css';
 
 interface MovieModalProps {
@@ -25,6 +26,9 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
   const [trailer, setTrailer] = useState<Video | null>(null);
   const [showTrailer, setShowTrailer] = useState(false);
   const [loading, setLoading] = useState(true);
+
+  const { addItem, removeItem, isInWatchlist } = useWatchlist();
+  const inWatchlist = isInWatchlist(item.id, mediaType);
 
   const title = isMovie(item) ? item.title : item.name;
   const dateStr = isMovie(item) ? item.release_date : item.first_air_date;
@@ -123,14 +127,28 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
               src={getImageUrl(item.poster_path, IMAGE_SIZES.poster.large)}
               alt={title}
             />
-            {trailer && (
+            <div className="poster-buttons">
+              {trailer && (
+                <button
+                  className="trailer-button"
+                  onClick={() => setShowTrailer(true)}
+                >
+                  ▶ Előzetes
+                </button>
+              )}
               <button
-                className="trailer-button"
-                onClick={() => setShowTrailer(true)}
+                className={`watchlist-button ${inWatchlist ? 'in-list' : ''}`}
+                onClick={() => {
+                  if (inWatchlist) {
+                    removeItem(item.id, mediaType);
+                  } else {
+                    addItem(item, mediaType);
+                  }
+                }}
               >
-                ▶ Előzetes
+                {inWatchlist ? '✓ Watchlistben' : '+ Watchlisthez'}
               </button>
-            )}
+            </div>
           </div>
 
           <div className="modal-info">

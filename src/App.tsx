@@ -3,8 +3,10 @@ import { Header } from './components/Header';
 import { FilterPanel } from './components/FilterPanel';
 import { MovieGrid } from './components/MovieGrid';
 import { MovieModal } from './components/MovieModal';
+import { Watchlist } from './components/Watchlist';
 import { useMovies } from './hooks/useMovies';
 import { useFilters, HUNGARIAN_PROVIDER_IDS } from './hooks/useFilters';
+import { useWatchlist } from './hooks/useWatchlist';
 import type { Movie, TVShow, MediaType } from './types/movie';
 import './App.css';
 
@@ -26,6 +28,12 @@ function App() {
 
   // Mobil szűrő panel megjelenítése
   const [showFilters, setShowFilters] = useState(false);
+
+  // Watchlist panel megjelenítése
+  const [showWatchlist, setShowWatchlist] = useState(false);
+
+  // Watchlist hook
+  const { items: watchlistItems } = useWatchlist();
 
   // Szűrők betöltése
   const {
@@ -81,6 +89,8 @@ function App() {
         onSearch={handleSearch}
         totalResults={totalResults}
         mediaType={mediaType}
+        onWatchlistClick={() => setShowWatchlist(true)}
+        watchlistCount={watchlistItems.length}
       />
 
       <main className="main-content">
@@ -152,6 +162,15 @@ function App() {
           item={selectedItem}
           mediaType={mediaType}
           onClose={() => setSelectedItem(null)}
+        />
+      )}
+
+      {showWatchlist && (
+        <Watchlist
+          onClose={() => setShowWatchlist(false)}
+          onItemClick={() => {
+            setShowWatchlist(false);
+          }}
         />
       )}
     </div>

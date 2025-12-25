@@ -103,3 +103,15 @@ export interface TMDBResponse<T> {
   total_pages: number;
   total_results: number;
 }
+
+// Watchlist item típus
+export interface WatchlistItem {
+  id: number;
+  mediaType: MediaType;
+  title: string;
+  posterPath: string | null;
+  releaseDate: string;
+  voteAverage: number;
+  addedAt: string; // ISO date string
+  watched: boolean;
+}
