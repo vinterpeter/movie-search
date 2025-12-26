@@ -163,6 +163,18 @@ export const searchMovies = async (
   });
 };
 
+// Sorozat keresése szöveggel
+export const searchTV = async (
+  query: string,
+  page: number = 1
+): Promise<TMDBResponse<TVShow>> => {
+  return fetchFromTMDB<TMDBResponse<TVShow>>('/search/tv', {
+    query,
+    page: page.toString(),
+    include_adult: 'false',
+  });
+};
+
 // ===== TV SHOW (SOROZAT) FUNKCIÓK =====
 
 // Sorozat műfajok lekérése
