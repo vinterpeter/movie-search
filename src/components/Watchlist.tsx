@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { useWatchlist } from '../hooks/useWatchlist';
 import { searchMovies, searchTV } from '../api/tmdb';
 import { getImageUrl, IMAGE_SIZES } from '../api/config';
-import type { MediaType, Movie, TVShow } from '../types/movie';
+import { HUNGARIAN_PROVIDER_IDS } from '../hooks/useFilters';
+import type { MediaType, Movie, TVShow, WatchProvider } from '../types/movie';
 import './Watchlist.css';
 
 interface WatchlistProps {
@@ -75,7 +76,7 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
     return { text: '✗ Nem elérhető', className: 'unavailable' };
   };
 
-  const getProviderNames = (item: typeof items[0]) => {
+  const getAvailableProviders = (item: typeof items[0]): WatchProvider[] => {
     if (!item.availability) return [];
 
     const allProviders = [
@@ -84,7 +85,14 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
       ...(item.availability.buy || []),
     ];
 
-    return allProviders.slice(0, 3).map(p => p.provider_name);
+    // Szűrjük csak a magyar szolgáltatókra és távolítsuk el a duplikátumokat
+    const uniqueProviders = allProviders.filter(
+      (p, index, self) =>
+        HUNGARIAN_PROVIDER_IDS.includes(p.provider_id) &&
+        self.findIndex(x => x.provider_id === p.provider_id) === index
+    );
+
+    return uniqueProviders;
   };
 
   return (
@@ -223,7 +231,7 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
               <div className="watchlist-items">
                 {items.map((item) => {
                   const status = getAvailabilityStatus(item);
-                  const providers = getProviderNames(item);
+                  const providers = getAvailableProviders(item);
 
                   return (
                     <div
@@ -262,14 +270,32 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
                           )}
                           <span className="rating">★ {item.voteAverage.toFixed(1)}</span>
                         </div>
+
+                        {/* Elérhetőség és szolgáltató ikonok */}
                         <div className={`availability-status ${status.className}`}>
                           {status.text}
-                          {providers.length > 0 && (
-                            <span className="provider-names">
-                              {' '}({providers.join(', ')})
-                            </span>
-                          )}
                         </div>
+
+                        {providers.length > 0 && item.availability?.link && (
+                          <div className="watchlist-providers">
+                            {providers.map((provider) => (
+                              <a
+                                key={provider.provider_id}
+                                href={item.availability?.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="provider-icon-link"
+                                title={`Megnézés: ${provider.provider_name}`}
+                              >
+                                <img
+                                  src={getImageUrl(provider.logo_path, IMAGE_SIZES.logo.small)}
+                                  alt={provider.provider_name}
+                                />
+                              </a>
+                            ))}
+                          </div>
+                        )}
+
                         <div className="watchlist-item-added">
                           Hozzáadva: {formatDate(item.addedAt)}
                         </div>

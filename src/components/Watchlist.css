@@ -237,6 +237,34 @@
   margin-top: 0.5rem;
 }
 
+/* Provider icons in watchlist */
+.watchlist-providers {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.provider-icon-link {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.provider-icon-link:hover {
+  transform: scale(1.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.provider-icon-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .watchlist-header h2 {
   margin: 0;
   font-size: 1.5rem;
