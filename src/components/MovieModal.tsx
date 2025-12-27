@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import { X, Play, Star, Check, Plus, ExternalLink, Loader2 } from 'lucide-react';
+import { X, Play, Star, Check, Plus, ExternalLink, Loader2, ThumbsUp, Heart } from 'lucide-react';
 import type { Movie, TVShow, MovieDetails, TVShowDetails, WatchProviderResult, Video, MediaType } from '../types/movie';
 import { getMovieDetails, getMovieWatchProviders, getTVDetails, getTVWatchProvidersForShow, getVideos, getBestTrailer } from '../api/tmdb';
 import { getImageUrl, IMAGE_SIZES } from '../api/config';
 import { useWatchlist } from '../hooks/useWatchlist';
+import { useFavorites } from '../hooks/useFavorites';
 import { useI18n } from '../i18n';
 import './MovieModal.css';
 
@@ -31,7 +32,10 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
 
   const { t } = useI18n();
   const { addItem, removeItem, isInWatchlist } = useWatchlist();
+  const { toggleLike, toggleLove, isLiked, isLoved } = useFavorites();
   const inWatchlist = isInWatchlist(item.id, mediaType);
+  const liked = isLiked(item.id, mediaType);
+  const loved = isLoved(item.id, mediaType);
 
   const title = isMovie(item) ? item.title : item.name;
   const dateStr = isMovie(item) ? item.release_date : item.first_air_date;
@@ -139,6 +143,22 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
                   <Play size={16} /> {t('trailer')}
                 </button>
               )}
+              <div className="favorite-buttons">
+                <button
+                  className={`favorite-button like-button ${liked ? 'active' : ''}`}
+                  onClick={() => toggleLike(item, mediaType)}
+                  title={t('like')}
+                >
+                  <ThumbsUp size={16} fill={liked ? 'currentColor' : 'none'} />
+                </button>
+                <button
+                  className={`favorite-button love-button ${loved ? 'active' : ''}`}
+                  onClick={() => toggleLove(item, mediaType)}
+                  title={t('love')}
+                >
+                  <Heart size={16} fill={loved ? 'currentColor' : 'none'} />
+                </button>
+              </div>
               <button
                 className={`watchlist-button ${inWatchlist ? 'in-list' : ''}`}
                 onClick={() => {

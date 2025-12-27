@@ -102,4 +102,13 @@ export const en: Record<TranslationKeys, string> = {
   signIn: 'Sign In',
   signOut: 'Sign Out',
   syncingWatchlist: 'Syncing watchlist...',
+
+  // Favorites
+  favorites: 'Favorites',
+  like: 'Like',
+  love: 'Love',
+  liked: 'Liked',
+  loved: 'Loved',
+  noFavorites: 'No favorites yet.',
+  filterAll: 'All',
 };

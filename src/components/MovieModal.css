@@ -126,6 +126,44 @@
   background: #dc2626;
 }
 
+/* Favorite buttons */
+.favorite-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.favorite-button {
+  flex: 1;
+  padding: 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorite-button:hover {
+  background: var(--bg-primary);
+  border-color: var(--text-secondary);
+}
+
+.favorite-button.like-button.active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: white;
+}
+
+.favorite-button.love-button.active {
+  background: #ec4899;
+  border-color: #ec4899;
+  color: white;
+}
+
 /* Trailer overlay */
 .trailer-overlay {
   position: fixed;

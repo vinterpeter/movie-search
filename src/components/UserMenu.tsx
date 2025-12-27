@@ -1,14 +1,15 @@
 import { useState, useRef, useEffect } from 'react';
-import { LogIn, LogOut, User, Cloud } from 'lucide-react';
+import { LogIn, LogOut, User, Cloud, Heart } from 'lucide-react';
 import { useAuth } from '../auth';
 import { useI18n } from '../i18n';
 import './UserMenu.css';
 
 interface UserMenuProps {
   syncing?: boolean;
+  onFavoritesClick?: () => void;
 }
 
-export const UserMenu = ({ syncing }: UserMenuProps) => {
+export const UserMenu = ({ syncing, onFavoritesClick }: UserMenuProps) => {
   const { user, loading, signInWithGoogle, signOut } = useAuth();
   const { t } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
@@ -101,6 +102,16 @@ export const UserMenu = ({ syncing }: UserMenuProps) => {
             </div>
           </div>
           <div className="user-menu__divider" />
+          <button
+            className="user-menu__option"
+            onClick={() => {
+              onFavoritesClick?.();
+              setIsOpen(false);
+            }}
+          >
+            <Heart size={16} />
+            <span>{t('favorites')}</span>
+          </button>
           <button className="user-menu__option" onClick={handleSignOut}>
             <LogOut size={16} />
             <span>{t('signOut')}</span>

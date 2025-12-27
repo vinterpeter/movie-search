@@ -100,6 +100,15 @@ export const hu = {
   signIn: 'Bejelentkezés',
   signOut: 'Kijelentkezés',
   syncingWatchlist: 'Watchlist szinkronizálás...',
+
+  // Favorites
+  favorites: 'Kedvencek',
+  like: 'Kedvelem',
+  love: 'Imádom',
+  liked: 'Kedvelt',
+  loved: 'Imádott',
+  noFavorites: 'Még nincsenek kedvenceid.',
+  filterAll: 'Összes',
 };
 
 export type TranslationKeys = keyof typeof hu;

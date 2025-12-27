@@ -115,3 +115,16 @@ export interface WatchlistItem {
   addedAt: string; // ISO date string
   watched: boolean;
 }
+
+// Favorite item típus (kedvelt/imádott filmek)
+export interface FavoriteItem {
+  id: number;
+  mediaType: MediaType;
+  title: string;
+  posterPath: string | null;
+  releaseDate: string;
+  voteAverage: number;
+  addedAt: string; // ISO date string
+  liked: boolean;
+  loved: boolean;
+}

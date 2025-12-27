@@ -4,9 +4,11 @@ import { FilterPanel } from './components/FilterPanel';
 import { MovieGrid } from './components/MovieGrid';
 import { MovieModal } from './components/MovieModal';
 import { Watchlist } from './components/Watchlist';
+import { Favorites } from './components/Favorites';
 import { useMovies } from './hooks/useMovies';
 import { useFilters, HUNGARIAN_PROVIDER_IDS } from './hooks/useFilters';
 import { useWatchlist } from './hooks/useWatchlist';
+import { useFavorites } from './hooks/useFavorites';
 import type { Movie, TVShow, MediaType } from './types/movie';
 import './App.css';
 
@@ -32,8 +34,17 @@ function App() {
   // Watchlist panel megjelenítése
   const [showWatchlist, setShowWatchlist] = useState(false);
 
+  // Favorites panel megjelenítése
+  const [showFavorites, setShowFavorites] = useState(false);
+
+  // Kiválasztott media type a modálhoz (favorites-ből jöhet más típus)
+  const [selectedMediaType, setSelectedMediaType] = useState<MediaType>('movie');
+
   // Watchlist hook
   const { items: watchlistItems, syncing } = useWatchlist();
+
+  // Favorites hook
+  const { syncing: favoritesSyncing } = useFavorites();
 
   // Szűrők betöltése
   const {
@@ -90,7 +101,8 @@ function App() {
         onMediaTypeChange={handleMediaTypeChange}
         onWatchlistClick={() => setShowWatchlist(true)}
         watchlistCount={watchlistItems.length}
-        syncing={syncing}
+        syncing={syncing || favoritesSyncing}
+        onFavoritesClick={() => setShowFavorites(true)}
       />
 
       <main className="main-content">
@@ -132,7 +144,10 @@ function App() {
             <MovieGrid
               items={items}
               loading={itemsLoading}
-              onItemClick={setSelectedItem}
+              onItemClick={(item) => {
+                setSelectedItem(item);
+                setSelectedMediaType(mediaType);
+              }}
               onLoadMore={loadMore}
               hasMore={page < totalPages}
               mediaType={mediaType}
@@ -144,7 +159,7 @@ function App() {
       {selectedItem && (
         <MovieModal
           item={selectedItem}
-          mediaType={mediaType}
+          mediaType={selectedMediaType}
           onClose={() => setSelectedItem(null)}
         />
       )}
@@ -154,6 +169,38 @@ function App() {
           onClose={() => setShowWatchlist(false)}
           onItemClick={() => {
             setShowWatchlist(false);
+          }}
+        />
+      )}
+
+      {showFavorites && (
+        <Favorites
+          onClose={() => setShowFavorites(false)}
+          onItemClick={(id, itemMediaType) => {
+            // Find the item in the current items list or create a minimal one
+            const foundItem = items.find(i => i.id === id);
+            if (foundItem) {
+              setSelectedItem(foundItem);
+            } else {
+              // Create minimal item for modal to fetch details
+              setSelectedItem({
+                id,
+                poster_path: null,
+                backdrop_path: null,
+                overview: '',
+                vote_average: 0,
+                vote_count: 0,
+                genre_ids: [],
+                adult: false,
+                popularity: 0,
+                ...(itemMediaType === 'movie'
+                  ? { title: '', original_title: '', release_date: '' }
+                  : { name: '', original_name: '', first_air_date: '' }
+                )
+              } as Movie | TVShow);
+            }
+            setSelectedMediaType(itemMediaType);
+            setShowFavorites(false);
           }}
         />
       )}

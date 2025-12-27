@@ -13,6 +13,7 @@ interface HeaderProps {
   onWatchlistClick: () => void;
   watchlistCount: number;
   syncing?: boolean;
+  onFavoritesClick?: () => void;
 }
 
 export const Header = ({
@@ -22,6 +23,7 @@ export const Header = ({
   onWatchlistClick,
   watchlistCount,
   syncing,
+  onFavoritesClick,
 }: HeaderProps) => {
   const [searchQuery, setSearchQuery] = useState('');
   const { t } = useI18n();
@@ -96,7 +98,7 @@ export const Header = ({
         {/* Right side actions */}
         <div className="header__actions">
           <LanguageSelector />
-          <UserMenu syncing={syncing} />
+          <UserMenu syncing={syncing} onFavoritesClick={onFavoritesClick} />
         </div>
       </div>
     </header>
