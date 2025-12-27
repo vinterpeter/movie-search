@@ -1,6 +1,8 @@
 # Film & Sorozat Kereső
 
 > **Verzió: 1.0.0**
+>
+> **Weboldal: https://vinterpeter.github.io/movie-search/**
 
 Magyar nyelvű webalkalmazás filmek és sorozatok kereséséhez, kívánságlista kezeléssel és streaming elérhetőség ellenőrzéssel.
 
