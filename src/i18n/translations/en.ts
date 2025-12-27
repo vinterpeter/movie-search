@@ -1,0 +1,100 @@
+import type { TranslationKeys } from './hu';
+
+export const en: Record<TranslationKeys, string> = {
+  // Header
+  appTitle: 'Movie Search',
+  movies: 'Movies',
+  tvShows: 'TV Shows',
+  searchMoviePlaceholder: 'Search movies...',
+  searchTvPlaceholder: 'Search TV shows...',
+  watchlist: 'Watchlist',
+
+  // Filter Panel
+  filters: 'Filters',
+  clearFilters: 'Clear',
+  sortBy: 'Sort by',
+  sortMostPopular: 'Most Popular',
+  sortBestRated: 'Highest Rated',
+  sortNewest: 'Newest',
+  sortTitleAZ: 'Title (A-Z)',
+  minimumRating: 'Minimum Rating',
+  ratingAny: 'Any',
+  releaseYear: 'Release Year',
+  yearFrom: 'From',
+  yearTo: 'To',
+  categories: 'Categories',
+  ageRating: 'Age Rating',
+  all: 'All',
+  streamingProviders: 'Streaming Providers',
+
+  // Age Rating descriptions (certifications)
+  certKN: 'No age restriction',
+  cert6: 'Ages 6 and up',
+  cert12: 'Ages 12 and up',
+  cert16: 'Ages 16 and up',
+  cert18: 'Ages 18 and up',
+  certG: 'General Audience',
+  certPG: 'Parental Guidance',
+  certPG13: 'Ages 13 and up',
+  certR: 'Restricted',
+  certNC17: 'Adults Only',
+
+  // Movie Card
+  tvShow: 'TV Show',
+  movie: 'Movie',
+
+  // Movie Grid
+  noMoviesFound: 'No movies found with the current filters.',
+  noTvShowsFound: 'No TV shows found with the current filters.',
+  tryDifferentFilters: 'Try adjusting your search criteria.',
+  loadingMovies: 'Loading movies...',
+  loadingTvShows: 'Loading TV shows...',
+  loadMoreMovies: 'Load more movies',
+  loadMoreTvShows: 'Load more TV shows',
+
+  // Movie Modal
+  trailer: 'Trailer',
+  inWatchlist: 'In Watchlist',
+  addToWatchlist: 'Add to Watchlist',
+  minutes: 'min',
+  seasons: 'seasons',
+  episodes: 'episodes',
+  noDescription: 'No description available.',
+  availableOnStreaming: 'Available on streaming platforms:',
+  withSubscription: 'With subscription:',
+  rentable: 'Rent:',
+  purchasable: 'Buy:',
+  noStreamingProviders: 'Currently not available on streaming platforms.',
+  viewOnJustWatch: 'View on JustWatch',
+
+  // Watchlist
+  list: 'List',
+  add: 'Add',
+  searchAnyMovieOrTv: 'Search for any movie or TV show...',
+  search: 'Search',
+  searching: 'Searching...',
+  noSearchResults: 'No results found.',
+  searchAnyInterest: 'Search for any movie or TV show you\'re interested in!',
+  addEvenIfNotAvailable: 'You can add it even if it\'s not streaming yet.',
+  checkingAvailability: 'Checking availability...',
+  watchlistEmpty: 'Your watchlist is empty.',
+  clickAddTab: 'Click "+ Add" tab to search for movies!',
+  checking: 'Checking...',
+  available: 'Available',
+  notAvailable: 'Not Available',
+  addedOn: 'Added',
+  checkedToday: 'Checked today',
+  checkedYesterday: 'Checked yesterday',
+  checkedDaysAgo: 'Checked {days} days ago',
+  checkedOnDate: 'Checked on {date}',
+  refreshAvailability: 'Refresh availability',
+  markAsWatched: 'Mark as watched',
+  markAsUnwatched: 'Mark as unwatched',
+  removeFromList: 'Remove from list',
+  watchOn: 'Watch on',
+
+  // Language
+  language: 'Language',
+  hungarian: 'Magyar',
+  english: 'English',
+};

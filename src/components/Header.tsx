@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Film, X, Search, BookmarkCheck } from 'lucide-react';
 import type { MediaType } from '../types/movie';
+import { useI18n } from '../i18n';
+import { LanguageSelector } from './LanguageSelector';
 import './Header.css';
 
 interface HeaderProps {
@@ -19,6 +21,7 @@ export const Header = ({
   watchlistCount,
 }: HeaderProps) => {
   const [searchQuery, setSearchQuery] = useState('');
+  const { t } = useI18n();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,7 +39,7 @@ export const Header = ({
         {/* Logo */}
         <div className="header__brand">
           <Film size={24} />
-          <span className="header__title">Film Kereső</span>
+          <span className="header__title">{t('appTitle')}</span>
         </div>
 
         {/* Media type toggle */}
@@ -45,13 +48,13 @@ export const Header = ({
             className={`header__media-btn ${mediaType === 'movie' ? 'active' : ''}`}
             onClick={() => onMediaTypeChange('movie')}
           >
-            Filmek
+            {t('movies')}
           </button>
           <button
             className={`header__media-btn ${mediaType === 'tv' ? 'active' : ''}`}
             onClick={() => onMediaTypeChange('tv')}
           >
-            Sorozatok
+            {t('tvShows')}
           </button>
         </div>
 
@@ -61,7 +64,7 @@ export const Header = ({
             <Search size={16} className="header__search-icon" />
             <input
               type="text"
-              placeholder={mediaType === 'tv' ? 'Sorozat keresése...' : 'Film keresése...'}
+              placeholder={mediaType === 'tv' ? t('searchTvPlaceholder') : t('searchMoviePlaceholder')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="header__search-input"
@@ -78,14 +81,19 @@ export const Header = ({
           </div>
         </form>
 
-        {/* Watchlist */}
-        <button className="header__watchlist-btn" onClick={onWatchlistClick}>
-          <BookmarkCheck size={18} />
-          <span className="header__watchlist-text">Watchlist</span>
-          {watchlistCount > 0 && (
-            <span className="header__watchlist-count">{watchlistCount}</span>
-          )}
-        </button>
+        {/* Right side actions */}
+        <div className="header__actions">
+          <LanguageSelector />
+
+          {/* Watchlist */}
+          <button className="header__watchlist-btn" onClick={onWatchlistClick}>
+            <BookmarkCheck size={18} />
+            <span className="header__watchlist-text">{t('watchlist')}</span>
+            {watchlistCount > 0 && (
+              <span className="header__watchlist-count">{watchlistCount}</span>
+            )}
+          </button>
+        </div>
       </div>
     </header>
   );

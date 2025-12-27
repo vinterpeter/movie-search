@@ -1,6 +1,7 @@
 import { Star } from 'lucide-react';
 import type { Movie, TVShow, MediaType } from '../types/movie';
 import { getImageUrl, IMAGE_SIZES } from '../api/config';
+import { useI18n } from '../i18n';
 import './MovieCard.css';
 
 interface MovieCardProps {
@@ -15,6 +16,7 @@ const isMovie = (item: Movie | TVShow): item is Movie => {
 };
 
 export const MovieCard = ({ item, onClick, mediaType }: MovieCardProps) => {
+  const { t } = useI18n();
   const title = isMovie(item) ? item.title : item.name;
   const dateStr = isMovie(item) ? item.release_date : item.first_air_date;
   const year = dateStr ? new Date(dateStr).getFullYear() : 'N/A';
@@ -33,7 +35,7 @@ export const MovieCard = ({ item, onClick, mediaType }: MovieCardProps) => {
           {rating}
         </div>
         {mediaType === 'tv' && (
-          <div className="movie-card__badge">Sorozat</div>
+          <div className="movie-card__badge">{t('tvShow')}</div>
         )}
       </div>
       <div className="movie-card__info">

@@ -1,5 +1,6 @@
 import type { Genre, WatchProvider, Certification, MediaType } from '../types/movie';
 import { getImageUrl, IMAGE_SIZES } from '../api/config';
+import { useI18n } from '../i18n';
 import './FilterPanel.css';
 
 interface FilterPanelProps {
@@ -24,47 +25,12 @@ interface FilterPanelProps {
   mediaType: MediaType;
 }
 
-const SORT_OPTIONS = [
-  { value: 'popularity.desc', label: 'Legnépszerűbb' },
-  { value: 'vote_average.desc', label: 'Legjobb értékelés' },
-  { value: 'primary_release_date.desc', label: 'Legújabb' },
-  { value: 'title.asc', label: 'Cím (A-Z)' },
-];
-
-const TV_SORT_OPTIONS = [
-  { value: 'popularity.desc', label: 'Legnépszerűbb' },
-  { value: 'vote_average.desc', label: 'Legjobb értékelés' },
-  { value: 'first_air_date.desc', label: 'Legújabb' },
-  { value: 'name.asc', label: 'Cím (A-Z)' },
-];
-
-const RATING_OPTIONS = [
-  { value: 0, label: 'Mindegy' },
-  { value: 6, label: '6+ ★' },
-  { value: 7, label: '7+ ★' },
-  { value: 8, label: '8+ ★' },
-  { value: 9, label: '9+ ★' },
-];
-
-// Év opciók generálása (1990-től a jelenlegi évig)
+// Year options (1990 to current year)
 const currentYear = new Date().getFullYear();
 const YEAR_OPTIONS = Array.from(
   { length: currentYear - 1989 },
   (_, i) => currentYear - i
 );
-
-const CERTIFICATION_INFO: Record<string, string> = {
-  'KN': 'Korhatár nélkül',
-  '6': '6 éven felülieknek',
-  '12': '12 éven felülieknek',
-  '16': '16 éven felülieknek',
-  '18': '18 éven felülieknek',
-  'G': 'Minden korosztálynak',
-  'PG': 'Szülői felügyelettel',
-  'PG-13': '13 év felett',
-  'R': '17 év alatt szülővel',
-  'NC-17': '18 év felett',
-};
 
 export const FilterPanel = ({
   genres,
@@ -87,6 +53,43 @@ export const FilterPanel = ({
   onClearFilters,
   mediaType,
 }: FilterPanelProps) => {
+  const { t } = useI18n();
+
+  const SORT_OPTIONS = [
+    { value: 'popularity.desc', label: t('sortMostPopular') },
+    { value: 'vote_average.desc', label: t('sortBestRated') },
+    { value: 'primary_release_date.desc', label: t('sortNewest') },
+    { value: 'title.asc', label: t('sortTitleAZ') },
+  ];
+
+  const TV_SORT_OPTIONS = [
+    { value: 'popularity.desc', label: t('sortMostPopular') },
+    { value: 'vote_average.desc', label: t('sortBestRated') },
+    { value: 'first_air_date.desc', label: t('sortNewest') },
+    { value: 'name.asc', label: t('sortTitleAZ') },
+  ];
+
+  const RATING_OPTIONS = [
+    { value: 0, label: t('ratingAny') },
+    { value: 6, label: '6+ ★' },
+    { value: 7, label: '7+ ★' },
+    { value: 8, label: '8+ ★' },
+    { value: 9, label: '9+ ★' },
+  ];
+
+  const CERTIFICATION_INFO: Record<string, string> = {
+    'KN': t('certKN'),
+    '6': t('cert6'),
+    '12': t('cert12'),
+    '16': t('cert16'),
+    '18': t('cert18'),
+    'G': t('certG'),
+    'PG': t('certPG'),
+    'PG-13': t('certPG13'),
+    'R': t('certR'),
+    'NC-17': t('certNC17'),
+  };
+
   const toggleGenre = (genreId: number) => {
     if (selectedGenres.includes(genreId)) {
       onGenreChange(selectedGenres.filter((id) => id !== genreId));
@@ -116,17 +119,17 @@ export const FilterPanel = ({
   return (
     <aside className="filter-panel">
       <div className="filter-panel__header">
-        <h2>Szűrők</h2>
+        <h2>{t('filters')}</h2>
         {hasActiveFilters && (
           <button className="filter-panel__clear" onClick={onClearFilters}>
-            Törlés
+            {t('clearFilters')}
           </button>
         )}
       </div>
 
-      {/* Rendezés */}
+      {/* Sort */}
       <section className="filter-section">
-        <h3>Rendezés</h3>
+        <h3>{t('sortBy')}</h3>
         <select
           value={sortBy}
           onChange={(e) => onSortChange(e.target.value)}
@@ -140,10 +143,10 @@ export const FilterPanel = ({
         </select>
       </section>
 
-      {/* Minimum értékelés */}
+      {/* Minimum rating */}
       {onRatingChange && (
         <section className="filter-section">
-          <h3>Minimum értékelés</h3>
+          <h3>{t('minimumRating')}</h3>
           <div className="filter-chips">
             {RATING_OPTIONS.map((option) => (
               <button
@@ -158,17 +161,17 @@ export const FilterPanel = ({
         </section>
       )}
 
-      {/* Megjelenés éve */}
+      {/* Release year */}
       {(onYearFromChange || onYearToChange) && (
         <section className="filter-section">
-          <h3>Megjelenés éve</h3>
+          <h3>{t('releaseYear')}</h3>
           <div className="filter-year-range">
             <select
               value={yearFrom || ''}
               onChange={(e) => onYearFromChange?.(e.target.value ? parseInt(e.target.value) : undefined)}
               className="filter-select filter-select--small"
             >
-              <option value="">Évtől</option>
+              <option value="">{t('yearFrom')}</option>
               {YEAR_OPTIONS.map((year) => (
                 <option key={year} value={year}>{year}</option>
               ))}
@@ -179,7 +182,7 @@ export const FilterPanel = ({
               onChange={(e) => onYearToChange?.(e.target.value ? parseInt(e.target.value) : undefined)}
               className="filter-select filter-select--small"
             >
-              <option value="">Évig</option>
+              <option value="">{t('yearTo')}</option>
               {YEAR_OPTIONS.map((year) => (
                 <option key={year} value={year}>{year}</option>
               ))}
@@ -188,9 +191,9 @@ export const FilterPanel = ({
         </section>
       )}
 
-      {/* Kategóriák */}
+      {/* Categories */}
       <section className="filter-section">
-        <h3>Kategóriák</h3>
+        <h3>{t('categories')}</h3>
         <div className="filter-chips">
           {genres.map((genre) => (
             <button
@@ -204,16 +207,16 @@ export const FilterPanel = ({
         </div>
       </section>
 
-      {/* Korosztály - csak filmekhez */}
+      {/* Age rating - movies only */}
       {mediaType === 'movie' && (
         <section className="filter-section">
-          <h3>Korosztály</h3>
+          <h3>{t('ageRating')}</h3>
           <div className="filter-chips">
             <button
               className={`filter-chip ${selectedCertification === '' ? 'active' : ''}`}
               onClick={() => onCertificationChange('')}
             >
-              Mind
+              {t('all')}
             </button>
             {certifications.map((cert) => (
               <button
@@ -229,9 +232,9 @@ export const FilterPanel = ({
         </section>
       )}
 
-      {/* Streaming szolgáltatók */}
+      {/* Streaming providers */}
       <section className="filter-section">
-        <h3>Streaming szolgáltatók</h3>
+        <h3>{t('streamingProviders')}</h3>
         <div className="filter-providers">
           {providers.map((provider) => (
             <button

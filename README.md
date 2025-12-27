@@ -1,24 +1,28 @@
-# Film & Sorozat Kereső
+# Film & Sorozat Kereső / Movie & TV Show Search
 
-> **Verzió: 1.0.0**
+> **Verzió / Version: 1.1.0**
 >
-> **Weboldal: https://vinterpeter.github.io/movie-search/**
+> **Weboldal / Website: https://vinterpeter.github.io/movie-search/**
 
-Magyar nyelvű webalkalmazás filmek és sorozatok kereséséhez, kívánságlista kezeléssel és streaming elérhetőség ellenőrzéssel.
+Többnyelvű (magyar/angol) webalkalmazás filmek és sorozatok kereséséhez, kívánságlista kezeléssel és streaming elérhetőség ellenőrzéssel.
 
-## Funkciók
+Multilingual (Hungarian/English) web application for searching movies and TV shows, with watchlist management and streaming availability checking.
 
-- **Keresés**: Filmek és sorozatok keresése az OMDB API-n keresztül
-- **Film/Sorozat kapcsoló**: Váltás filmek és sorozatok között
-- **Kívánságlista**: Filmek/sorozatok mentése helyi tárolásba
-  - Megnézett jelölés
-  - Automatikus elérhetőség ellenőrzés új elemeknél
-  - Egyedi frissítés gomb minden elemhez
-- **Streaming elérhetőség**: Magyar streaming szolgáltatók ellenőrzése (Streaming Availability API)
+## Funkciók / Features
+
+- **Többnyelvű támogatás / Multi-language support**: Magyar és angol nyelv (automatikus böngésző nyelvfelismerés)
+- **Keresés / Search**: Filmek és sorozatok keresése a TMDB API-n keresztül
+- **Film/Sorozat kapcsoló / Movie/TV toggle**: Váltás filmek és sorozatok között
+- **Szűrők / Filters**: Kategória, év, értékelés, streaming szolgáltató és korhatár szűrők
+- **Kívánságlista / Watchlist**: Filmek/sorozatok mentése helyi tárolásba
+  - Megnézett jelölés / Watched marking
+  - Automatikus elérhetőség ellenőrzés / Auto availability check
+  - Egyedi frissítés gomb / Individual refresh button
+- **Streaming elérhetőség / Streaming availability**: Magyar streaming szolgáltatók ellenőrzése
   - Netflix, HBO Max, Disney+, Amazon Prime, Apple TV+ támogatás
-  - Cachelés a gyorsabb betöltésért
-- **Részletes modal**: Film/sorozat részletek megjelenítése
-- **Reszponzív design**: Mobil és desktop nézet támogatás
+  - JustWatch integráció
+- **Részletes modal / Details modal**: Film/sorozat részletek és előzetes
+- **Reszponzív design / Responsive design**: Mobil és desktop nézet
 
 ## Technológiák
 
@@ -47,41 +51,54 @@ npm run build
 npm run preview
 ```
 
-## Mappastruktúra
+## Mappastruktúra / Folder Structure
 
 ```
 src/
 ├── api/
-│   ├── omdb.ts              # OMDB API integráció
-│   └── streamingAvailability.ts  # Streaming API integráció
+│   ├── config.ts            # API konfiguráció
+│   └── tmdb.ts              # TMDB API integráció
 ├── components/
-│   ├── Header.tsx/.css      # Fejléc (kereső, kapcsolók)
-│   ├── MovieCard.tsx/.css   # Film/sorozat kártya
-│   ├── MovieGrid.tsx/.css   # Kártyák rácsos elrendezése
-│   ├── MovieModal.tsx/.css  # Részletes nézet modal
-│   └── Watchlist.tsx/.css   # Kívánságlista panel
+│   ├── FilterPanel.tsx/.css     # Szűrő panel / Filter panel
+│   ├── Header.tsx/.css          # Fejléc / Header
+│   ├── LanguageSelector.tsx/.css # Nyelvválasztó / Language selector
+│   ├── MovieCard.tsx/.css       # Film kártya / Movie card
+│   ├── MovieGrid.tsx/.css       # Rácsos elrendezés / Grid layout
+│   ├── MovieModal.tsx/.css      # Részletek modal / Details modal
+│   └── Watchlist.tsx/.css       # Kívánságlista / Watchlist
 ├── hooks/
-│   ├── useMovies.ts         # Film adatok kezelése
-│   └── useWatchlist.ts      # Kívánságlista hook
+│   ├── useFilters.ts        # Szűrő hook / Filter hook
+│   └── useWatchlist.ts      # Kívánságlista hook / Watchlist hook
+├── i18n/
+│   ├── index.tsx            # I18n provider és hook
+│   └── translations/
+│       ├── hu.ts            # Magyar fordítások / Hungarian translations
+│       └── en.ts            # Angol fordítások / English translations
 ├── types/
-│   └── movie.ts             # TypeScript típusok
-├── App.tsx                  # Fő alkalmazás komponens
+│   └── movie.ts             # TypeScript típusok / Types
+├── App.tsx                  # Fő alkalmazás / Main app
 ├── App.css
-└── index.css                # Globális stílusok
+└── index.css                # Globális stílusok / Global styles
 ```
 
 ---
 
-## Változásnapló
+## Változásnapló / Changelog
+
+### v1.1.0 (2025-12)
+- **Többnyelvű támogatás / Multi-language support**: Magyar és angol nyelv
+  - Nyelvválasztó a fejlécben / Language selector in header
+  - Automatikus böngésző nyelvfelismerés / Auto browser language detection
+  - LocalStorage perzisztencia / LocalStorage persistence
+- I18n rendszer React Context-tel / I18n system with React Context
 
 ### v1.0.0 (2025-12)
-- Kezdeti kiadás
-- Film és sorozat keresés
-- Kívánságlista funkció
-- Streaming elérhetőség ellenőrzés
-- Ikon láthatóság javítások
-- Kompakt fejléc design
+- Kezdeti kiadás / Initial release
+- Film és sorozat keresés / Movie and TV search
+- Kívánságlista funkció / Watchlist feature
+- Streaming elérhetőség ellenőrzés / Streaming availability check
+- Szűrők (kategória, év, értékelés, szolgáltató, korhatár)
 
 ---
 
-> **FONTOS**: Ez a dokumentáció mindig frissítendő a projekt változásaival együtt! Minden új funkció, javítás vagy módosítás után frissítsd ezt a fájlt és növeld a verziószámot a `package.json`-ban is.
+> **FONTOS / IMPORTANT**: Ez a dokumentáció mindig frissítendő a projekt változásaival együtt! / This documentation should be updated with project changes!

@@ -4,6 +4,7 @@ import type { Movie, TVShow, MovieDetails, TVShowDetails, WatchProviderResult, V
 import { getMovieDetails, getMovieWatchProviders, getTVDetails, getTVWatchProvidersForShow, getVideos, getBestTrailer } from '../api/tmdb';
 import { getImageUrl, IMAGE_SIZES } from '../api/config';
 import { useWatchlist } from '../hooks/useWatchlist';
+import { useI18n } from '../i18n';
 import './MovieModal.css';
 
 interface MovieModalProps {
@@ -28,6 +29,7 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
   const [showTrailer, setShowTrailer] = useState(false);
   const [loading, setLoading] = useState(true);
 
+  const { t } = useI18n();
   const { addItem, removeItem, isInWatchlist } = useWatchlist();
   const inWatchlist = isInWatchlist(item.id, mediaType);
 
@@ -91,10 +93,10 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
   const getRuntimeDisplay = () => {
     if (!details) return null;
     if (isMovieDetails(details)) {
-      return details.runtime ? `${details.runtime} perc` : null;
+      return details.runtime ? `${details.runtime} ${t('minutes')}` : null;
     } else {
       // TV show - show number of seasons/episodes
-      return `${details.number_of_seasons} évad, ${details.number_of_episodes} epizód`;
+      return `${details.number_of_seasons} ${t('seasons')}, ${details.number_of_episodes} ${t('episodes')}`;
     }
   };
 
@@ -134,7 +136,7 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
                   className="trailer-button"
                   onClick={() => setShowTrailer(true)}
                 >
-                  <Play size={16} /> Előzetes
+                  <Play size={16} /> {t('trailer')}
                 </button>
               )}
               <button
@@ -147,7 +149,7 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
                   }
                 }}
               >
-                {inWatchlist ? <><Check size={16} /> Watchlistben</> : <><Plus size={16} /> Watchlisthez</>}
+                {inWatchlist ? <><Check size={16} /> {t('inWatchlist')}</> : <><Plus size={16} /> {t('addToWatchlist')}</>}
               </button>
             </div>
           </div>
@@ -180,7 +182,7 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
             )}
 
             <p className="modal-overview">
-              {item.overview || 'Nincs elérhető leírás.'}
+              {item.overview || t('noDescription')}
             </p>
 
             {loading && (
@@ -191,11 +193,11 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
 
             {providers && (
               <div className="modal-providers">
-                <h3>Elérhető streaming szolgáltatóknál:</h3>
+                <h3>{t('availableOnStreaming')}</h3>
 
                 {providers.flatrate && providers.flatrate.length > 0 && (
                   <div className="provider-section">
-                    <span className="provider-label">Előfizetéssel:</span>
+                    <span className="provider-label">{t('withSubscription')}</span>
                     <div className="provider-list">
                       {providers.flatrate.map((p) => (
                         <img
@@ -211,7 +213,7 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
 
                 {providers.rent && providers.rent.length > 0 && (
                   <div className="provider-section">
-                    <span className="provider-label">Kölcsönözhető:</span>
+                    <span className="provider-label">{t('rentable')}</span>
                     <div className="provider-list">
                       {providers.rent.map((p) => (
                         <img
@@ -227,7 +229,7 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
 
                 {providers.buy && providers.buy.length > 0 && (
                   <div className="provider-section">
-                    <span className="provider-label">Megvásárolható:</span>
+                    <span className="provider-label">{t('purchasable')}</span>
                     <div className="provider-list">
                       {providers.buy.map((p) => (
                         <img
@@ -243,7 +245,7 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
 
                 {!providers.flatrate && !providers.rent && !providers.buy && (
                   <p className="no-providers">
-                    Jelenleg nincs elérhető streaming szolgáltató.
+                    {t('noStreamingProviders')}
                   </p>
                 )}
 
@@ -254,7 +256,7 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
                     rel="noopener noreferrer"
                     className="provider-link"
                   >
-                    Megtekintés a JustWatch-on <ExternalLink size={14} />
+                    {t('viewOnJustWatch')} <ExternalLink size={14} />
                   </a>
                 )}
               </div>

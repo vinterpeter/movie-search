@@ -116,6 +116,14 @@
   background: rgba(0, 0, 0, 0.05);
 }
 
+/* Right side actions */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
 /* Watchlist button */
 .header__watchlist-btn {
   display: flex;
@@ -163,13 +171,18 @@
     order: 1;
   }
 
-  .header__watchlist-btn {
+  .header__actions {
     order: 2;
     margin-left: auto;
   }
 
   .header__media-toggle {
     order: 3;
+  }
+
+  .language-select {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.8rem;
   }
 
   .header__search {

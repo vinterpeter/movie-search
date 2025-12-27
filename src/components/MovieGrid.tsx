@@ -1,5 +1,6 @@
 import type { Movie, TVShow, MediaType } from '../types/movie';
 import { MovieCard } from './MovieCard';
+import { useI18n } from '../i18n';
 import './MovieGrid.css';
 
 interface MovieGridProps {
@@ -19,15 +20,13 @@ export const MovieGrid = ({
   hasMore,
   mediaType,
 }: MovieGridProps) => {
-  const emptyText = mediaType === 'tv' ? 'sorozatokat' : 'filmeket';
-  const loadingText = mediaType === 'tv' ? 'Sorozatok' : 'Filmek';
-  const loadMoreText = mediaType === 'tv' ? 'Több sorozat betöltése' : 'Több film betöltése';
+  const { t } = useI18n();
 
   if (!loading && items.length === 0) {
     return (
       <div className="movie-grid__empty">
-        <p>Nem találtunk {emptyText} a megadott szűrőkkel.</p>
-        <p>Próbáld meg módosítani a keresési feltételeket.</p>
+        <p>{mediaType === 'tv' ? t('noTvShowsFound') : t('noMoviesFound')}</p>
+        <p>{t('tryDifferentFilters')}</p>
       </div>
     );
   }
@@ -48,13 +47,13 @@ export const MovieGrid = ({
       {loading && (
         <div className="movie-grid__loading">
           <div className="spinner"></div>
-          <p>{loadingText} betöltése...</p>
+          <p>{mediaType === 'tv' ? t('loadingTvShows') : t('loadingMovies')}</p>
         </div>
       )}
 
       {!loading && hasMore && (
         <button className="movie-grid__load-more" onClick={onLoadMore}>
-          {loadMoreText}
+          {mediaType === 'tv' ? t('loadMoreTvShows') : t('loadMoreMovies')}
         </button>
       )}
     </div>
