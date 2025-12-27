@@ -72,7 +72,7 @@ src/
 
 ## Változásnapló
 
-### v1.0.0 (2024-12)
+### v1.0.0 (2025-12)
 - Kezdeti kiadás
 - Film és sorozat keresés
 - Kívánságlista funkció
