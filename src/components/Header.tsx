@@ -3,6 +3,7 @@ import { Film, X, Search, BookmarkCheck } from 'lucide-react';
 import type { MediaType } from '../types/movie';
 import { useI18n } from '../i18n';
 import { LanguageSelector } from './LanguageSelector';
+import { UserMenu } from './UserMenu';
 import './Header.css';
 
 interface HeaderProps {
@@ -11,6 +12,7 @@ interface HeaderProps {
   onMediaTypeChange: (type: MediaType) => void;
   onWatchlistClick: () => void;
   watchlistCount: number;
+  syncing?: boolean;
 }
 
 export const Header = ({
@@ -19,6 +21,7 @@ export const Header = ({
   onMediaTypeChange,
   onWatchlistClick,
   watchlistCount,
+  syncing,
 }: HeaderProps) => {
   const [searchQuery, setSearchQuery] = useState('');
   const { t } = useI18n();
@@ -83,6 +86,7 @@ export const Header = ({
 
         {/* Right side actions */}
         <div className="header__actions">
+          <UserMenu syncing={syncing} />
           <LanguageSelector />
 
           {/* Watchlist */}

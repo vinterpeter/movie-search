@@ -95,6 +95,11 @@ export const hu = {
   language: 'Nyelv',
   hungarian: 'Magyar',
   english: 'English',
+
+  // Auth
+  signIn: 'Bejelentkezés',
+  signOut: 'Kijelentkezés',
+  syncingWatchlist: 'Watchlist szinkronizálás...',
 };
 
 export type TranslationKeys = keyof typeof hu;

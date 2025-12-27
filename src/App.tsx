@@ -33,7 +33,7 @@ function App() {
   const [showWatchlist, setShowWatchlist] = useState(false);
 
   // Watchlist hook
-  const { items: watchlistItems } = useWatchlist();
+  const { items: watchlistItems, syncing } = useWatchlist();
 
   // Szűrők betöltése
   const {
@@ -90,6 +90,7 @@ function App() {
         onMediaTypeChange={handleMediaTypeChange}
         onWatchlistClick={() => setShowWatchlist(true)}
         watchlistCount={watchlistItems.length}
+        syncing={syncing}
       />
 
       <main className="main-content">

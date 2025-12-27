@@ -97,4 +97,9 @@ export const en: Record<TranslationKeys, string> = {
   language: 'Language',
   hungarian: 'Magyar',
   english: 'English',
+
+  // Auth
+  signIn: 'Sign In',
+  signOut: 'Sign Out',
+  syncingWatchlist: 'Syncing watchlist...',
 };
