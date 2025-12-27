@@ -76,3 +76,45 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+
+/* Favorites buttons */
+.movie-card__favorites {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.movie-card:hover .movie-card__favorites,
+.movie-card__favorites:has(.active) {
+  opacity: 1;
+}
+
+.movie-card__fav-btn {
+  width: 28px;
+  height: 28px;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.movie-card__fav-btn:hover {
+  transform: scale(1.1);
+}
+
+.movie-card__like.active {
+  background: #3b82f6;
+}
+
+.movie-card__love.active {
+  background: #ec4899;
+}
