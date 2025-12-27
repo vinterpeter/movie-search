@@ -4,6 +4,21 @@ import { searchMovies, searchTV } from '../api/tmdb';
 import { getImageUrl, IMAGE_SIZES } from '../api/config';
 import { HUNGARIAN_PROVIDER_IDS } from '../hooks/useFilters';
 import type { MediaType, Movie, TVShow, WatchProvider } from '../types/movie';
+import {
+  X,
+  Plus,
+  Check,
+  RefreshCw,
+  Eye,
+  EyeOff,
+  Trash2,
+  CheckCircle,
+  XCircle,
+  Loader2,
+  Film,
+  ImageOff,
+  Star,
+} from 'lucide-react';
 import './Watchlist.css';
 
 interface WatchlistProps {
@@ -22,11 +37,13 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
   const {
     items,
     loading,
+    refreshingId,
     removeItem,
     toggleWatched,
     addItem,
     isInWatchlist,
     checkAvailability,
+    refreshItemAvailability,
   } = useWatchlist();
 
   const [activeTab, setActiveTab] = useState<'list' | 'search'>('list');
@@ -35,12 +52,14 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const [searching, setSearching] = useState(false);
 
-  // Elérhetőség ellenőrzése az első betöltéskor
+  // Elérhetőség ellenőrzése az első betöltéskor és új elemek hozzáadásakor
+  const itemsNeedingCheck = items.filter(item => item.isAvailable === undefined).length;
+
   useEffect(() => {
-    if (items.length > 0 && activeTab === 'list') {
+    if (itemsNeedingCheck > 0 && activeTab === 'list' && !loading) {
       checkAvailability();
     }
-  }, [activeTab]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [activeTab, itemsNeedingCheck, checkAvailability, loading]);
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -66,14 +85,32 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
     return new Date(dateString).toLocaleDateString('hu-HU');
   };
 
+  const formatLastChecked = (dateString?: string) => {
+    if (!dateString) return null;
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+    if (diffDays === 0) {
+      return 'Ma ellenőrizve';
+    } else if (diffDays === 1) {
+      return 'Tegnap ellenőrizve';
+    } else if (diffDays < 7) {
+      return `${diffDays} napja ellenőrizve`;
+    } else {
+      return `${formatDate(dateString)}-kor ellenőrizve`;
+    }
+  };
+
   const getAvailabilityStatus = (item: typeof items[0]) => {
     if (item.isAvailable === undefined) {
-      return { text: 'Ellenőrzés...', className: 'checking' };
+      return { icon: <Loader2 size={14} className="spin" />, text: 'Ellenőrzés...', className: 'checking' };
     }
     if (item.isAvailable) {
-      return { text: '✓ Elérhető', className: 'available' };
+      return { icon: <CheckCircle size={14} />, text: 'Elérhető', className: 'available' };
     }
-    return { text: '✗ Nem elérhető', className: 'unavailable' };
+    return { icon: <XCircle size={14} />, text: 'Nem elérhető', className: 'unavailable' };
   };
 
   const getAvailableProviders = (item: typeof items[0]): WatchProvider[] => {
@@ -100,7 +137,9 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
       <div className="watchlist-panel" onClick={(e) => e.stopPropagation()}>
         <div className="watchlist-header">
           <h2>Watchlist</h2>
-          <button className="watchlist-close" onClick={onClose}>✕</button>
+          <button className="watchlist-close" onClick={onClose}>
+            <X size={24} />
+          </button>
         </div>
 
         {/* Tab váltó */}
@@ -109,13 +148,13 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
             className={`watchlist-tab ${activeTab === 'list' ? 'active' : ''}`}
             onClick={() => setActiveTab('list')}
           >
-            Lista ({items.length})
+            <Film size={16} /> Lista ({items.length})
           </button>
           <button
             className={`watchlist-tab ${activeTab === 'search' ? 'active' : ''}`}
             onClick={() => setActiveTab('search')}
           >
-            + Hozzáadás
+            <Plus size={16} /> Hozzáadás
           </button>
         </div>
 
@@ -154,7 +193,7 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
 
             {searching ? (
               <div className="watchlist-loading">
-                <div className="spinner"></div>
+                <Loader2 size={40} className="spin" />
                 <p>Keresés...</p>
               </div>
             ) : searchResults.length > 0 ? (
@@ -173,7 +212,9 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
                             alt={title}
                           />
                         ) : (
-                          <div className="no-poster">?</div>
+                          <div className="no-poster">
+                            <ImageOff size={20} />
+                          </div>
                         )}
                       </div>
                       <div className="search-result-info">
@@ -183,7 +224,7 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
                             {result.mediaType === 'movie' ? 'Film' : 'Sorozat'}
                           </span>
                           {date && <span>{date.split('-')[0]}</span>}
-                          <span className="rating">★ {result.vote_average.toFixed(1)}</span>
+                          <span className="rating"><Star size={12} fill="currentColor" /> {result.vote_average.toFixed(1)}</span>
                         </div>
                       </div>
                       <button
@@ -196,7 +237,7 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
                           }
                         }}
                       >
-                        {inList ? '✓' : '+'}
+                        {inList ? <Check size={18} /> : <Plus size={18} />}
                       </button>
                     </div>
                   );
@@ -219,7 +260,7 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
           <>
             {loading ? (
               <div className="watchlist-loading">
-                <div className="spinner"></div>
+                <Loader2 size={40} className="spin" />
                 <p>Elérhetőség ellenőrzése...</p>
               </div>
             ) : items.length === 0 ? (
@@ -248,7 +289,9 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
                             alt={item.title}
                           />
                         ) : (
-                          <div className="no-poster">?</div>
+                          <div className="no-poster">
+                            <ImageOff size={24} />
+                          </div>
                         )}
                       </div>
 
@@ -268,12 +311,12 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
                               {item.releaseDate.split('-')[0]}
                             </span>
                           )}
-                          <span className="rating">★ {item.voteAverage.toFixed(1)}</span>
+                          <span className="rating"><Star size={12} fill="currentColor" /> {item.voteAverage.toFixed(1)}</span>
                         </div>
 
                         {/* Elérhetőség és szolgáltató ikonok */}
                         <div className={`availability-status ${status.className}`}>
-                          {status.text}
+                          {status.icon} {status.text}
                         </div>
 
                         {providers.length > 0 && item.availability?.link && (
@@ -296,25 +339,36 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
                           </div>
                         )}
 
-                        <div className="watchlist-item-added">
-                          Hozzáadva: {formatDate(item.addedAt)}
+                        <div className="watchlist-item-dates">
+                          <span className="date-added">Hozzáadva: {formatDate(item.addedAt)}</span>
+                          {item.lastChecked && (
+                            <span className="date-checked">{formatLastChecked(item.lastChecked)}</span>
+                          )}
                         </div>
                       </div>
 
                       <div className="watchlist-item-actions">
                         <button
+                          className={`btn-refresh-item ${refreshingId === item.id ? 'refreshing' : ''}`}
+                          onClick={() => refreshItemAvailability(item.id, item.mediaType)}
+                          disabled={refreshingId === item.id}
+                          title="Elérhetőség frissítése"
+                        >
+                          <RefreshCw size={18} />
+                        </button>
+                        <button
                           className={`btn-watched ${item.watched ? 'active' : ''}`}
                           onClick={() => toggleWatched(item.id, item.mediaType)}
                           title={item.watched ? 'Megjelölés nem látottként' : 'Megjelölés látottként'}
                         >
-                          {item.watched ? '👁️' : '👁️‍🗨️'}
+                          {item.watched ? <Eye size={18} /> : <EyeOff size={18} />}
                         </button>
                         <button
                           className="btn-remove"
                           onClick={() => removeItem(item.id, item.mediaType)}
                           title="Eltávolítás a listából"
                         >
-                          🗑️
+                          <Trash2 size={18} />
                         </button>
                       </div>
                     </div>
@@ -329,7 +383,7 @@ export const Watchlist = ({ onClose, onItemClick }: WatchlistProps) => {
                   className="btn-refresh"
                   onClick={checkAvailability}
                 >
-                  🔄 Elérhetőség frissítése
+                  <RefreshCw size={16} /> Elérhetőség frissítése
                 </button>
               </div>
             )}

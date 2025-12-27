@@ -10,31 +10,35 @@ const isMovie = (item: Movie | TVShow): item is Movie => {
   return 'title' in item;
 };
 
-interface WatchlistItemWithAvailability extends WatchlistItem {
+export interface WatchlistItemWithAvailability extends WatchlistItem {
   availability?: WatchProviderResult | null;
   isAvailable?: boolean;
+  lastChecked?: string; // ISO date string when availability was last checked
 }
 
 interface UseWatchlistReturn {
   items: WatchlistItemWithAvailability[];
   loading: boolean;
+  refreshingId: number | null;
   addItem: (item: Movie | TVShow, mediaType: MediaType) => void;
   removeItem: (id: number, mediaType: MediaType) => void;
   toggleWatched: (id: number, mediaType: MediaType) => void;
   isInWatchlist: (id: number, mediaType: MediaType) => boolean;
   checkAvailability: () => Promise<void>;
+  refreshItemAvailability: (id: number, mediaType: MediaType) => Promise<void>;
 }
 
 export const useWatchlist = (): UseWatchlistReturn => {
   const [items, setItems] = useState<WatchlistItemWithAvailability[]>([]);
   const [loading, setLoading] = useState(true);
+  const [refreshingId, setRefreshingId] = useState<number | null>(null);
 
-  // Load from localStorage on mount
+  // Load from localStorage on mount (including availability data)
   useEffect(() => {
     const stored = localStorage.getItem(WATCHLIST_KEY);
     if (stored) {
       try {
-        const parsed = JSON.parse(stored) as WatchlistItem[];
+        const parsed = JSON.parse(stored) as WatchlistItemWithAvailability[];
         setItems(parsed);
       } catch (e) {
         console.error('Failed to parse watchlist:', e);
@@ -43,12 +47,10 @@ export const useWatchlist = (): UseWatchlistReturn => {
     setLoading(false);
   }, []);
 
-  // Save to localStorage when items change
+  // Save to localStorage when items change (including availability data)
   useEffect(() => {
     if (!loading) {
-      // Save without availability data
-      const toSave = items.map(({ availability, isAvailable, ...rest }) => rest);
-      localStorage.setItem(WATCHLIST_KEY, JSON.stringify(toSave));
+      localStorage.setItem(WATCHLIST_KEY, JSON.stringify(items));
     }
   }, [items, loading]);
 
@@ -56,7 +58,7 @@ export const useWatchlist = (): UseWatchlistReturn => {
     const title = isMovie(item) ? item.title : item.name;
     const releaseDate = isMovie(item) ? item.release_date : item.first_air_date;
 
-    const newItem: WatchlistItem = {
+    const newItem: WatchlistItemWithAvailability = {
       id: item.id,
       mediaType,
       title,
@@ -95,18 +97,30 @@ export const useWatchlist = (): UseWatchlistReturn => {
     [items]
   );
 
+  // Check availability for items that don't have it yet
   const checkAvailability = useCallback(async () => {
+    // Only check items without availability data
+    const itemsToCheck = items.filter((item) => item.availability === undefined);
+
+    if (itemsToCheck.length === 0) {
+      return;
+    }
+
     setLoading(true);
 
     const updatedItems = await Promise.all(
       items.map(async (item) => {
+        // Skip if already has availability data
+        if (item.availability !== undefined) {
+          return item;
+        }
+
         try {
           const providers =
             item.mediaType === 'movie'
               ? await getMovieWatchProviders(item.id)
               : await getTVWatchProvidersForShow(item.id);
 
-          // Check if available on any of our providers
           const allProviders = [
             ...(providers?.flatrate || []),
             ...(providers?.rent || []),
@@ -121,6 +135,7 @@ export const useWatchlist = (): UseWatchlistReturn => {
             ...item,
             availability: providers,
             isAvailable,
+            lastChecked: new Date().toISOString(),
           };
         } catch (e) {
           console.error(`Failed to check availability for ${item.title}:`, e);
@@ -133,13 +148,54 @@ export const useWatchlist = (): UseWatchlistReturn => {
     setLoading(false);
   }, [items]);
 
+  // Refresh availability for a single item
+  const refreshItemAvailability = useCallback(async (id: number, mediaType: MediaType) => {
+    setRefreshingId(id);
+
+    try {
+      const providers =
+        mediaType === 'movie'
+          ? await getMovieWatchProviders(id)
+          : await getTVWatchProvidersForShow(id);
+
+      const allProviders = [
+        ...(providers?.flatrate || []),
+        ...(providers?.rent || []),
+        ...(providers?.buy || []),
+      ];
+
+      const isAvailable = allProviders.some((p) =>
+        HUNGARIAN_PROVIDER_IDS.includes(p.provider_id)
+      );
+
+      setItems((prev) =>
+        prev.map((item) =>
+          item.id === id && item.mediaType === mediaType
+            ? {
+                ...item,
+                availability: providers,
+                isAvailable,
+                lastChecked: new Date().toISOString(),
+              }
+            : item
+        )
+      );
+    } catch (e) {
+      console.error(`Failed to refresh availability for item ${id}:`, e);
+    } finally {
+      setRefreshingId(null);
+    }
+  }, []);
+
   return {
     items,
     loading,
+    refreshingId,
     addItem,
     removeItem,
     toggleWatched,
     isInWatchlist,
     checkAvailability,
+    refreshItemAvailability,
   };
 };

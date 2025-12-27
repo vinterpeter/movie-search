@@ -49,7 +49,6 @@ function App() {
     loading: itemsLoading,
     page,
     totalPages,
-    totalResults,
     loadMore,
   } = useMovies({
     mediaType,
@@ -87,29 +86,13 @@ function App() {
     <div className="app">
       <Header
         onSearch={handleSearch}
-        totalResults={totalResults}
         mediaType={mediaType}
+        onMediaTypeChange={handleMediaTypeChange}
         onWatchlistClick={() => setShowWatchlist(true)}
         watchlistCount={watchlistItems.length}
       />
 
       <main className="main-content">
-        {/* Média típus váltó */}
-        <div className="media-type-toggle">
-          <button
-            className={`media-type-btn ${mediaType === 'movie' ? 'active' : ''}`}
-            onClick={() => handleMediaTypeChange('movie')}
-          >
-            Filmek
-          </button>
-          <button
-            className={`media-type-btn ${mediaType === 'tv' ? 'active' : ''}`}
-            onClick={() => handleMediaTypeChange('tv')}
-          >
-            Sorozatok
-          </button>
-        </div>
-
         <button
           className="filters-toggle"
           onClick={() => setShowFilters(!showFilters)}

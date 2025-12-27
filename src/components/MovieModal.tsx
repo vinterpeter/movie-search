@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { X, Play, Star, Check, Plus, ExternalLink, Loader2 } from 'lucide-react';
 import type { Movie, TVShow, MovieDetails, TVShowDetails, WatchProviderResult, Video, MediaType } from '../types/movie';
 import { getMovieDetails, getMovieWatchProviders, getTVDetails, getTVWatchProvidersForShow, getVideos, getBestTrailer } from '../api/tmdb';
 import { getImageUrl, IMAGE_SIZES } from '../api/config';
@@ -101,7 +102,7 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose}>
-          ✕
+          <X size={24} />
         </button>
 
         {/* Trailer Modal */}
@@ -109,7 +110,7 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
           <div className="trailer-overlay" onClick={() => setShowTrailer(false)}>
             <div className="trailer-container" onClick={(e) => e.stopPropagation()}>
               <button className="trailer-close" onClick={() => setShowTrailer(false)}>
-                ✕
+                <X size={24} />
               </button>
               <iframe
                 src={`https://www.youtube.com/embed/${trailer.key}?autoplay=1`}
@@ -133,7 +134,7 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
                   className="trailer-button"
                   onClick={() => setShowTrailer(true)}
                 >
-                  ▶ Előzetes
+                  <Play size={16} /> Előzetes
                 </button>
               )}
               <button
@@ -146,7 +147,7 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
                   }
                 }}
               >
-                {inWatchlist ? '✓ Watchlistben' : '+ Watchlisthez'}
+                {inWatchlist ? <><Check size={16} /> Watchlistben</> : <><Plus size={16} /> Watchlisthez</>}
               </button>
             </div>
           </div>
@@ -160,7 +161,7 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
                 <span className="modal-runtime">{getRuntimeDisplay()}</span>
               )}
               <span className="modal-rating">
-                ★ {item.vote_average.toFixed(1)}
+                <Star size={16} fill="currentColor" /> {item.vote_average.toFixed(1)}
               </span>
             </div>
 
@@ -184,7 +185,7 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
 
             {loading && (
               <div className="modal-loading">
-                <div className="spinner"></div>
+                <Loader2 size={32} className="spin" />
               </div>
             )}
 
@@ -253,7 +254,7 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
                     rel="noopener noreferrer"
                     className="provider-link"
                   >
-                    Megtekintés a JustWatch-on →
+                    Megtekintés a JustWatch-on <ExternalLink size={14} />
                   </a>
                 )}
               </div>

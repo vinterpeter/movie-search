@@ -227,6 +227,16 @@
   padding: 24px;
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
 .modal-providers {
   border-top: 1px solid var(--border-color);
   padding-top: 20px;

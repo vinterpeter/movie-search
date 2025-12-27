@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import type { Movie, TVShow, MediaType } from '../types/movie';
 import { getImageUrl, IMAGE_SIZES } from '../api/config';
 import './MovieCard.css';
@@ -28,7 +29,7 @@ export const MovieCard = ({ item, onClick, mediaType }: MovieCardProps) => {
           loading="lazy"
         />
         <div className="movie-card__rating">
-          <span className="movie-card__rating-star">★</span>
+          <Star size={14} fill="currentColor" />
           {rating}
         </div>
         {mediaType === 'tv' && (
