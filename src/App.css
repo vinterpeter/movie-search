@@ -8,6 +8,20 @@
   padding: 24px 24px 48px;
 }
 
+/* Movie sections container */
+.movie-sections {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 16px 0 8px;
+  margin-bottom: 32px;
+}
+
+.movie-sections-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+  margin: 0 16px 24px;
+}
+
 .filters-toggle {
   display: none;
   width: 100%;

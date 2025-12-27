@@ -33,16 +33,16 @@ export const useMovieSections = (mediaType: MediaType): MovieSectionsData => {
             getUpcomingMovies(),
             getNowPlayingMovies(),
           ]);
-          setTrending(trendingData.results.slice(0, 20));
-          setUpcoming(upcomingData.results.slice(0, 20));
-          setNowPlaying(nowPlayingData.results.slice(0, 20));
+          setTrending(trendingData.results.slice(0, 10));
+          setUpcoming(upcomingData.results.slice(0, 10));
+          setNowPlaying(nowPlayingData.results.slice(0, 10));
         } else {
           const [trendingData, onTheAirData] = await Promise.all([
             getTrendingTV('week'),
             getOnTheAirTV(),
           ]);
-          setTrending(trendingData.results.slice(0, 20));
-          setOnTheAir(onTheAirData.results.slice(0, 20));
+          setTrending(trendingData.results.slice(0, 10));
+          setOnTheAir(onTheAirData.results.slice(0, 10));
         }
       } catch (error) {
         console.error('Error fetching movie sections:', error);

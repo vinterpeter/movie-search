@@ -1,13 +1,15 @@
 .movie-section {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .movie-section__title {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  color: var(--text-primary);
-  margin: 0 0 16px;
+  color: var(--text-secondary);
+  margin: 0 0 12px;
   padding: 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .movie-section__container {
@@ -16,12 +18,12 @@
 
 .movie-section__scroll {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding: 8px 16px 16px;
+  padding: 4px 16px 12px;
 }
 
 .movie-section__scroll::-webkit-scrollbar {
@@ -30,8 +32,29 @@
 
 .movie-section__item {
   flex-shrink: 0;
-  width: 160px;
+  width: 130px;
   scroll-snap-align: start;
+}
+
+.movie-section__item .movie-card__info {
+  padding: 8px;
+}
+
+.movie-section__item .movie-card__title {
+  font-size: 0.8rem;
+}
+
+.movie-section__item .movie-card__year {
+  font-size: 0.7rem;
+}
+
+.movie-section__item .movie-card__rating {
+  padding: 2px 6px;
+  font-size: 0.7rem;
+}
+
+.movie-section__item .movie-card__favorites {
+  display: none;
 }
 
 .movie-section__nav {
@@ -74,7 +97,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 240px;
+  height: 180px;
   color: var(--text-secondary);
 }
 
@@ -90,17 +113,17 @@
 
 @media (max-width: 768px) {
   .movie-section__title {
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding: 0 12px;
   }
 
   .movie-section__scroll {
-    padding: 8px 12px 16px;
-    gap: 12px;
+    padding: 4px 12px 12px;
+    gap: 10px;
   }
 
   .movie-section__item {
-    width: 140px;
+    width: 110px;
   }
 
   .movie-section__nav {
