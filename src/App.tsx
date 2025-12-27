@@ -12,7 +12,7 @@ import { useWatchlist } from './hooks/useWatchlist';
 import { useFavorites } from './hooks/useFavorites';
 import { useMovieSections } from './hooks/useMovieSections';
 import { useI18n } from './i18n';
-import type { Movie, TVShow, MediaType } from './types/movie';
+import type { Movie, TVShow, MediaType, BrowseMode } from './types/movie';
 import './App.css';
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
   const [mediaType, setMediaType] = useState<MediaType>('movie');
 
   // Szűrő állapotok
+  const [browseMode, setBrowseMode] = useState<BrowseMode>('streaming');
   const [selectedGenres, setSelectedGenres] = useState<number[]>([]);
   const [selectedProviders, setSelectedProviders] = useState<number[]>([]);
   const [selectedCertification, setSelectedCertification] = useState('');
@@ -78,6 +79,7 @@ function App() {
     loadMore,
   } = useMovies({
     mediaType,
+    browseMode,
     genres: selectedGenres.length > 0 ? selectedGenres : undefined,
     certification: mediaType === 'movie' ? (selectedCertification || undefined) : undefined,
     // Ha nincs kiválasztva szolgáltató, akkor mind a 6 szolgáltatónk kínálatát mutatjuk
@@ -90,11 +92,17 @@ function App() {
 
   const handleMediaTypeChange = useCallback((type: MediaType) => {
     setMediaType(type);
+    setBrowseMode('streaming');
     setSelectedGenres([]);
     setSelectedCertification('');
   }, []);
 
+  const handleBrowseModeChange = useCallback((mode: BrowseMode) => {
+    setBrowseMode(mode);
+  }, []);
+
   const handleClearFilters = useCallback(() => {
+    setBrowseMode('streaming');
     setSelectedGenres([]);
     setSelectedProviders([]);
     setSelectedCertification('');
@@ -192,6 +200,7 @@ function App() {
                 minRating={minRating}
                 yearFrom={yearFrom}
                 yearTo={yearTo}
+                browseMode={browseMode}
                 onGenreChange={setSelectedGenres}
                 onProviderChange={setSelectedProviders}
                 onCertificationChange={setSelectedCertification}
@@ -199,6 +208,7 @@ function App() {
                 onRatingChange={setMinRating}
                 onYearFromChange={setYearFrom}
                 onYearToChange={setYearTo}
+                onBrowseModeChange={handleBrowseModeChange}
                 onClearFilters={handleClearFilters}
                 mediaType={mediaType}
               />

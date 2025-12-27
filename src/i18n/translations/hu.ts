@@ -117,6 +117,13 @@ export const hu = {
   onTheAir: 'Most adásban',
   showFilters: 'Szűrők megjelenítése',
   hideFilters: 'Szűrők elrejtése',
+
+  // Browse Mode
+  browseMode: 'Lista típusa',
+  browseStreaming: 'Streaming',
+  browseTrending: 'Felkapott',
+  browseTheaters: 'Mozikban',
+  browseUpcoming: 'Hamarosan',
 };
 
 export type TranslationKeys = keyof typeof hu;

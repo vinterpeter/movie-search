@@ -119,4 +119,11 @@ export const en: Record<TranslationKeys, string> = {
   onTheAir: 'On The Air',
   showFilters: 'Show Filters',
   hideFilters: 'Hide Filters',
+
+  // Browse Mode
+  browseMode: 'Browse',
+  browseStreaming: 'Streaming',
+  browseTrending: 'Trending',
+  browseTheaters: 'In Theaters',
+  browseUpcoming: 'Coming Soon',
 };

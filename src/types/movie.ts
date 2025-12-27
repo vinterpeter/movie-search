@@ -62,6 +62,9 @@ export interface Video {
 // Közös típus filmekhez és sorozatokhoz
 export type MediaType = 'movie' | 'tv';
 
+// Böngészési mód (milyen listát mutassunk)
+export type BrowseMode = 'streaming' | 'trending' | 'upcoming' | 'theaters';
+
 export type MediaItem = Movie | TVShow;
 export type MediaDetails = MovieDetails | TVShowDetails;
 

@@ -1,4 +1,4 @@
-import type { Genre, WatchProvider, Certification, MediaType } from '../types/movie';
+import type { Genre, WatchProvider, Certification, MediaType, BrowseMode } from '../types/movie';
 import { getImageUrl, IMAGE_SIZES } from '../api/config';
 import { useI18n } from '../i18n';
 import './FilterPanel.css';
@@ -14,6 +14,7 @@ interface FilterPanelProps {
   minRating?: number;
   yearFrom?: number;
   yearTo?: number;
+  browseMode?: BrowseMode;
   onGenreChange: (genres: number[]) => void;
   onProviderChange: (providers: number[]) => void;
   onCertificationChange: (certification: string) => void;
@@ -21,6 +22,7 @@ interface FilterPanelProps {
   onRatingChange?: (rating: number) => void;
   onYearFromChange?: (year: number | undefined) => void;
   onYearToChange?: (year: number | undefined) => void;
+  onBrowseModeChange?: (mode: BrowseMode) => void;
   onClearFilters: () => void;
   mediaType: MediaType;
 }
@@ -43,6 +45,7 @@ export const FilterPanel = ({
   minRating = 0,
   yearFrom,
   yearTo,
+  browseMode = 'streaming',
   onGenreChange,
   onProviderChange,
   onCertificationChange,
@@ -50,6 +53,7 @@ export const FilterPanel = ({
   onRatingChange,
   onYearFromChange,
   onYearToChange,
+  onBrowseModeChange,
   onClearFilters,
   mediaType,
 }: FilterPanelProps) => {
@@ -112,7 +116,21 @@ export const FilterPanel = ({
     selectedCertification !== '' ||
     minRating > 0 ||
     yearFrom !== undefined ||
-    yearTo !== undefined;
+    yearTo !== undefined ||
+    browseMode !== 'streaming';
+
+  // Browse mode options (only for movies, TV only has streaming and trending)
+  const BROWSE_MODE_OPTIONS = mediaType === 'movie'
+    ? [
+        { value: 'streaming' as BrowseMode, label: t('browseStreaming') },
+        { value: 'trending' as BrowseMode, label: t('browseTrending') },
+        { value: 'theaters' as BrowseMode, label: t('browseTheaters') },
+        { value: 'upcoming' as BrowseMode, label: t('browseUpcoming') },
+      ]
+    : [
+        { value: 'streaming' as BrowseMode, label: t('browseStreaming') },
+        { value: 'trending' as BrowseMode, label: t('browseTrending') },
+      ];
 
   const sortOptions = mediaType === 'tv' ? TV_SORT_OPTIONS : SORT_OPTIONS;
 
@@ -127,32 +145,16 @@ export const FilterPanel = ({
         )}
       </div>
 
-      {/* Sort */}
-      <section className="filter-section">
-        <h3>{t('sortBy')}</h3>
-        <select
-          value={sortBy}
-          onChange={(e) => onSortChange(e.target.value)}
-          className="filter-select"
-        >
-          {sortOptions.map((option) => (
-            <option key={option.value} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-        </select>
-      </section>
-
-      {/* Minimum rating */}
-      {onRatingChange && (
+      {/* Browse Mode */}
+      {onBrowseModeChange && (
         <section className="filter-section">
-          <h3>{t('minimumRating')}</h3>
+          <h3>{t('browseMode')}</h3>
           <div className="filter-chips">
-            {RATING_OPTIONS.map((option) => (
+            {BROWSE_MODE_OPTIONS.map((option) => (
               <button
                 key={option.value}
-                className={`filter-chip ${minRating === option.value ? 'active' : ''}`}
-                onClick={() => onRatingChange(option.value)}
+                className={`filter-chip ${browseMode === option.value ? 'active' : ''}`}
+                onClick={() => onBrowseModeChange(option.value)}
               >
                 {option.label}
               </button>
@@ -161,96 +163,137 @@ export const FilterPanel = ({
         </section>
       )}
 
-      {/* Release year */}
-      {(onYearFromChange || onYearToChange) && (
+      {/* Sort - only show for streaming mode */}
+      {browseMode === 'streaming' && (
         <section className="filter-section">
-          <h3>{t('releaseYear')}</h3>
-          <div className="filter-year-range">
-            <select
-              value={yearFrom || ''}
-              onChange={(e) => onYearFromChange?.(e.target.value ? parseInt(e.target.value) : undefined)}
-              className="filter-select filter-select--small"
-            >
-              <option value="">{t('yearFrom')}</option>
-              {YEAR_OPTIONS.map((year) => (
-                <option key={year} value={year}>{year}</option>
-              ))}
-            </select>
-            <span className="filter-year-separator">-</span>
-            <select
-              value={yearTo || ''}
-              onChange={(e) => onYearToChange?.(e.target.value ? parseInt(e.target.value) : undefined)}
-              className="filter-select filter-select--small"
-            >
-              <option value="">{t('yearTo')}</option>
-              {YEAR_OPTIONS.map((year) => (
-                <option key={year} value={year}>{year}</option>
-              ))}
-            </select>
-          </div>
-        </section>
-      )}
-
-      {/* Categories */}
-      <section className="filter-section">
-        <h3>{t('categories')}</h3>
-        <div className="filter-chips">
-          {genres.map((genre) => (
-            <button
-              key={genre.id}
-              className={`filter-chip ${selectedGenres.includes(genre.id) ? 'active' : ''}`}
-              onClick={() => toggleGenre(genre.id)}
-            >
-              {genre.name}
-            </button>
-          ))}
-        </div>
-      </section>
-
-      {/* Age rating - movies only */}
-      {mediaType === 'movie' && (
-        <section className="filter-section">
-          <h3>{t('ageRating')}</h3>
-          <div className="filter-chips">
-            <button
-              className={`filter-chip ${selectedCertification === '' ? 'active' : ''}`}
-              onClick={() => onCertificationChange('')}
-            >
-              {t('all')}
-            </button>
-            {certifications.map((cert) => (
-              <button
-                key={cert.certification}
-                className={`filter-chip ${selectedCertification === cert.certification ? 'active' : ''}`}
-                onClick={() => onCertificationChange(cert.certification)}
-                title={CERTIFICATION_INFO[cert.certification] || cert.meaning}
-              >
-                {cert.certification}
-              </button>
+          <h3>{t('sortBy')}</h3>
+          <select
+            value={sortBy}
+            onChange={(e) => onSortChange(e.target.value)}
+            className="filter-select"
+          >
+            {sortOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
             ))}
-          </div>
+          </select>
         </section>
       )}
 
-      {/* Streaming providers */}
-      <section className="filter-section">
-        <h3>{t('streamingProviders')}</h3>
-        <div className="filter-providers">
-          {providers.map((provider) => (
-            <button
-              key={provider.provider_id}
-              className={`filter-provider ${selectedProviders.includes(provider.provider_id) ? 'active' : ''}`}
-              onClick={() => toggleProvider(provider.provider_id)}
-              title={provider.provider_name}
-            >
-              <img
-                src={getImageUrl(provider.logo_path, IMAGE_SIZES.logo.medium)}
-                alt={provider.provider_name}
-              />
-            </button>
-          ))}
-        </div>
-      </section>
+      {/* Filters only for streaming mode */}
+      {browseMode === 'streaming' && (
+        <>
+          {/* Minimum rating */}
+          {onRatingChange && (
+            <section className="filter-section">
+              <h3>{t('minimumRating')}</h3>
+              <div className="filter-chips">
+                {RATING_OPTIONS.map((option) => (
+                  <button
+                    key={option.value}
+                    className={`filter-chip ${minRating === option.value ? 'active' : ''}`}
+                    onClick={() => onRatingChange(option.value)}
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Release year */}
+          {(onYearFromChange || onYearToChange) && (
+            <section className="filter-section">
+              <h3>{t('releaseYear')}</h3>
+              <div className="filter-year-range">
+                <select
+                  value={yearFrom || ''}
+                  onChange={(e) => onYearFromChange?.(e.target.value ? parseInt(e.target.value) : undefined)}
+                  className="filter-select filter-select--small"
+                >
+                  <option value="">{t('yearFrom')}</option>
+                  {YEAR_OPTIONS.map((year) => (
+                    <option key={year} value={year}>{year}</option>
+                  ))}
+                </select>
+                <span className="filter-year-separator">-</span>
+                <select
+                  value={yearTo || ''}
+                  onChange={(e) => onYearToChange?.(e.target.value ? parseInt(e.target.value) : undefined)}
+                  className="filter-select filter-select--small"
+                >
+                  <option value="">{t('yearTo')}</option>
+                  {YEAR_OPTIONS.map((year) => (
+                    <option key={year} value={year}>{year}</option>
+                  ))}
+                </select>
+              </div>
+            </section>
+          )}
+
+          {/* Categories */}
+          <section className="filter-section">
+            <h3>{t('categories')}</h3>
+            <div className="filter-chips">
+              {genres.map((genre) => (
+                <button
+                  key={genre.id}
+                  className={`filter-chip ${selectedGenres.includes(genre.id) ? 'active' : ''}`}
+                  onClick={() => toggleGenre(genre.id)}
+                >
+                  {genre.name}
+                </button>
+              ))}
+            </div>
+          </section>
+
+          {/* Age rating - movies only */}
+          {mediaType === 'movie' && (
+            <section className="filter-section">
+              <h3>{t('ageRating')}</h3>
+              <div className="filter-chips">
+                <button
+                  className={`filter-chip ${selectedCertification === '' ? 'active' : ''}`}
+                  onClick={() => onCertificationChange('')}
+                >
+                  {t('all')}
+                </button>
+                {certifications.map((cert) => (
+                  <button
+                    key={cert.certification}
+                    className={`filter-chip ${selectedCertification === cert.certification ? 'active' : ''}`}
+                    onClick={() => onCertificationChange(cert.certification)}
+                    title={CERTIFICATION_INFO[cert.certification] || cert.meaning}
+                  >
+                    {cert.certification}
+                  </button>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Streaming providers */}
+          <section className="filter-section">
+            <h3>{t('streamingProviders')}</h3>
+            <div className="filter-providers">
+              {providers.map((provider) => (
+                <button
+                  key={provider.provider_id}
+                  className={`filter-provider ${selectedProviders.includes(provider.provider_id) ? 'active' : ''}`}
+                  onClick={() => toggleProvider(provider.provider_id)}
+                  title={provider.provider_name}
+                >
+                  <img
+                    src={getImageUrl(provider.logo_path, IMAGE_SIZES.logo.medium)}
+                    alt={provider.provider_name}
+                  />
+                </button>
+              ))}
+            </div>
+          </section>
+        </>
+      )}
     </aside>
   );
 };
