@@ -84,19 +84,19 @@ export const Header = ({
           </div>
         </form>
 
+        {/* Watchlist - after search */}
+        <button className="header__watchlist-btn" onClick={onWatchlistClick}>
+          <BookmarkCheck size={18} />
+          <span className="header__watchlist-text">{t('watchlist')}</span>
+          {watchlistCount > 0 && (
+            <span className="header__watchlist-count">{watchlistCount}</span>
+          )}
+        </button>
+
         {/* Right side actions */}
         <div className="header__actions">
-          <UserMenu syncing={syncing} />
           <LanguageSelector />
-
-          {/* Watchlist */}
-          <button className="header__watchlist-btn" onClick={onWatchlistClick}>
-            <BookmarkCheck size={18} />
-            <span className="header__watchlist-text">{t('watchlist')}</span>
-            {watchlistCount > 0 && (
-              <span className="header__watchlist-count">{watchlistCount}</span>
-            )}
-          </button>
+          <UserMenu syncing={syncing} />
         </div>
       </div>
     </header>
