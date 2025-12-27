@@ -309,3 +309,44 @@ export const getBestTrailer = (videos: Video[]): Video | null => {
   const youtubeVideos = videos.filter(v => v.site === 'YouTube');
   return youtubeVideos.length > 0 ? youtubeVideos[0] : null;
 };
+
+// ===== TRENDING / UPCOMING / NOW PLAYING =====
+
+// Felkapott filmek (trending)
+export const getTrendingMovies = async (
+  timeWindow: 'day' | 'week' = 'week'
+): Promise<TMDBResponse<Movie>> => {
+  return fetchFromTMDB<TMDBResponse<Movie>>(`/trending/movie/${timeWindow}`, {
+    region: REGION,
+  });
+};
+
+// Felkapott sorozatok (trending)
+export const getTrendingTV = async (
+  timeWindow: 'day' | 'week' = 'week'
+): Promise<TMDBResponse<TVShow>> => {
+  return fetchFromTMDB<TMDBResponse<TVShow>>(`/trending/tv/${timeWindow}`);
+};
+
+// Hamarosan megjelenő filmek (upcoming)
+export const getUpcomingMovies = async (page: number = 1): Promise<TMDBResponse<Movie>> => {
+  return fetchFromTMDB<TMDBResponse<Movie>>('/movie/upcoming', {
+    page: page.toString(),
+    region: REGION,
+  });
+};
+
+// Most a mozikban (now playing)
+export const getNowPlayingMovies = async (page: number = 1): Promise<TMDBResponse<Movie>> => {
+  return fetchFromTMDB<TMDBResponse<Movie>>('/movie/now_playing', {
+    page: page.toString(),
+    region: REGION,
+  });
+};
+
+// Most adásban lévő sorozatok (on the air)
+export const getOnTheAirTV = async (page: number = 1): Promise<TMDBResponse<TVShow>> => {
+  return fetchFromTMDB<TMDBResponse<TVShow>>('/tv/on_the_air', {
+    page: page.toString(),
+  });
+};

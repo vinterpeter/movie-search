@@ -3,12 +3,15 @@ import { Header } from './components/Header';
 import { FilterPanel } from './components/FilterPanel';
 import { MovieGrid } from './components/MovieGrid';
 import { MovieModal } from './components/MovieModal';
+import { MovieSection } from './components/MovieSection';
 import { Watchlist } from './components/Watchlist';
 import { Favorites } from './components/Favorites';
 import { useMovies } from './hooks/useMovies';
 import { useFilters, HUNGARIAN_PROVIDER_IDS } from './hooks/useFilters';
 import { useWatchlist } from './hooks/useWatchlist';
 import { useFavorites } from './hooks/useFavorites';
+import { useMovieSections } from './hooks/useMovieSections';
+import { useI18n } from './i18n';
 import type { Movie, TVShow, MediaType } from './types/movie';
 import './App.css';
 
@@ -45,6 +48,18 @@ function App() {
 
   // Favorites hook
   const { syncing: favoritesSyncing } = useFavorites();
+
+  // Movie sections (trending, upcoming, now playing)
+  const {
+    trending,
+    upcoming,
+    nowPlaying,
+    onTheAir,
+    loading: sectionsLoading,
+  } = useMovieSections(mediaType);
+
+  // Translations
+  const { t } = useI18n();
 
   // Szűrők betöltése
   const {
@@ -106,11 +121,61 @@ function App() {
       />
 
       <main className="main-content">
+        {/* Movie Sections */}
+        <div className="movie-sections">
+          <MovieSection
+            title={t('trending')}
+            items={trending}
+            loading={sectionsLoading}
+            mediaType={mediaType}
+            onItemClick={(item) => {
+              setSelectedItem(item);
+              setSelectedMediaType(mediaType);
+            }}
+          />
+          {mediaType === 'movie' && (
+            <>
+              <MovieSection
+                title={t('nowPlaying')}
+                items={nowPlaying}
+                loading={sectionsLoading}
+                mediaType="movie"
+                onItemClick={(item) => {
+                  setSelectedItem(item);
+                  setSelectedMediaType('movie');
+                }}
+              />
+              <MovieSection
+                title={t('upcoming')}
+                items={upcoming}
+                loading={sectionsLoading}
+                mediaType="movie"
+                onItemClick={(item) => {
+                  setSelectedItem(item);
+                  setSelectedMediaType('movie');
+                }}
+              />
+            </>
+          )}
+          {mediaType === 'tv' && (
+            <MovieSection
+              title={t('onTheAir')}
+              items={onTheAir}
+              loading={sectionsLoading}
+              mediaType="tv"
+              onItemClick={(item) => {
+                setSelectedItem(item);
+                setSelectedMediaType('tv');
+              }}
+            />
+          )}
+        </div>
+
         <button
           className="filters-toggle"
           onClick={() => setShowFilters(!showFilters)}
         >
-          {showFilters ? 'Szűrők elrejtése' : 'Szűrők megjelenítése'}
+          {showFilters ? t('hideFilters') : t('showFilters')}
         </button>
 
         <div className="content-layout">

@@ -111,4 +111,12 @@ export const en: Record<TranslationKeys, string> = {
   loved: 'Loved',
   noFavorites: 'No favorites yet.',
   filterAll: 'All',
+
+  // Movie Sections
+  trending: 'Trending',
+  nowPlaying: 'Now Playing',
+  upcoming: 'Coming Soon',
+  onTheAir: 'On The Air',
+  showFilters: 'Show Filters',
+  hideFilters: 'Hide Filters',
 };

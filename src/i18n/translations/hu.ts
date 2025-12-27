@@ -109,6 +109,14 @@ export const hu = {
   loved: 'Imádott',
   noFavorites: 'Még nincsenek kedvenceid.',
   filterAll: 'Összes',
+
+  // Movie Sections
+  trending: 'Felkapott',
+  nowPlaying: 'Most a mozikban',
+  upcoming: 'Hamarosan',
+  onTheAir: 'Most adásban',
+  showFilters: 'Szűrők megjelenítése',
+  hideFilters: 'Szűrők elrejtése',
 };
 
 export type TranslationKeys = keyof typeof hu;
