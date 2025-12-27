@@ -16,8 +16,8 @@ export function LanguageSelector() {
         className="language-select"
         aria-label={t('language')}
       >
-        <option value="hu">🇭🇺 {t('hungarian')}</option>
-        <option value="en">🇬🇧 {t('english')}</option>
+        <option value="hu">🇭🇺</option>
+        <option value="en">🇬🇧</option>
       </select>
     </div>
   );
