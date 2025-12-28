@@ -127,4 +127,12 @@ export const en: Record<TranslationKeys, string> = {
   browseTrending: 'Trending',
   browseTheaters: 'In Theaters',
   browseUpcoming: 'Coming Soon',
+
+  // Cinema filters
+  city: 'City',
+  allCities: 'All cities',
+  date: 'Date',
+  allDates: 'All dates',
+  today: 'Today',
+  tomorrow: 'Tomorrow',
 };

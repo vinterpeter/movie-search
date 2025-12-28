@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { Header } from './components/Header';
 import { FilterPanel } from './components/FilterPanel';
 import { MovieGrid } from './components/MovieGrid';
@@ -12,6 +12,7 @@ import { useWatchlist } from './hooks/useWatchlist';
 import { useFavorites } from './hooks/useFavorites';
 import { useMovieSections } from './hooks/useMovieSections';
 import { useI18n } from './i18n';
+import { getHungarianCinemaData } from './api/tmdb';
 import type { Movie, TVShow, MediaType, BrowseMode } from './types/movie';
 import './App.css';
 
@@ -28,6 +29,12 @@ function App() {
   const [minRating, setMinRating] = useState(0);
   const [yearFrom, setYearFrom] = useState<number | undefined>(undefined);
   const [yearTo, setYearTo] = useState<number | undefined>(undefined);
+
+  // Cinema filters (theaters mode)
+  const [selectedCity, setSelectedCity] = useState('');
+  const [selectedDate, setSelectedDate] = useState('');
+  const [availableCities, setAvailableCities] = useState<string[]>([]);
+  const [availableDates, setAvailableDates] = useState<string[]>([]);
 
   // Kiválasztott film/sorozat a modalhoz
   const [selectedItem, setSelectedItem] = useState<Movie | TVShow | null>(null);
@@ -67,6 +74,18 @@ function App() {
     loading: filtersLoading,
   } = useFilters(mediaType);
 
+  // Load cinema data when theaters mode is active
+  useEffect(() => {
+    if (browseMode === 'theaters') {
+      getHungarianCinemaData().then(data => {
+        if (data) {
+          setAvailableCities(data.cities);
+          setAvailableDates(data.dates);
+        }
+      });
+    }
+  }, [browseMode]);
+
   // Filmek/Sorozatok betöltése szűrőkkel
   const {
     items,
@@ -85,6 +104,9 @@ function App() {
     minRating: minRating > 0 ? minRating : undefined,
     yearFrom,
     yearTo,
+    // Cinema filters
+    city: selectedCity || undefined,
+    date: selectedDate || undefined,
   });
 
   const handleMediaTypeChange = useCallback((type: MediaType) => {
@@ -99,6 +121,8 @@ function App() {
     setBrowseMode('theaters');
     setSelectedGenres([]);
     setSelectedCertification('');
+    setSelectedCity('');
+    setSelectedDate('');
   }, []);
 
   const handleBrowseModeChange = useCallback((mode: BrowseMode) => {
@@ -114,6 +138,8 @@ function App() {
     setMinRating(0);
     setYearFrom(undefined);
     setYearTo(undefined);
+    setSelectedCity('');
+    setSelectedDate('');
   }, []);
 
   const handleSearch = useCallback((_query: string) => {
@@ -171,6 +197,12 @@ function App() {
                 yearFrom={yearFrom}
                 yearTo={yearTo}
                 browseMode={browseMode}
+                availableCities={availableCities}
+                availableDates={availableDates}
+                selectedCity={selectedCity}
+                selectedDate={selectedDate}
+                onCityChange={setSelectedCity}
+                onDateChange={setSelectedDate}
                 onGenreChange={setSelectedGenres}
                 onProviderChange={setSelectedProviders}
                 onCertificationChange={setSelectedCertification}

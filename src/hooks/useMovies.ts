@@ -19,6 +19,9 @@ interface UseMoviesOptions {
   minRating?: number;
   yearFrom?: number;
   yearTo?: number;
+  // Cinema filters
+  city?: string;
+  date?: string;
 }
 
 interface UseMoviesReturn {
@@ -61,44 +64,14 @@ export const useMovies = (options: UseMoviesOptions = {}): UseMoviesReturn => {
         } else if (browseMode === 'upcoming' && mediaType === 'movie') {
           data = await getUpcomingMovies(pageNum);
         } else if (browseMode === 'theaters' && mediaType === 'movie') {
-          // Magyar mozikban játszott filmek (mozinezo.hu-ról)
-          data = await getHungarianCinemaMovies();
-          // Kliens oldali szűrés a mozi filmekre
-          let filteredResults = data.results as Movie[];
-
-          // Műfaj szűrés
-          if (options.genres && options.genres.length > 0) {
-            filteredResults = filteredResults.filter(movie =>
-              options.genres!.some(genreId => movie.genre_ids.includes(genreId))
-            );
-          }
-
-          // Minimum értékelés szűrés
-          if (options.minRating && options.minRating > 0) {
-            filteredResults = filteredResults.filter(movie =>
-              movie.vote_average >= options.minRating!
-            );
-          }
-
-          // Rendezés
-          if (options.sortBy) {
-            switch (options.sortBy) {
-              case 'vote_average.desc':
-                filteredResults.sort((a, b) => b.vote_average - a.vote_average);
-                break;
-              case 'primary_release_date.desc':
-                filteredResults.sort((a, b) =>
-                  new Date(b.release_date).getTime() - new Date(a.release_date).getTime()
-                );
-                break;
-              case 'title.asc':
-                filteredResults.sort((a, b) => a.title.localeCompare(b.title));
-                break;
-              // popularity.desc az alapértelmezett, nem kell rendezni
-            }
-          }
-
-          data = { ...data, results: filteredResults };
+          // Magyar mozikban játszott filmek (Cinema City API)
+          data = await getHungarianCinemaMovies({
+            city: options.city,
+            date: options.date,
+            genres: options.genres,
+            minRating: options.minRating,
+            sortBy: options.sortBy,
+          });
         } else {
           // Alapértelmezett: streaming discover
           if (mediaType === 'tv') {
@@ -136,7 +109,7 @@ export const useMovies = (options: UseMoviesOptions = {}): UseMoviesReturn => {
         setLoading(false);
       }
     },
-    [mediaType, browseMode, options.genres, options.certification, options.providers, options.sortBy, options.minRating, options.yearFrom, options.yearTo]
+    [mediaType, browseMode, options.genres, options.certification, options.providers, options.sortBy, options.minRating, options.yearFrom, options.yearTo, options.city, options.date]
   );
 
   useEffect(() => {

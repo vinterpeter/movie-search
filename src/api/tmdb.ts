@@ -16,6 +16,8 @@ import type {
   TMDBResponse,
   Video,
   MediaType,
+  CinemaData,
+  CinemaMovie,
 } from '../types/movie';
 
 const fetchFromTMDB = async <T>(
@@ -344,23 +346,102 @@ export const getNowPlayingMovies = async (page: number = 1): Promise<TMDBRespons
   });
 };
 
-// Hungarian cinema movies from static JSON (scraped from mozinezo.hu)
-export const getHungarianCinemaMovies = async (): Promise<TMDBResponse<Movie>> => {
+// Hungarian cinema data from static JSON (Cinema City API)
+let cachedCinemaData: CinemaData | null = null;
+
+export const getHungarianCinemaData = async (): Promise<CinemaData | null> => {
+  if (cachedCinemaData) return cachedCinemaData;
+
   try {
-    // Use base URL from Vite config (handles both dev and production)
     const baseUrl = import.meta.env.BASE_URL || '/';
     const response = await fetch(`${baseUrl}data/cinema.json`);
     if (!response.ok) {
+      console.warn('Hungarian cinema data not available');
+      return null;
+    }
+
+    cachedCinemaData = await response.json();
+    return cachedCinemaData;
+  } catch (error) {
+    console.error('Error loading Hungarian cinema data:', error);
+    return null;
+  }
+};
+
+// Hungarian cinema movies with optional filtering
+export const getHungarianCinemaMovies = async (filters?: {
+  city?: string;
+  date?: string;
+  genres?: number[];
+  minRating?: number;
+  sortBy?: string;
+}): Promise<TMDBResponse<Movie>> => {
+  try {
+    const cinemaData = await getHungarianCinemaData();
+
+    if (!cinemaData) {
       console.warn('Hungarian cinema data not available, falling back to TMDB');
       return getNowPlayingMovies(1);
     }
 
-    const data = await response.json();
+    let filteredMovies = cinemaData.movies as CinemaMovie[];
+
+    // Filter by city
+    if (filters?.city) {
+      filteredMovies = filteredMovies.filter(movie =>
+        movie.cities.includes(filters.city!)
+      );
+    }
+
+    // Filter by date
+    if (filters?.date) {
+      filteredMovies = filteredMovies.filter(movie =>
+        movie.dates.includes(filters.date!)
+      );
+    }
+
+    // Filter by genre
+    if (filters?.genres && filters.genres.length > 0) {
+      filteredMovies = filteredMovies.filter(movie =>
+        filters.genres!.some(genreId => movie.genre_ids.includes(genreId))
+      );
+    }
+
+    // Filter by minimum rating
+    if (filters?.minRating && filters.minRating > 0) {
+      filteredMovies = filteredMovies.filter(movie =>
+        movie.vote_average >= filters.minRating!
+      );
+    }
+
+    // Sort
+    if (filters?.sortBy) {
+      switch (filters.sortBy) {
+        case 'vote_average.desc':
+          filteredMovies.sort((a, b) => b.vote_average - a.vote_average);
+          break;
+        case 'primary_release_date.desc':
+          filteredMovies.sort((a, b) =>
+            new Date(b.release_date).getTime() - new Date(a.release_date).getTime()
+          );
+          break;
+        case 'title.asc':
+          filteredMovies.sort((a, b) => a.title.localeCompare(b.title));
+          break;
+        case 'screenings.desc':
+          filteredMovies.sort((a, b) => b.screeningCount - a.screeningCount);
+          break;
+        // popularity.desc is default
+        default:
+          filteredMovies.sort((a, b) => b.screeningCount - a.screeningCount);
+      }
+    }
+
     return {
       page: 1,
-      results: data.movies as Movie[],
+      results: filteredMovies as Movie[],
       total_pages: 1,
-      total_results: data.count,
+      total_results: filteredMovies.length,
     };
   } catch (error) {
     console.error('Error loading Hungarian cinema data:', error);

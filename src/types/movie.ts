@@ -131,3 +131,37 @@ export interface FavoriteItem {
   liked: boolean;
   loved: boolean;
 }
+
+// Cinema screening types (Cinema City)
+export interface Cinema {
+  id: string;
+  name: string;
+  city: string;
+}
+
+export interface Screening {
+  cinemaId: string;
+  cinemaName: string;
+  date: string;
+  time: string;
+  auditorium: string;
+  bookingLink: string | null;
+}
+
+export interface CinemaMovie extends Movie {
+  cinemaCityId?: string;
+  cinemaCityPoster?: string | null;
+  screenings: Record<string, Screening[]>; // city -> screenings
+  screeningCount: number;
+  cities: string[];
+  dates: string[];
+}
+
+export interface CinemaData {
+  lastUpdated: string;
+  count: number;
+  dates: string[];
+  cities: string[];
+  cinemas: Cinema[];
+  movies: CinemaMovie[];
+}

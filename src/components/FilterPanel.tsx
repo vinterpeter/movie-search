@@ -15,6 +15,13 @@ interface FilterPanelProps {
   yearFrom?: number;
   yearTo?: number;
   browseMode?: BrowseMode;
+  // Cinema filters (theaters mode)
+  availableCities?: string[];
+  availableDates?: string[];
+  selectedCity?: string;
+  selectedDate?: string;
+  onCityChange?: (city: string) => void;
+  onDateChange?: (date: string) => void;
   onGenreChange: (genres: number[]) => void;
   onProviderChange: (providers: number[]) => void;
   onCertificationChange: (certification: string) => void;
@@ -46,6 +53,12 @@ export const FilterPanel = ({
   yearFrom,
   yearTo,
   browseMode = 'streaming',
+  availableCities = [],
+  availableDates = [],
+  selectedCity = '',
+  selectedDate = '',
+  onCityChange,
+  onDateChange,
   onGenreChange,
   onProviderChange,
   onCertificationChange,
@@ -58,6 +71,23 @@ export const FilterPanel = ({
   mediaType,
 }: FilterPanelProps) => {
   const { t } = useI18n();
+
+  // Format date for display (YYYY-MM-DD -> readable)
+  const formatDateForDisplay = (dateStr: string): string => {
+    const date = new Date(dateStr);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+
+    if (date.toDateString() === today.toDateString()) {
+      return t('today');
+    } else if (date.toDateString() === tomorrow.toDateString()) {
+      return t('tomorrow');
+    } else {
+      return date.toLocaleDateString('hu-HU', { weekday: 'short', month: 'short', day: 'numeric' });
+    }
+  };
 
   const SORT_OPTIONS = [
     { value: 'popularity.desc', label: t('sortMostPopular') },
@@ -117,6 +147,8 @@ export const FilterPanel = ({
     minRating > 0 ||
     yearFrom !== undefined ||
     yearTo !== undefined ||
+    selectedCity !== '' ||
+    selectedDate !== '' ||
     browseMode !== 'streaming';
 
   // Browse mode options (only for movies, TV only has streaming and trending)
@@ -178,6 +210,47 @@ export const FilterPanel = ({
               </option>
             ))}
           </select>
+        </section>
+      )}
+
+      {/* City filter - theaters mode only */}
+      {browseMode === 'theaters' && availableCities.length > 0 && onCityChange && (
+        <section className="filter-section">
+          <h3>{t('city')}</h3>
+          <select
+            value={selectedCity}
+            onChange={(e) => onCityChange(e.target.value)}
+            className="filter-select"
+          >
+            <option value="">{t('allCities')}</option>
+            {availableCities.map((city) => (
+              <option key={city} value={city}>{city}</option>
+            ))}
+          </select>
+        </section>
+      )}
+
+      {/* Date filter - theaters mode only */}
+      {browseMode === 'theaters' && availableDates.length > 0 && onDateChange && (
+        <section className="filter-section">
+          <h3>{t('date')}</h3>
+          <div className="filter-chips filter-chips--dates">
+            <button
+              className={`filter-chip ${selectedDate === '' ? 'active' : ''}`}
+              onClick={() => onDateChange('')}
+            >
+              {t('allDates')}
+            </button>
+            {availableDates.map((date) => (
+              <button
+                key={date}
+                className={`filter-chip ${selectedDate === date ? 'active' : ''}`}
+                onClick={() => onDateChange(date)}
+              >
+                {formatDateForDisplay(date)}
+              </button>
+            ))}
+          </div>
         </section>
       )}
 

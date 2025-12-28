@@ -125,6 +125,14 @@ export const hu = {
   browseTrending: 'Felkapott',
   browseTheaters: 'Mozikban',
   browseUpcoming: 'Hamarosan',
+
+  // Cinema filters
+  city: 'Város',
+  allCities: 'Összes város',
+  date: 'Dátum',
+  allDates: 'Összes nap',
+  today: 'Ma',
+  tomorrow: 'Holnap',
 };
 
 export type TranslationKeys = keyof typeof hu;
