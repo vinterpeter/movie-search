@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Film, X, Search, BookmarkCheck } from 'lucide-react';
-import type { MediaType } from '../types/movie';
+import type { MediaType, BrowseMode } from '../types/movie';
 import { useI18n } from '../i18n';
 import { LanguageSelector } from './LanguageSelector';
 import { UserMenu } from './UserMenu';
@@ -9,7 +9,9 @@ import './Header.css';
 interface HeaderProps {
   onSearch: (query: string) => void;
   mediaType: MediaType;
+  browseMode: BrowseMode;
   onMediaTypeChange: (type: MediaType) => void;
+  onTheatersClick: () => void;
   onWatchlistClick: () => void;
   watchlistCount: number;
   syncing?: boolean;
@@ -19,7 +21,9 @@ interface HeaderProps {
 export const Header = ({
   onSearch,
   mediaType,
+  browseMode,
   onMediaTypeChange,
+  onTheatersClick,
   onWatchlistClick,
   watchlistCount,
   syncing,
@@ -50,7 +54,7 @@ export const Header = ({
         {/* Media type toggle */}
         <div className="header__media-toggle">
           <button
-            className={`header__media-btn ${mediaType === 'movie' ? 'active' : ''}`}
+            className={`header__media-btn ${mediaType === 'movie' && browseMode !== 'theaters' ? 'active' : ''}`}
             onClick={() => onMediaTypeChange('movie')}
           >
             {t('movies')}
@@ -60,6 +64,12 @@ export const Header = ({
             onClick={() => onMediaTypeChange('tv')}
           >
             {t('tvShows')}
+          </button>
+          <button
+            className={`header__media-btn ${browseMode === 'theaters' ? 'active' : ''}`}
+            onClick={onTheatersClick}
+          >
+            {t('theaters')}
           </button>
         </div>
 

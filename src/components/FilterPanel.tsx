@@ -163,8 +163,8 @@ export const FilterPanel = ({
         </section>
       )}
 
-      {/* Sort - only show for streaming mode */}
-      {browseMode === 'streaming' && (
+      {/* Sort - show for streaming and theaters modes */}
+      {(browseMode === 'streaming' || browseMode === 'theaters') && (
         <section className="filter-section">
           <h3>{t('sortBy')}</h3>
           <select
@@ -181,27 +181,45 @@ export const FilterPanel = ({
         </section>
       )}
 
+      {/* Minimum rating - show for streaming and theaters */}
+      {(browseMode === 'streaming' || browseMode === 'theaters') && onRatingChange && (
+        <section className="filter-section">
+          <h3>{t('minimumRating')}</h3>
+          <div className="filter-chips">
+            {RATING_OPTIONS.map((option) => (
+              <button
+                key={option.value}
+                className={`filter-chip ${minRating === option.value ? 'active' : ''}`}
+                onClick={() => onRatingChange(option.value)}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Categories - show for streaming and theaters */}
+      {(browseMode === 'streaming' || browseMode === 'theaters') && (
+        <section className="filter-section">
+          <h3>{t('categories')}</h3>
+          <div className="filter-chips">
+            {genres.map((genre) => (
+              <button
+                key={genre.id}
+                className={`filter-chip ${selectedGenres.includes(genre.id) ? 'active' : ''}`}
+                onClick={() => toggleGenre(genre.id)}
+              >
+                {genre.name}
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Filters only for streaming mode */}
       {browseMode === 'streaming' && (
         <>
-          {/* Minimum rating */}
-          {onRatingChange && (
-            <section className="filter-section">
-              <h3>{t('minimumRating')}</h3>
-              <div className="filter-chips">
-                {RATING_OPTIONS.map((option) => (
-                  <button
-                    key={option.value}
-                    className={`filter-chip ${minRating === option.value ? 'active' : ''}`}
-                    onClick={() => onRatingChange(option.value)}
-                  >
-                    {option.label}
-                  </button>
-                ))}
-              </div>
-            </section>
-          )}
-
           {/* Release year */}
           {(onYearFromChange || onYearToChange) && (
             <section className="filter-section">
@@ -231,22 +249,6 @@ export const FilterPanel = ({
               </div>
             </section>
           )}
-
-          {/* Categories */}
-          <section className="filter-section">
-            <h3>{t('categories')}</h3>
-            <div className="filter-chips">
-              {genres.map((genre) => (
-                <button
-                  key={genre.id}
-                  className={`filter-chip ${selectedGenres.includes(genre.id) ? 'active' : ''}`}
-                  onClick={() => toggleGenre(genre.id)}
-                >
-                  {genre.name}
-                </button>
-              ))}
-            </div>
-          </section>
 
           {/* Age rating - movies only */}
           {mediaType === 'movie' && (

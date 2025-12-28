@@ -336,12 +336,36 @@ export const getUpcomingMovies = async (page: number = 1): Promise<TMDBResponse<
   });
 };
 
-// Most a mozikban (now playing)
+// Most a mozikban (now playing) - TMDB fallback
 export const getNowPlayingMovies = async (page: number = 1): Promise<TMDBResponse<Movie>> => {
   return fetchFromTMDB<TMDBResponse<Movie>>('/movie/now_playing', {
     page: page.toString(),
     region: REGION,
   });
+};
+
+// Hungarian cinema movies from static JSON (scraped from mozinezo.hu)
+export const getHungarianCinemaMovies = async (): Promise<TMDBResponse<Movie>> => {
+  try {
+    // Use base URL from Vite config (handles both dev and production)
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    const response = await fetch(`${baseUrl}data/cinema.json`);
+    if (!response.ok) {
+      console.warn('Hungarian cinema data not available, falling back to TMDB');
+      return getNowPlayingMovies(1);
+    }
+
+    const data = await response.json();
+    return {
+      page: 1,
+      results: data.movies as Movie[],
+      total_pages: 1,
+      total_results: data.count,
+    };
+  } catch (error) {
+    console.error('Error loading Hungarian cinema data:', error);
+    return getNowPlayingMovies(1);
+  }
 };
 
 // Most adásban lévő sorozatok (on the air)

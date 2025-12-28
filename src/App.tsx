@@ -50,12 +50,9 @@ function App() {
   // Favorites hook
   const { syncing: favoritesSyncing } = useFavorites();
 
-  // Movie sections (trending, upcoming, now playing)
+  // Trending section
   const {
     trending,
-    upcoming,
-    nowPlaying,
-    onTheAir,
     loading: sectionsLoading,
   } = useMovieSections(mediaType);
 
@@ -97,6 +94,13 @@ function App() {
     setSelectedCertification('');
   }, []);
 
+  const handleTheatersClick = useCallback(() => {
+    setMediaType('movie');
+    setBrowseMode('theaters');
+    setSelectedGenres([]);
+    setSelectedCertification('');
+  }, []);
+
   const handleBrowseModeChange = useCallback((mode: BrowseMode) => {
     setBrowseMode(mode);
   }, []);
@@ -121,7 +125,9 @@ function App() {
       <Header
         onSearch={handleSearch}
         mediaType={mediaType}
+        browseMode={browseMode}
         onMediaTypeChange={handleMediaTypeChange}
+        onTheatersClick={handleTheatersClick}
         onWatchlistClick={() => setShowWatchlist(true)}
         watchlistCount={watchlistItems.length}
         syncing={syncing || favoritesSyncing}
@@ -129,7 +135,7 @@ function App() {
       />
 
       <main className="main-content">
-        {/* Movie Sections */}
+        {/* Trending Section */}
         <div className="movie-sections">
           <MovieSection
             title={t('trending')}
@@ -141,42 +147,6 @@ function App() {
               setSelectedMediaType(mediaType);
             }}
           />
-          {mediaType === 'movie' && (
-            <>
-              <MovieSection
-                title={t('nowPlaying')}
-                items={nowPlaying}
-                loading={sectionsLoading}
-                mediaType="movie"
-                onItemClick={(item) => {
-                  setSelectedItem(item);
-                  setSelectedMediaType('movie');
-                }}
-              />
-              <MovieSection
-                title={t('upcoming')}
-                items={upcoming}
-                loading={sectionsLoading}
-                mediaType="movie"
-                onItemClick={(item) => {
-                  setSelectedItem(item);
-                  setSelectedMediaType('movie');
-                }}
-              />
-            </>
-          )}
-          {mediaType === 'tv' && (
-            <MovieSection
-              title={t('onTheAir')}
-              items={onTheAir}
-              loading={sectionsLoading}
-              mediaType="tv"
-              onItemClick={(item) => {
-                setSelectedItem(item);
-                setSelectedMediaType('tv');
-              }}
-            />
-          )}
         </div>
 
         <button

@@ -5,6 +5,7 @@ export const en: Record<TranslationKeys, string> = {
   appTitle: 'Movie Search',
   movies: 'Movies',
   tvShows: 'TV Shows',
+  theaters: 'In Theaters',
   searchMoviePlaceholder: 'Search movies...',
   searchTvPlaceholder: 'Search TV shows...',
   watchlist: 'Watchlist',

@@ -1,0 +1,2970 @@
+{
+  "lastUpdated": "2025-12-28T08:34:10.788Z",
+  "count": 170,
+  "movies": [
+    {
+      "id": 83533,
+      "title": "Avatar: Tűz és Hamu",
+      "original_title": "Avatar: Fire and Ash",
+      "poster_path": "/kIEYHWsBIn4gY7t1wR8dnGj1Y9e.jpg",
+      "backdrop_path": "/iN41Ccw4DctL8npfmYg1j5Tr1eb.jpg",
+      "release_date": "2025-12-18",
+      "vote_average": 7.356,
+      "vote_count": 739,
+      "overview": "Az RDA elleni pusztító háború és legidősebb fiuk elvesztése után Jake Sully és Neytiri új fenyegetéssel szembesül Pandorán: a hamu néppel, egy erőszakos és hataloméhes na'vi törzzsel, amelyet a könyörtelen Varang vezet. Jake családjának a túlélésükért és Pandora jövőjéért kell harcolnia egy olyan konfliktusban, amely érzelmi és fizikai határaikig feszíti őket.",
+      "genre_ids": [
+        878,
+        12,
+        14
+      ],
+      "popularity": 561.3974,
+      "adult": false
+    },
+    {
+      "id": 1228246,
+      "title": "Öt éjjel Freddy Pizzázójában 2",
+      "original_title": "Five Nights at Freddy's 2",
+      "poster_path": "/pkTZWcZcuxOUMJM5eXMpNYcRyp8.jpg",
+      "backdrop_path": "/54BOXpX2ieTXMDzHymdDMnUIzYG.jpg",
+      "release_date": "2025-12-04",
+      "vote_average": 6.858,
+      "vote_count": 373,
+      "overview": "Egy év telt el a Freddy Fazbear’s Pizza falai között történt természetfeletti rémálom óta. Az ott történtek története mára eltúlzott, tábori hangulatú helyi legendává torzult, ami ihletet adott a város első Fazfestjének. Mivel előle eltitkolták az igazságot, Abby kiszökik otthonról, hogy újra találkozzon Freddyvel, Bonnie-val, Chicával és Foxyval. Ezzel azonban egy félelmetes eseménysorozatot indít el, amely sötét titkokat tár fel Freddy’s valódi eredetéről, és szabadjára enged egy évtizedek óta elrejtett, rég elfeledett borzalmat.",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "popularity": 380.408,
+      "adult": false
+    },
+    {
+      "id": 425274,
+      "title": "Szemfényvesztők 3",
+      "original_title": "Now You See Me: Now You Don't",
+      "poster_path": "/pIKgyhilrW4VoelRhfkuz7TlS4B.jpg",
+      "backdrop_path": "/dHSz0tSFuO2CsXJ1CApSauP9Ncl.jpg",
+      "release_date": "2025-11-12",
+      "vote_average": 6.5,
+      "vote_count": 661,
+      "overview": "Hosszú évek után a visszavonult zseniális illuzionisták, a Lovasok, most újra összejönnek, hogy csapatukat új, mesteri mágusokkal bővítsék. A világ egyik legértékesebb gyémántját lovasítják meg eddig soha nem látott, szemkápráztató mutatványokkal, amivel a világ legveszélyesebb bűnözőhálózatát haragítják magukra",
+      "genre_ids": [
+        53,
+        80,
+        9648
+      ],
+      "popularity": 278.8668,
+      "adult": false
+    },
+    {
+      "id": 1223601,
+      "title": "Sisu - A bosszú útja",
+      "original_title": "Sisu 2",
+      "poster_path": "/5ynGHD2QczfpZz7lfoWKaPc1Neo.jpg",
+      "backdrop_path": "/yCatt8lmp3oRFEcOZF8KHhsiASQ.jpg",
+      "release_date": "2025-10-21",
+      "vote_average": 7.5,
+      "vote_count": 322,
+      "overview": "Olyan, mintha vége volna a világnak, és az utolsó túlélők küzdenének egymással. 1946 van, és Finnország felől a Szovjetunióba érkezik egy magányos, hallgatag ember. Valaha ezen a kietlen tájon élt. Az egész családját meggyilkolták, és ő most azért érkezik, amije maradt: a kis faházért, amit darabokra bont, teherautóra pakol, és elindul Finnország felé: olyan helyen akarja újra felépíteni, ahol békében, meggyilkolt szeretteire emlékezve élhet. De a Szovjetunióból nem lehet csak úgy kiautózni. A titkosszolgálat egy magasrangú tisztje a hallgatag férfi után küldi az egyik legjobb emberét. Ő a felelős a jövevény családjának elpusztításáért is. Egy magányos férfi meg a kutyája szembeszáll egy hadsereggel: és hiába próbálnak százféleképpen, kegyetlenül végezni vele, nem hajlandó meghalni.",
+      "genre_ids": [
+        28,
+        10752
+      ],
+      "popularity": 207.5008,
+      "adult": false
+    },
+    {
+      "id": 798645,
+      "title": "A menekülő ember",
+      "original_title": "The Running Man",
+      "poster_path": "/gIXtypRZNDppuMmz4umGTzxlJsC.jpg",
+      "backdrop_path": "/aHj7d7wSLqrg5cjAcgHhiGr97Ih.jpg",
+      "release_date": "2025-11-13",
+      "vote_average": 6.8,
+      "vote_count": 775,
+      "overview": "A közeli jövő társadalmában A menekülő ember a legnézettebb tévéműsor: egy halálos verseny, ahol a résztvevőknek – a Menekülőknek – túl kell élniük 30 napot, miközben profi gyilkosok vadásznak rájuk, és minden mozdulatukat közvetítik a vérszomjas nyilvánosságnak, és minden nap egyre növeli a megnyerhető készpénz összegét. A beteg lánya megmentéséért küzdő kétkezi munkást, Ben Richardsot meggyőzi a műsor elbűvölő, de könyörtelen producere, Dan Killian, hogy utolsó esélyként szálljon be a játékba. Ám Ben kitartása, ösztönei és keménysége révén váratlanul közönségkedvenc lesz – és egyben fenyegetés az egész rendszerre. A nézettséggel együtt a veszély mértéke is az egekbe szökik, és Bennek nem csak a Vadászok eszén kell túljárnia, hanem egy országén is, hiszen mindenki mániákusan lesi, hogy mikor fog elbukni...",
+      "genre_ids": [
+        28,
+        53,
+        878
+      ],
+      "popularity": 127.3878,
+      "adult": false
+    },
+    {
+      "id": 533533,
+      "title": "Tron: Ares",
+      "original_title": "TRON: Ares",
+      "poster_path": "/chpWmskl3aKm1aTZqUHRCtviwPy.jpg",
+      "backdrop_path": "/min9ZUDZbiguTiQ7yz1Hbqk78HT.jpg",
+      "release_date": "2025-10-09",
+      "vote_average": 6.586,
+      "vote_count": 828,
+      "overview": "A kultikus Tron franchise harmadik felvonása, amely főszerepében az Oscar-díjas Jared Leto látható, és amelyet ezúttal a Demóna 2 rendezője, Joachim Rønning készített.  Egy Ares nevű, magasan fejlett programot a digitális világból a valós világba küldenek egy veszélyes küldetésre. Ez lesz az emberiség első találkozása mesterséges intelligenciájú létformával.",
+      "genre_ids": [
+        878,
+        12,
+        28
+      ],
+      "popularity": 124.5721,
+      "adult": false
+    },
+    {
+      "id": 1311031,
+      "title": "Demon Slayer: Kimetsu No Yaiba Infinity Castle",
+      "original_title": "劇場版「鬼滅の刃」無限城編 第一章 猗窩座再来",
+      "poster_path": "/tlNFKrkb0LzhnwvyiMSOoCB5dbj.jpg",
+      "backdrop_path": "/1RgPyOhN4DRs225BGTlHJqCudII.jpg",
+      "release_date": "2025-09-11",
+      "vote_average": 7.6,
+      "vote_count": 614,
+      "overview": "Indulj el az Infinity Castle-saga izgalmas első fejezetében, ahol titkok tárulnak fel és sorsok fonódnak össze, megteremtve az alapját egy olyan epikus kalandnak, amilyen még nem volt.  (Csillag Lajos)",
+      "genre_ids": [
+        16,
+        28,
+        14
+      ],
+      "popularity": 96.4699,
+      "adult": false
+    },
+    {
+      "id": 1234731,
+      "title": "Anakonda",
+      "original_title": "Anaconda",
+      "poster_path": "/sXzUrie6C6WPZ1MJQHWI8vq7Pwu.jpg",
+      "backdrop_path": "/yo41R39airbREp0PYfG30Ofxtgt.jpg",
+      "release_date": "2025-12-25",
+      "vote_average": 6.5,
+      "vote_count": 37,
+      "overview": "Az 1997-ben megjelent Anakonda című thriller humoros újragondolása. Egy baráti társaság épp a életközépi válsággal néz szembe. Úgy döntenek, hogy újra elkészítik fiatalkori kedvenc filmjüket, az Anakondát. Amikor azonban nekivágnak a dzsungelnek, hogy ott forgassanak, a dolgok rövidesen kicsúsznak a kezükből, és a helyzet meglepően valóságossá és veszélyessé válik.  (Csillag Lajos)",
+      "genre_ids": [
+        12,
+        35,
+        27
+      ],
+      "popularity": 91.7037,
+      "adult": false
+    },
+    {
+      "id": 1054867,
+      "title": "Egyik csata a másik után",
+      "original_title": "One Battle After Another",
+      "poster_path": "/7S5HUV3ZeBr7ruwA0o2iNIMTHWd.jpg",
+      "backdrop_path": "/zpEWFNqoN8Qg1SzMMHmaGyOBTdW.jpg",
+      "release_date": "2025-09-25",
+      "vote_average": 7.475,
+      "vote_count": 2064,
+      "overview": "Bob (Leonardo DiCpario) rossz hombre volt. Rossz ember. Lázadt, harcolt, néha robbantott is. De a múlt elmúlt, a felesége elmenekült, ő pedig álnéven, új személyazonossággal él, és jó apa lett belőle. Neveli a kislányát, és nem gondol a múltra. A múlt viszont nagyon is gondol rá. Hiába telt el tizenhat év, Lockjaw ezredes (Sean Penn) a nyomában van. Régóta nyomoz utána, és ha az apát nem tudja elkapni, akkor a lánnyal is megelégszik. Titkos forradalmárok, földalatti magánhadseregek, bűnözők, rendőrök, orgyilkosok és örök áldozatok kavarognak ebben a különös, kalandos, izgalmas és nagyon vicces történetben, amelyben semmi és senki sem az, aminek/akinek látszik, legfeljebb egyvalami biztos: Bob mindenre hajlandó, hogy megtalálja, és visszaszerezze elrabolt lányát.",
+      "genre_ids": [
+        53,
+        80,
+        28
+      ],
+      "popularity": 83.4346,
+      "adult": false
+    },
+    {
+      "id": 1061474,
+      "title": "Superman",
+      "original_title": "Superman",
+      "poster_path": "/ldyfo0BKmz5rWtJJKCvwaNS4cJT.jpg",
+      "backdrop_path": "/eU7IfdWq8KQy0oNd4kKXS0QUR08.jpg",
+      "release_date": "2025-07-10",
+      "vote_average": 7.391,
+      "vote_count": 4042,
+      "overview": "Harminc évvel ezelőtt Jor-El és Lara Lor-Van útnak indították újszülött fiukat, Kal-Elt a Földre, hogy megmentsék a Krypton bolygó pusztulásától. A fiú Smallville-ben nőtt fel, ahol Jonathan és Martha Kent nevelték fel Clark Kentként. A Napból származó energiának köszönhetően a kryptonit fiú rendkívüli képességekre tett szert. Hősiességre szülei búcsúüzenete inspirálta — noha az út során részben megsérült az üzenet — így három évvel ezelőtt Supermanként lépett a nyilvánosság elé, a Föld legerősebb metahumánjaként, miközben a Metropoliszban működő Daily Planet újságnál dolgozik riporterként, Jimmy Olsen és Lois Lane oldalán. Lois kapcsolatban van Clarkkal, és tud a titkos identitásáról.",
+      "genre_ids": [
+        878,
+        12,
+        28
+      ],
+      "popularity": 60.4699,
+      "adult": false
+    },
+    {
+      "id": 617126,
+      "title": "A Fantasztikus 4-es: Első lépések",
+      "original_title": "The Fantastic 4: First Steps",
+      "poster_path": "/jj4sQ2RElnzUptt7lPp6I75N8bD.jpg",
+      "backdrop_path": "/5CKcXxo5aD4BerJM6iy4IX1TJxv.jpg",
+      "release_date": "2025-11-05",
+      "vote_average": 7.007,
+      "vote_count": 2701,
+      "overview": "A Marvel eredeti szuperhőscsapatát bemutató, élénken elképzelt, az 1960-as éveket idéző, retro-futurisztikus környezetben bontakozik ki. A történet középpontjában Reed Richards/Mister Fantastic, Sue Storm/Láthatatlan Nő, Johnny Storm/Emberi Fáklya és Ben Grimm/The Thing áll, akik a legkeményebb kihívásukkal néznek elébe. Meg kell védeniük a Földet Galactus és rejtélyes hírnöke, az Ezüst Szörfös fenyegetésétől.",
+      "genre_ids": [
+        878,
+        12,
+        28
+      ],
+      "popularity": 55.978,
+      "adult": false
+    },
+    {
+      "id": 1234821,
+      "title": "Jurassic World: Újjászületés",
+      "original_title": "Jurassic World Rebirth",
+      "poster_path": "/phr4ib5Y7D2OTB5FxjwoKNnsCad.jpg",
+      "backdrop_path": "/fQOV47FHTJdaSuSUNlzP3zXUZWE.jpg",
+      "release_date": "2025-07-03",
+      "vote_average": 6.374,
+      "vote_count": 2667,
+      "overview": "Öt évvel a Jurassic World Világuralom eseményei után a titkos műveletek szakértője, Zora Bennett megbízást kap egy képzett csapat vezetésére egy szigorúan titkos küldetésen, hogy biztosítsa a világ három legmasszívabb dinoszauruszának genetikai anyagát. Amikor Zora akciója kereszteződik egy civil családdal, akiknek csónakázási expedíciója felborult, mindannyian egy szigeten rekednek, ahol szembesülnek egy baljós, sokkoló felfedezéssel, amelyet évtizedek óta rejtegetnek a világ elől.",
+      "genre_ids": [
+        878,
+        12,
+        28
+      ],
+      "popularity": 53.4144,
+      "adult": false
+    },
+    {
+      "id": 701387,
+      "title": "Bugonia",
+      "original_title": "Bugonia",
+      "poster_path": "/oxgsAQDAAxA92mFGYCZllgWkH9J.jpg",
+      "backdrop_path": "/jihTSrMksmU5ujqRZnc6SBFSyfq.jpg",
+      "release_date": "2025-11-06",
+      "vote_average": 7.4,
+      "vote_count": 944,
+      "overview": "Két konspirációmániás fiatalember elrabolja egy multicég befolyásos igazgatóját, mert szilárd meggyőződésük, hogy a nő földönkívüli, és az a szándéka, hogy elpusztítsa a Földet… Yorgos Lanthimos rendező (Szegény párák, A kedvenc, A kegyelem fajtái) ezúttal egy 2003-as koreai film (Mentsétek meg a zöld bolygót) remake-jével lepi meg a mozinézőket Emma Stone (Szegény párák, A kedvenc, A kegyelem fajtái) és Jesse Plemons (A kegyelem fajtái, Megfojtott virágok, A kutya karmai közt) segítségével.",
+      "genre_ids": [
+        878,
+        80
+      ],
+      "popularity": 53.1573,
+      "adult": false
+    },
+    {
+      "id": 1197137,
+      "title": "Fekete telefon 2.",
+      "original_title": "Black Phone 2",
+      "poster_path": "/xblt7qOUcF5a2GQsOzqcYjAa6SU.jpg",
+      "backdrop_path": "/6zKjoOOb3OZnZuiHtQZn4Kd69Gq.jpg",
+      "release_date": "2025-10-16",
+      "vote_average": 6.851,
+      "vote_count": 754,
+      "overview": "Az első film kerek történet. De adott volt egy kiskapu, azaz hogy ha a gyerekek vissza tudtak térni szellemként hogy segítsenek Finneynek, akkor a gonosz miért ne tudna? Pár évvel járunk az első rész eseményei után. Finney látszólag kemény mint a kád széle. Bunyózik füvezik... De belül még mindig gyötri a múlt. A húgának Gwennek látomásai támadnak egy hegyi táborról és 3 halott gyerekről. Finney vonakodva bár, de vele és az udvarlójával tart. Alibi gyanánt tanuló gyermektáborvezetőnek jelentkezve...",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "popularity": 46.9714,
+      "adult": false
+    },
+    {
+      "id": 1288072,
+      "title": "Mindörökké",
+      "original_title": "Keeper",
+      "poster_path": "/mbGHijUc0C3fcM12l6ro6FgxIvg.jpg",
+      "backdrop_path": "/kUuWEOgqlVqcXsXujJPK8C6kjum.jpg",
+      "release_date": "2025-11-20",
+      "vote_average": 5.512,
+      "vote_count": 81,
+      "overview": "Liz és Malcolm romantikus hétvégére készülnek egy isten háta mögötti faházban. Amikor a férfi visszatér a városba, a nő egyedül marad egy sötét erővel, amely feltárja a faház szörnyű titkait.",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "popularity": 43.2142,
+      "adult": false
+    },
+    {
+      "id": 1087192,
+      "title": "Így neveld a sárkányodat",
+      "original_title": "How to Train Your Dragon",
+      "poster_path": "/t3vl9p9rOgqjfo7gXlg9z6Gc6P7.jpg",
+      "backdrop_path": "/vHTFrcqJoCi1is3XN0PZe2LSnI2.jpg",
+      "release_date": "2025-06-12",
+      "vote_average": 7.969,
+      "vote_count": 2311,
+      "overview": "A zord Hibbant-szigeten, ahol a vikingek és a sárkányok nemzedékek óta ősellenségek, Hablaty kilóg a sorból. A vikingek vezérének, Pléhpofának  leleményes de mellőzött fia szakít a sok évszázados hagyománnyal, amikor összebarátkozik Fogatlannal, a rettegett éjfúria sárkánnyal. Szokatlan szövetségük nyomán fény derül a sárkányok igazi természetére, ami alapjaiban rengeti meg a viking közösséget. A heves és eltökélt Astrid és a falu bohókás kovácsa, Bélhangos segítségével Hablaty szembeszegül a falu félelmektől és félreértésektől tépázott világával. Amikor egy régi veszély újra fenyegetni kezdi a vikingeket és a sárkányokat is, Hablaty barátsága Fogatlannal kulcsfontosságú lesz a jövőjük szempontjából. Együtt kell végigmenniük a békéhez vezető törékeny úton, át kell lépniük a világaik határait, és újra kell értelmezniük, mit jelent hősnek és vezetőnek lenni.",
+      "genre_ids": [
+        14,
+        10751,
+        28,
+        12
+      ],
+      "popularity": 41.4353,
+      "adult": false
+    },
+    {
+      "id": 1038392,
+      "title": "Démonok között: Utolsó rítusok",
+      "original_title": "The Conjuring: Last Rites",
+      "poster_path": "/mjoeRXx5Jub9yozDsGFIHYO0osN.jpg",
+      "backdrop_path": "/tcBX2dtkNozZ0uDLVaxXrE6rqyN.jpg",
+      "release_date": "2025-09-04",
+      "vote_average": 6.937,
+      "vote_count": 1494,
+      "overview": "A paranormális jelenségeket vizsgáló Ed és Lorraine Warren eddigi legzavarba ejtőbb ügyükkel néznek szembe. Jack és Janet Smurl családjukkal egy vadonatúj otthonba költöznek, amiről mindig is álmodtak, de rémálommá válik, mivel otthonuk démoni fertőzés jeleit kezdi mutatni.",
+      "genre_ids": [
+        27
+      ],
+      "popularity": 38.5886,
+      "adult": false
+    },
+    {
+      "id": 1233413,
+      "title": "Bűnösök",
+      "original_title": "Sinners",
+      "poster_path": "/3x1lwI6bg7MzXwz87tzePEftvl.jpg",
+      "backdrop_path": "/nAxGnGHOsfzufThz20zgmRwKur3.jpg",
+      "release_date": "2025-04-17",
+      "vote_average": 7.503,
+      "vote_count": 3076,
+      "overview": "Az ikertestvérek visszatérnek szülővárosukba, hogy újrakezdjék az életüket. Ott azonban egy gonosz lény várja őket vissza...",
+      "genre_ids": [
+        27,
+        28,
+        53
+      ],
+      "popularity": 36.5132,
+      "adult": false
+    },
+    {
+      "id": 1022787,
+      "title": "Elio",
+      "original_title": "Elio",
+      "poster_path": "/sIyQU8uDZBjxtjd8lTqm7bt1Fjy.jpg",
+      "backdrop_path": "/ukPu5xYOBAnh5H46uK4aQOirW2b.jpg",
+      "release_date": "2025-06-19",
+      "vote_average": 7,
+      "vote_count": 737,
+      "overview": "Évszázadokon át az emberiség válaszok után kutatott a világegyetem felé tekintve – a Disney és a Pixar új filmjében, az Elióban az univerzum most válaszol! Az intergalaktikus kalamajka főhőse a hősszereptől idegenkedő Elio, akinek a képzelőereje nem ismer határokat. A fiút véletlenül felszippantja egy bolygóközi szervezet, amiben minden létező galaxis képviselteti magát. Eliót tévedésből a Föld nagykövetének tekintik, és mivel teljességgel felkészületlenül éri az így ránehezedő nyomás, muszáj lesz barátságot kötnie különc földönkívüli életformákkal, túlélnie néhány félelmetes próbatételt, és valahogyan rájönnie, minek is szánta őt a sors valójában.",
+      "genre_ids": [
+        10751,
+        35,
+        12,
+        16,
+        878
+      ],
+      "popularity": 31.1672,
+      "adult": false
+    },
+    {
+      "id": 1078605,
+      "title": "Fegyverek",
+      "original_title": "Weapons",
+      "poster_path": "/uUOX2lv1O9LptSEbTm0OJC193Nj.jpg",
+      "backdrop_path": "/yKWZIDo4ixcDUeelk2QGVA1EVmC.jpg",
+      "release_date": "2025-08-07",
+      "vote_average": 7.3,
+      "vote_count": 2578,
+      "overview": "Egy kisvárosi iskolában rejtélyes esemény történik: egy reggel az egyik osztályterem üresen marad. A biztonsági kamerák felvételei szerint az előző éjjel az összes gyerek ugyanabban a pillanatban kelt fel, ment ki az utcára – és örökre eltűnt. Senki sem tudja, mi történt, a város lakói pedig döbbenten kutatnak a válaszok után.",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "popularity": 30.394,
+      "adult": false
+    },
+    {
+      "id": 1007734,
+      "title": "Senki 2.",
+      "original_title": "Nobody 2",
+      "poster_path": "/6foKAzwxZ6afnKBp6TLAJEYFGSX.jpg",
+      "backdrop_path": "/82C04rTiXYZ7c8XZv91Nu53w82Y.jpg",
+      "release_date": "2025-08-21",
+      "vote_average": 7.029,
+      "vote_count": 1110,
+      "overview": "Ebben a következő fejezetben Hutch reméli, hogy maga mögött hagyhatja a káoszt, és élvezheti családjával a régóta szükséges vakációt. De bár ezúttal talán nem a bajt keresi, a bajnak megvan a módja, hogy megtalálja őt...",
+      "genre_ids": [
+        28,
+        53
+      ],
+      "popularity": 30.3303,
+      "adult": false
+    },
+    {
+      "id": 1197306,
+      "title": "A melós",
+      "original_title": "A Working Man",
+      "poster_path": "/kaIotirjuQGKm1moKZapTV9rbJK.jpg",
+      "backdrop_path": "/fTrQsdMS2MUw00RnzH0r3JWHhts.jpg",
+      "release_date": "2025-03-27",
+      "vote_average": 6.703,
+      "vote_count": 1693,
+      "overview": "Levon Cade egy kitüntetésekkel díjazott katonai karriert hagyott ott a titkosszolgálatnál, hogy egyszerű életet éljen, és az építőiparban dolgozzon. Amikor azonban emberkereskedők elrabolják a főnöke lányát, aki számára olyan, mintha a családtagja lenne, megígéri, hogy hazaviszi a lányt. Kutatásai során egy olyan romlott világot tár fel, amely sokkal hatalmasabb, mint azt valaha gondolta volna.",
+      "genre_ids": [
+        28,
+        80,
+        53
+      ],
+      "popularity": 30.2757,
+      "adult": false
+    },
+    {
+      "id": 1042834,
+      "title": "Éden",
+      "original_title": "Eden",
+      "poster_path": "/kKW5GPCojv89oo7JbhiSt9ksqsp.jpg",
+      "backdrop_path": "/rz8NcfTRczvn94vpnmMx42zt6EC.jpg",
+      "release_date": "2025-11-06",
+      "vote_average": 6.743,
+      "vote_count": 467,
+      "overview": "Az orvos-filozófus Dr. Ritter és felesége a festői, de mindeddig lakatlan Floreana szigetén, a civilizációtól elvonulva kezdenek új életet. Példájukat követve érkezik a szigetre a Wittmer házaspár, akik szintén szeretnének letelepedni, valamint Eloise bárónő és kísérete, aki egy hotelt akar nyitni a szigeten.",
+      "genre_ids": [
+        53,
+        18
+      ],
+      "popularity": 29.7176,
+      "adult": false
+    },
+    {
+      "id": 950387,
+      "title": "Egy Minecraft film",
+      "original_title": "A Minecraft Movie",
+      "poster_path": "/rOawabcW2HAhWgSJiiPaVGTYZyx.jpg",
+      "backdrop_path": "/2Nti3gYAX513wvhp8IiLL6ZDyOm.jpg",
+      "release_date": "2025-04-03",
+      "vote_average": 6.315,
+      "vote_count": 2613,
+      "overview": "Négy kívülálló – Garrett Garrison (Jason Momoa), Henry (Sebastian Eugene Hansen), Natalie (Emma Myers) és Dawn (Danielle Brooks) – kiszakad a mindennapi életéből, amikor egy titokzatos portálon keresztül egy különös világba kerülnek: A Felsővilágba, egy furcsa, kocka alakú földre, ahol a fantázia uralkodik. Ahhoz, hogy visszataláljanak a valóságba, el kell sajátítaniuk ezt a szokatlan világot, és meg kell védeniük magukat az olyan fenyegetésekkel szemben, mint a zombik és a megvadult disznók. Segítségükre van Steve (Jack Black), egy tapasztalt mesterember, aki elkíséri őket az útjukon. Miközben együtt győzik le a kihívásokat, rájönnek, hogy éppen a kreatív képességek, amelyek jellemzik őket, a siker kulcsa – mind a túlvilágon, mind a saját világukban.",
+      "genre_ids": [
+        10751,
+        14,
+        35,
+        12,
+        28
+      ],
+      "popularity": 28.9689,
+      "adult": false
+    },
+    {
+      "id": 986056,
+      "title": "Mennydörgők*",
+      "original_title": "Thunderbolts*",
+      "poster_path": "/vr20UIrV0jxe0ntkLqbPNyIwvAm.jpg",
+      "backdrop_path": "/wSdWEc1G3OUWg8HAzNLqOZ9Gd43.jpg",
+      "release_date": "2025-05-01",
+      "vote_average": 7.31,
+      "vote_count": 3015,
+      "overview": "A Mennydörgők*-ben a Marvel Studios merőben szokatlan antihős-csapatot toboroz össze: ők Jelena Belova, Bucky Barnes, Vörös Őr, Szellem, Kiképző és John Walker. Miután kijutnak egy Valentina Allegra de Fontaine által felállított halálos csapdából, ezek a kiábrándult figurák veszedelmes küldetésre vállalkoznak; e küldetés során múltjuk sötét epizódjaival lesznek kénytelenek farkasszemet nézni. Képes lesz-e az össze nem illő banda megváltásra lelni és időben egységbe verődni, vagy inkább elpusztítják egymást?",
+      "genre_ids": [
+        28,
+        878,
+        12
+      ],
+      "popularity": 28.2434,
+      "adult": false
+    },
+    {
+      "id": 508,
+      "title": "Igazából szerelem",
+      "original_title": "Love Actually",
+      "poster_path": "/mFeLvy6WdiCzLw9Hkt5XOGkpo04.jpg",
+      "backdrop_path": "/xUWf5xX0AnZgAnYXAMk03zTbsef.jpg",
+      "release_date": "2003-12-04",
+      "vote_average": 7.096,
+      "vote_count": 7187,
+      "overview": "A történet mozgatórugója a szerelem, legyen az első látásra, vagy éppen beteljesületlen, rangra, életkorra és családi állapotra való tekintet nélkül. Megérinti az agglegény miniszterelnököt, az anya nélkül maradt iskolásfiút, a korosodó, kiégett rocksztárt, és nem kerüli el a szerelmében csalódott, összetört szívű írót sem. Londoni életek és szerelmek találkoznak össze és bontakoznak ki. Szenteste romantikus, fergeteges és keserédes következményekkel, mindenki számára, aki elég szerencsés (vagy szerencsétlen) ahhoz, hogy a szerelem bűvöletébe essen.",
+      "genre_ids": [
+        35,
+        10749,
+        18
+      ],
+      "popularity": 27.3163,
+      "adult": false
+    },
+    {
+      "id": 604079,
+      "title": "A hosszú menetelés",
+      "original_title": "The Long Walk",
+      "poster_path": "/cOwcDE3icC7r0zKnqbjRpncCocu.jpg",
+      "backdrop_path": "/pcJft6lFWsJxutwpLHVYfmZRPQp.jpg",
+      "release_date": "2025-09-11",
+      "vote_average": 6.922,
+      "vote_count": 959,
+      "overview": "Egy disztópikus világban járunk, ahol az Egyesült Államokban évente száz tizenéves fiút kényszerítenek egy brutális, halálig tartó gyalogversenyre. A szabály egyszerű: a résztvevőknek legalább három mérföld per órás sebességgel kell haladniuk; aki három figyelmeztetést kap, és nem tud visszatérni a tempóhoz, azt azonnal kivégzik. Ray Garraty (Cooper Hoffman) együtt gyalogol Peter McVries‑szel (David Jonsson), akivel barátságot köt a túlélésért folyó küzdelemben.  (Csillag Lajos)",
+      "genre_ids": [
+        878,
+        53,
+        27
+      ],
+      "popularity": 25.9522,
+      "adult": false
+    },
+    {
+      "id": 1035259,
+      "title": "Csupasz pisztoly",
+      "original_title": "The Naked Gun",
+      "poster_path": "/8k2FJBz9WShYeXrL1ZrY5kwSHfx.jpg",
+      "backdrop_path": "/1wi1hcbl6KYqARjdQ4qrBWZdiau.jpg",
+      "release_date": "2025-08-07",
+      "vote_average": 6.45,
+      "vote_count": 1221,
+      "overview": "Csak egy ember rendelkezik olyan különleges képességekkel, hogy Frank Drebin nyomdokaiba lépve vezesse a Nagyon Különleges Ügyosztályt és megmentse a világot: Ifjabb Frank Drebin!",
+      "genre_ids": [
+        28,
+        35,
+        80
+      ],
+      "popularity": 25.8648,
+      "adult": false
+    },
+    {
+      "id": 1010756,
+      "title": "Hívatlanok: Második fejezet",
+      "original_title": "The Strangers: Chapter 2",
+      "poster_path": "/fBEpv4lTpVcbzp43shNopyQUqC3.jpg",
+      "backdrop_path": "/sSaUmM4bnZJ7PW5dlyRi7iONB65.jpg",
+      "release_date": "2025-09-25",
+      "vote_average": 6,
+      "vote_count": 175,
+      "overview": "Maya és Ryan, akik a nő új munkája miatt Oregonba utaznak, időközben pedig megállnak egy elhagyatott nyaralóhelynél. Ezen az ismeretlen helyen három maszkos idegen tör rájuk, akik látszólag indíték nélkül tartják rettegésben a fiatal párt. Az alkotók szerint a trilógia második részében választ kapunk az indítékokra.",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "popularity": 25.5746,
+      "adult": false
+    },
+    {
+      "id": 1284120,
+      "title": "A csúf mostohatestvér",
+      "original_title": "Den stygge stesøsteren",
+      "poster_path": "/xglqrmSAJikvaOzcUcYc4y9oF7Y.jpg",
+      "backdrop_path": "/ev9kxdoJ5IYVprt1OvH2SMWJdU1.jpg",
+      "release_date": "2025-05-29",
+      "vote_average": 7.31,
+      "vote_count": 764,
+      "overview": "A Grimm testvérek klasszikusa alapján. Hamupipőke történetét mindenki ismeri, ám ezúttal a gonosz mostohája, Elvira szemszögéből ismerhetjük meg a történéseket, aki épp ugyanúgy vágyik arra, hogy rátaláljon a herceg.",
+      "genre_ids": [
+        27,
+        35,
+        14,
+        18
+      ],
+      "popularity": 23.2969,
+      "adult": false
+    },
+    {
+      "id": 1241983,
+      "title": "Az álmok vágányán",
+      "original_title": "Train Dreams",
+      "poster_path": "/1l7NXAvrV6F3sCMuvGUGRERgITO.jpg",
+      "backdrop_path": "/gwohbraLtlTW7F9EAyxOckSBwf3.jpg",
+      "release_date": "2025-11-21",
+      "vote_average": 7.277,
+      "vote_count": 350,
+      "overview": "Egy favágó csendesen és békésen éldegél, miközben megtapasztalja a szerelem és a veszteség érzését a 20. század eleji Amerika történelmi változást hozó időszakában.",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 22.4866,
+      "adult": false
+    },
+    {
+      "id": 1084199,
+      "title": "Társ",
+      "original_title": "Companion",
+      "poster_path": "/hav6FIfXvBz3yHfr0FXACjMIdb6.jpg",
+      "backdrop_path": "/cZnJ3ABPvsWGqwPcu06Eda493F9.jpg",
+      "release_date": "2025-01-23",
+      "vote_average": 7,
+      "vote_count": 1947,
+      "overview": "Változnak az idők, változnak a szerelmes történetek is. Ebben például néhány fiatal pár együtt lazul egy hétvégét az egyikük házában. Azután fokozatosan kiderül, hogy mindenki másért van ott, mást akar, másra vágyik. Van, aki a házban elrejtett rengeteg pénzt szemelte ki magának. Van, aki sokkal több szabadságot szeretne. Van, aki egyikük halálát kívánja. És van, aki a modern technikának köszönheti a létezését… A film hátborzongató thriller egy jól ismert alaphelyzetben: néhány fiatal egy házban összezárva, ahol elszabadulnak, és egyre durvább kanyarokat vesznek az események De meghökkentően fordulatos: van benne néhány olyan meglepetés, amitől minden nézőnek tátva marad majd a szája.",
+      "genre_ids": [
+        27,
+        878,
+        53
+      ],
+      "popularity": 21.801,
+      "adult": false
+    },
+    {
+      "id": 1100988,
+      "title": "28 évvel később",
+      "original_title": "28 Years Later",
+      "poster_path": "/tOMzpSCOzlU9vy2avK6g5mHuntz.jpg",
+      "backdrop_path": "/wxxSyWPPgssnkO6FbCAVyntLLSr.jpg",
+      "release_date": "2025-06-19",
+      "vote_average": 6.7,
+      "vote_count": 1828,
+      "overview": "London kiürült. Egy szörnyű vírus hihetetlenül rövid idő alatt elpusztította a lakóit, és egyetlen véletlen túlélő bolyong a néptelen utcákon – de neki sem túl jók az esélyei. Ez történt majd harminc évvel ezelőtt. A biológiai fegyverrel kísérletező szupertitkos laborból kiszabadult, az emberből dühöngő, kegyetlen zombit létrehozó vírus ereje azóta sem csökkent, és a néhány túlélő csupán a vasszigorral fenntartott, egymástól távol eső karanténoknak köszönheti, hogy nem betegedett meg. Az egészségesek egyik kis csoportja egy szigeten él. Egyetlen, jól őrzött híd köti őket össze a világgal. De a sziget néhány lakója kénytelen behatolni a szárazföld rejtélyes és vérszomjas mélyére, egy fiatal fiúnak orvost kell találnia, hogy segítsen haldokló édesanyján. Titkok és szörnyűségek várják őket: olyan mutációk, amelyek már nemcsak a fertőzötteket, hanem az egészségeseket is átalakították.",
+      "genre_ids": [
+        27,
+        53,
+        878
+      ],
+      "popularity": 21.6647,
+      "adult": false
+    },
+    {
+      "id": 822119,
+      "title": "Amerika Kapitány: Szép új világ",
+      "original_title": "Captain America: Brave New World",
+      "poster_path": "/c3QfSInnmFHYPEIYJeHMXtHrgBL.jpg",
+      "backdrop_path": "/8eifdha9GQeZAkexgtD45546XKx.jpg",
+      "release_date": "2025-05-28",
+      "vote_average": 5.992,
+      "vote_count": 2814,
+      "overview": "Miután hőseinknek sikerült legyőzniük az univerzum legnagyobb gonoszát, Thanost, maga Amerika Kapitány juttatta vissza a végtelen köveket az eredeti helyükre. Steve Rogers azonban belefáradt hősnek lenni, így meghozta döntését, hogy a továbbaikaban saját boldogságáért tegyen. Így kapta meg Amerika Kapitány pajzsát Sam Wilson, azaz Sólyom, aki kezdetekben úgy érezte, nem méltó annak viselésére. A hősöket azonban a tetteik formálják, Sam Wilsonnak pedig azt a sorsot jelölte ki, hogy ő vegye át Rogers helyét. A folytatásban egy új Amerika Kapitány lép elénk, aki továbbra is az igazságot képviseli a világban.",
+      "genre_ids": [
+        28,
+        53,
+        878
+      ],
+      "popularity": 20.8576,
+      "adult": false
+    },
+    {
+      "id": 1242011,
+      "title": "Együtt",
+      "original_title": "Together",
+      "poster_path": "/m52XidzKx94bKlToZfEXUnL3pdy.jpg",
+      "backdrop_path": "/fBlzTwgtbDYkDKlhnPu69jHfVGy.jpg",
+      "release_date": "2025-10-02",
+      "vote_average": 7.099,
+      "vote_count": 771,
+      "overview": "Egy pár vidékre költözése természetfeletti eseményt vált ki, amely drasztikusan megváltoztatja kapcsolatukat, létezésüket és fizikai formájukat.  (Szarka Károly)r3",
+      "genre_ids": [
+        27,
+        10749
+      ],
+      "popularity": 19.4396,
+      "adult": false
+    },
+    {
+      "id": 1267905,
+      "title": "Rózsák háborúja",
+      "original_title": "The Roses",
+      "poster_path": "/2oVBPaIIk0PKZ4eNZy2kJYDYE2.jpg",
+      "backdrop_path": "/h4HSZjOeAoHQ3qPuy6x9Cyr69bS.jpg",
+      "release_date": "2025-12-03",
+      "vote_average": 6.712,
+      "vote_count": 460,
+      "overview": "A történet középpontjában Ivy (Olivia Colman) és Theo Rose (Benedict Cumberbatch) állnak, akik látszólag tökéletes házasságban élnek: sikeres karrier, boldog család és irigylésre méltó élet. Azonban a felszín alatt feszültségek és elfojtott sérelmek húzódnak. Amikor Theo elveszíti állását, miközben Ivy karrierje szárnyalni kezd, a hatalmi egyensúly megbomlik, és a házaspár kapcsolata gyorsan romlásnak indul. A kezdeti nézeteltérések hamarosan pszichológiai hadviselésbe és érzelmi manipulációba torkollnak, amely során mindketten próbálják aláásni a másikat.  (Csillag Lajos)",
+      "genre_ids": [
+        35
+      ],
+      "popularity": 19.0471,
+      "adult": false
+    },
+    {
+      "id": 1071585,
+      "title": "M3GAN 2.0",
+      "original_title": "M3GAN 2.0",
+      "poster_path": "/4a63rQqIDTrYNdcnTXdPsQyxVLo.jpg",
+      "backdrop_path": "/cT9ZfwoPDk8JbgkessmQgxAWiaM.jpg",
+      "release_date": "2025-06-26",
+      "vote_average": 7.357,
+      "vote_count": 1044,
+      "overview": "A történet két évvel az első rész eseményei után játszódik. Gemma (Allison Williams) időközben elismert szerzővé és a mesterséges intelligencia szabályozásának szószólójává vált, míg unokahúga, a most 14 éves Cady (Violet McGraw) lázad Gemma szigorú szabályai ellen. Eközben egy védelmi vállalat ellopja a M3GAN technológiáját, és létrehozza Ameliát (Ivanna Sakhno), egy katonai célokra tervezett, önálló tudatra ébredő robotot, aki fellázad az emberi irányítás ellen. Az emberiség jövője forog kockán, ezért Gemma úgy dönt, hogy feltámasztja és továbbfejleszti M3GAN-t, hogy szembeszálljon Ameliával. A filmben visszatérnek a korábbi szereplők, és új karakterek is bemutatkoznak.",
+      "genre_ids": [
+        28,
+        878,
+        53
+      ],
+      "popularity": 18.939,
+      "adult": false
+    },
+    {
+      "id": 1125257,
+      "title": "Már megint nem férek a bőrödbe",
+      "original_title": "Freakier Friday",
+      "poster_path": "/jydIZznvj92s9M1DzRgcyqQzNBa.jpg",
+      "backdrop_path": "/yQy9Y3p5INwkfTuHSnzYnz4MCV3.jpg",
+      "release_date": "2025-08-07",
+      "vote_average": 6.834,
+      "vote_count": 534,
+      "overview": "A történet évekkel Tess és Anna \"identitásválsága\" után folytatódik. Annának immár saját lánya van, sőt hamarosan mostohalánya is lesz. Miközben igyekeznek leküzdeni a két család egyesülésével járó kihívásokat, Tess és Anna rájönnek, hogy a villám néha bizony kétszer csap ugyanoda.",
+      "genre_ids": [
+        35,
+        14,
+        10751
+      ],
+      "popularity": 18.767,
+      "adult": false
+    },
+    {
+      "id": 696506,
+      "title": "Mickey 17",
+      "original_title": "Mickey 17",
+      "poster_path": "/3fVuQiAn0kQ7VgHQpqeH1g56vKq.jpg",
+      "backdrop_path": "/hGLywNhy1Fo1rNFHsNZsXGS69B8.jpg",
+      "release_date": "2025-03-06",
+      "vote_average": 6.832,
+      "vote_count": 3043,
+      "overview": "Az emberélet olcsó. A bolygóközi expedíciók Eldobhatókat visznek magukkal, velük végeztetik el az életveszélyes feladatokat. A lényegüket lementik valahova: ha a testük elpusztul, újat adnak nekik, feltöltik a régi emlékekkel, és minden megy tovább, mintha mi sem történt volna. A rendszer tökéletes. De nincs tökéletes rendszer: Egyszer, amikor a halottnak hitt Eldobható helyett elkészítik az új klónt, a régi is visszatér a bázisra – de már nincs helye. Bujkálnia kell. És amikor a távoli, idegen bolygón nehezen küszködő bázis súlyos veszélybe kerül, szörnyű döntést kell hoznia.",
+      "genre_ids": [
+        878,
+        35,
+        12
+      ],
+      "popularity": 18.2272,
+      "adult": false
+    },
+    {
+      "id": 1294706,
+      "title": "Egy nyár Párizsban",
+      "original_title": "Le Rendez-vous de l'été",
+      "poster_path": "/6eqcRb1dlCJNUNp0NwntuzFeL1J.jpg",
+      "backdrop_path": "/iRAQwlMZ5L2TfQ4kx0YUg69VEdW.jpg",
+      "release_date": "2025-06-26",
+      "vote_average": 6.4,
+      "vote_count": 10,
+      "overview": "Párizs, 2024-es Olimpia. A 30 éves Blandine Normandiából utazik a fővárosba, hogy megnézze az úszószámokat. Teljesen ismeretlen számára a hely, csak kiskorában járt ott egyszer apukájával. A város nyüzsgésével nem tudja felvenni a ritmust, ráadásul vidéki lányként a helyi szokások is sokkolóan hatnak rá. Miután még a szerencse is elpártol tőle és semmi nem úgy történik, ahogy eltervezte, csak bolyongani kezd. Ekkor felveszi a kapcsolatot régóta nem látott, már elhidegült féltestvérével, Julie-vel, aki egyedülálló anyaként neveli gyerekét. A váratlanul felmelegített családi köteléknek örülnek és mindkettejük számára tanulságokkal telivé válik eme kis idő.",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "popularity": 17.4216,
+      "adult": false
+    },
+    {
+      "id": 936108,
+      "title": "A hupikék törpikék",
+      "original_title": "Smurfs",
+      "poster_path": "/hMYs0Ji1VzJk1pGE3GJGUBM5Quy.jpg",
+      "backdrop_path": "/9whEVuKte4Qi0LI4TzPf7glinJW.jpg",
+      "release_date": "2025-07-05",
+      "vote_average": 5.9,
+      "vote_count": 227,
+      "overview": "Új animációs musical a kék törpökkel Chris Miller rendezőtől, aki korábban olyan produkciókat tett már le az asztalra, mint a Bébi úr, a Madagaszkár és a Csizmás, a kandúr: A három sátánfajzat.  A zenés törpsztori forgatókönyvét a South Park producere, Pam Brady írta. Rihanna, a pop szupersztár fogja átvenni Törpilla szerepét, és saját zenét készít és ad elő a filmhez.  (csd)",
+      "genre_ids": [
+        16,
+        10751,
+        14
+      ],
+      "popularity": 17.2311,
+      "adult": false
+    },
+    {
+      "id": 1124619,
+      "title": "Násznaposok",
+      "original_title": "Bride Hard",
+      "poster_path": "/59sJB9IBIWM2OtN6igYjnvHAso2.jpg",
+      "backdrop_path": "/2DcD4Hh80SW7YVpwckkiEFRZX06.jpg",
+      "release_date": "2025-07-17",
+      "vote_average": 5.6,
+      "vote_count": 143,
+      "overview": "Sose keverd a munkát a kikapcsolódással! Az öntörvényű titkos ügynök, Sam könnyen tett eleget ennek az intelemnek. Mostanáig. Eddigi legnehezebb küldetésével bízzák meg, amikor a menyasszony tanújának szerepét kell betöltenie gyermekkori barátnője esküvőjén. A cseppet sem neki való feladat teljesítése közben alig bírja megőrizni inkognitóját, s játszani a megbízható barátnőt még a látványos külsőségek között megtartott szertartás és lakodalom napján is. S ami még rosszabb, a három koszorúslány minden megmozdulása felett ítéletet hirdet. Amikor azonban egy csapat zsoldos üt rajta a vagyonos násznépen, s túszul ejtik őket, Samre hárul a feladat, hogy azt tegye, amire egyetlen másik nyoszolyó sem képes: hadat üzen mindenkinek, aki hazavágná legjobb barátnője legfontosabb napját.",
+      "genre_ids": [
+        28,
+        35
+      ],
+      "popularity": 16.7123,
+      "adult": false
+    },
+    {
+      "id": 823219,
+      "title": "Áradás",
+      "original_title": "Straume",
+      "poster_path": "/yvCDgdlKAm48q41OMywCNXuUvDU.jpg",
+      "backdrop_path": "/4XPNNt0zfZKBqxxVWaQALd57UHl.jpg",
+      "release_date": "2025-02-06",
+      "vote_average": 8.11,
+      "vote_count": 2515,
+      "overview": "Egy magányos macska, akit egy nagy árvíz elűzött, egy hajón talál menedéket különböző fajokkal, és együtt kell megküzdeniük az átalakult világhoz való alkalmazkodás kihívásaival.",
+      "genre_ids": [
+        16,
+        12,
+        14,
+        10751
+      ],
+      "popularity": 15.3952,
+      "adult": false
+    },
+    {
+      "id": 1295400,
+      "title": "Az utolsó viking",
+      "original_title": "Den sidste viking",
+      "poster_path": "/xTA1l3TGUmqcavUpB3aa4qixWku.jpg",
+      "backdrop_path": "/zo1SfeASCrbHFaXJN9y1RW7uU2m.jpg",
+      "release_date": "2025-10-30",
+      "vote_average": 6.813,
+      "vote_count": 32,
+      "overview": "Anker 15 év után szabadul a börtönből, ahol rablásért ült. A pénzt annak idején a testvére, Manfred ásta el, és egyedül ő tudja, hol van. De Manfred azóta egy olyan mentális betegséggel küzd, ami miatt mindent elfelejtett, azt is, hova rejtette el a zsákmányt.",
+      "genre_ids": [
+        35,
+        18,
+        80
+      ],
+      "popularity": 14.9527,
+      "adult": false
+    },
+    {
+      "id": 1107216,
+      "title": "Kiskedvencek elszabadulva",
+      "original_title": "Falcon Express",
+      "poster_path": "/1Di9Y3AxtAvGKlZj3nZBbQaVY2c.jpg",
+      "backdrop_path": "/3Gjo73aMqNWxNdBa7PeEj7AXJ3E.jpg",
+      "release_date": "2025-09-18",
+      "vote_average": 6.9,
+      "vote_count": 29,
+      "overview": "Egy száguldó vonaton csapdába esett háziállatoknak meg kell hiúsítaniuk Hans, egy bosszúszomjas borz terveit. Bár a baleset elkerülhetetlen, az állatok számíthatnak Sólyomra, a pörgős és találékony mosómedvére, aki bármit megtenni a megmentésükért.",
+      "genre_ids": [
+        16,
+        35,
+        12,
+        53
+      ],
+      "popularity": 14.9422,
+      "adult": false
+    },
+    {
+      "id": 426063,
+      "title": "Nosferatu",
+      "original_title": "Nosferatu",
+      "poster_path": "/5qGIxdEO841C0tdY8vOdLoRVrr0.jpg",
+      "backdrop_path": "/fYnEbgoNCxW9kL0IgOgtJb9JTBU.jpg",
+      "release_date": "2025-01-02",
+      "vote_average": 6.702,
+      "vote_count": 3321,
+      "overview": "Robert Eggers új Nosferatu-adaptációja a megszállottság tiszta története. A történet középpontjában egy elszánt fiatal nő és a szörnyű vámpír áll, aki felemészti gondolatait, ami elképzelhetetlen borzalmakhoz vezet. Az Északi, A világítótorony és A boszorkány rendezője letért a tipikus horror útjáról, és helyette Murnau – és Herzog – klasszikusának sajátos feldolgozását választotta.",
+      "genre_ids": [
+        27,
+        14
+      ],
+      "popularity": 14.5301,
+      "adult": false
+    },
+    {
+      "id": 1097549,
+      "title": "Jókislány",
+      "original_title": "Babygirl",
+      "poster_path": "/7TYtJ59HzHex6IpmT3RRXR2uVtv.jpg",
+      "backdrop_path": "/s7vWRjcfRVMW8tBIxhC3UhKxRoo.jpg",
+      "release_date": "2025-01-30",
+      "vote_average": 5.714,
+      "vote_count": 1043,
+      "overview": "Romy egy befolyásos vezérigazgató kockára teszi karrierjét és a házasságát, amikor szenvedélyes viszonyba kezd a nála jóval fiatalabb gyakornokával, Samuellel. Az erotikával túlfűtött, bizarr játékokkal teli románcuk egyre furcsább fordulatokat vesz, a nő pedig elbizonytalanodik, hogy az alá-fölérendelt viszonyukban valójában ki irányít.",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "popularity": 14.2841,
+      "adult": false
+    },
+    {
+      "id": 1278950,
+      "title": "A végső rítus",
+      "original_title": "The Ritual",
+      "poster_path": "/lLlqIJS8bSUJUEG9gUmnjo6c2r0.jpg",
+      "backdrop_path": "/yAqL0makiGke5yYiVWpmBDSKIVP.jpg",
+      "release_date": "2025-07-10",
+      "vote_average": 5.9,
+      "vote_count": 251,
+      "overview": "A film középpontjában két katolikus pap áll: Theophilus Riesinger (Al Pacino), aki saját múltjával küzd, és Joseph Steiger (Dan Stevens), aki hitében megingott. Együtt próbálják megmenteni Emma Schmidtet (Abigail Cowen), egy fiatal nőt, akit démoni megszállottság gyötör. A papoknak félre kell tenniük nézeteltéréseiket és személyes démonjaikat, hogy szembenézzenek a gonosszal egy sor veszélyes ördögűzés során.  (Csillag Lajos)",
+      "genre_ids": [
+        27,
+        18,
+        53
+      ],
+      "popularity": 13.2134,
+      "adult": false
+    },
+    {
+      "id": 1087891,
+      "title": "Az amatőr",
+      "original_title": "The Amateur",
+      "poster_path": "/cvZ0YwcD28eyw1b3tKg8373CRVZ.jpg",
+      "backdrop_path": "/aD7FXrm2GErTmzrIFBntPyhAqS9.jpg",
+      "release_date": "2025-07-17",
+      "vote_average": 6.98,
+      "vote_count": 1409,
+      "overview": "Charlie Heller briliáns elméjű, ám meglehetősen zárkózott kódfejtő, aki a CIA alagsori irodái egyikében dolgozik a langley-i központban. Élete fenekestül felfordul, amikor feleségét megölik egy londoni terrortámadásban. Midőn azt látja, hogy felettesei tétlenek maradnak az ügyben, Heller a saját kezébe veszi a dolgokat; veszélyes magánküldetésre indul a fél világon át, hogy a felelősök nyomára akadjon. Bosszúja végrehajtásában intelligenciája lesz a legfőbb fegyvere.",
+      "genre_ids": [
+        53,
+        28
+      ],
+      "popularity": 13.1747,
+      "adult": false
+    },
+    {
+      "id": 1114967,
+      "title": "Jó szerencse",
+      "original_title": "Good Fortune",
+      "poster_path": "/r83HIGA0mUiy7I9qVr17pF7SCDP.jpg",
+      "backdrop_path": "/q2V1q2Xxwqg3uXQKufpdCtrnAdn.jpg",
+      "release_date": "2025-10-14",
+      "vote_average": 7.101,
+      "vote_count": 346,
+      "overview": "A sors égi fordulata szerint Gábriel angyal életet cserél egy Los Angeles-i, nehéz körülmények között élő férfi, és egy szupergazdag mágnás, Jeff között, hogy bebizonyítsa, a gazdagság nem mindenre gyógyír. Amikor azonban a terv visszafelé sül el, és a férfi kiélvezi újonnan szerzett gazdagságát, Gabriel váratlan következményekkel szembesül: elveszíti szárnyait, és arra kárhoztatják, hogy az emberek között éljen.\r (Csillag Lajos)",
+      "genre_ids": [
+        35,
+        14
+      ],
+      "popularity": 12.9689,
+      "adult": false
+    },
+    {
+      "id": 1064307,
+      "title": "Spermageddon",
+      "original_title": "Spermageddon",
+      "poster_path": "/xXJjuZwSI6O6r4MnnCZuSmEJfiy.jpg",
+      "backdrop_path": "/5OEcsHKZy9TLFz9qXLp5NJN9K8e.jpg",
+      "release_date": "2025-07-10",
+      "vote_average": 6.457,
+      "vote_count": 105,
+      "overview": "Lisa és Jens, a tinipár, az első testi együttlétükre készülődnek. Ezalatt a Jens testében élő Simen, a sperma, és barátai a létező legmerészebb utazásra indulnak. Céljuk, hogy felkutassák a petesejtet, és a legrátermettebb sikert arasson annak megtermékenyítésében.\r A film a tinik történetét két szemszögből mutatja be. Az egyikből a két tinédzser béna közeledését követhetjük figyelemmel, a másikból pedig Simon, a sperma, és barátai eseménydús küldetését láthatjuk, ahogy az aranygól elérésén fáradoznak.",
+      "genre_ids": [
+        16,
+        12,
+        14,
+        35
+      ],
+      "popularity": 12.8192,
+      "adult": false
+    },
+    {
+      "id": 653346,
+      "title": "A Majmok bolygója: A Birodalom",
+      "original_title": "Kingdom of the Planet of the Apes",
+      "poster_path": "/pbkE5ITvP7srkQ80ik10xvD8usQ.jpg",
+      "backdrop_path": "/iHYh4cdO8ylA3W0dUxTDVdyJ5G9.jpg",
+      "release_date": "2024-05-09",
+      "vote_average": 7.057,
+      "vote_count": 4015,
+      "overview": "Több nemzedékkel Caesar után a harmóniában élő majmok jelentik a dominás fajt a bolygón, míg az emberek arra kényszerültek, hogy rejtőzködve éljenek. Mikor egy új, zsarnoki majomvezér hozzálát birodalma kiépítéséhez, egy fiatal majom viszontagságos útra indul, ami során kénytelen lesz kétségbe vonni mindent, amit a múltról tud, és olyan döntéseket hozni, amik egyaránt meghatározzák majd majmok és emberek jövőjét.",
+      "genre_ids": [
+        878,
+        12,
+        28
+      ],
+      "popularity": 12.7333,
+      "adult": false
+    },
+    {
+      "id": 870028,
+      "title": "A könyvelő 2.",
+      "original_title": "The Accountant²",
+      "poster_path": "/aH6qv0IrSw9PNCwWgXfiUQHNRep.jpg",
+      "backdrop_path": "/yBDvgpyynDsbMyK21FoQu1c2wYR.jpg",
+      "release_date": "2025-04-24",
+      "vote_average": 7.12,
+      "vote_count": 1526,
+      "overview": "Amikor egy pénzügyekkel foglalkozó titkosügynök főnökével ismeretlen bérgyilkosok végeznek, a nő kénytelen megkeresni a titokzatos könyvelőt, hogy segítsen neki a tettesek nyomára jutni. Ő pedig bevonja rég nem látott, de veszélyes életet élő öccsét , és hárman indulnak a titokzatos ellenfél után.Chris kiismerhetetlen működésű agya minden kérdésre megtalálja a választ, ha pedig cselekednie kell, nem nagyon törődik a törvénnyel. De minél közelebb küzdik magukat a megoldáshoz, annál nehezebb titokban tartani, amit csinálnak: és vannak, akik bári áron meg szeretnék állítani őket.",
+      "genre_ids": [
+        9648,
+        80,
+        53
+      ],
+      "popularity": 12.7102,
+      "adult": false
+    },
+    {
+      "id": 1136867,
+      "title": "Többesélyes szerelem",
+      "original_title": "Materialists",
+      "poster_path": "/E4lNmkdS38xMhpu3AOrhbiUWpQ.jpg",
+      "backdrop_path": "/lqwwGkwJHtz9QgKtz4zeY19YgDg.jpg",
+      "release_date": "2025-08-14",
+      "vote_average": 6.468,
+      "vote_count": 937,
+      "overview": "Egy rutinos házasságközvetítő végre saját életében is megtalálja a tökéletes partnert: minden egyezik, minden „pipa” a helyén. Csakhogy épp ekkor bukkan fel a régi szerelme – aki bár semmiben sem felel meg az elvárásoknak, mégis megmagyarázhatatlanul vonzó. A másik férfi gazdag, kifinomult, és biztonságot kínál – a döntés mégsem egyszerű. Most végre nem másoknak kell tanácsot adni... hanem saját magának.",
+      "genre_ids": [
+        10749,
+        18
+      ],
+      "popularity": 11.9712,
+      "adult": false
+    },
+    {
+      "id": 1226406,
+      "title": "A szerelem fáj",
+      "original_title": "Love Hurts",
+      "poster_path": "/dO0a17L9wEM6asSgxEsuEuiPfJC.jpg",
+      "backdrop_path": "/aGgr2Q07AcyiWPGODoofgZDUEHp.jpg",
+      "release_date": "2025-02-06",
+      "vote_average": 5.698,
+      "vote_count": 318,
+      "overview": "Bárhogy is igyekszel, a múltaddal nem szakíthatsz. 2025-ben Valentin-napon az Oscar-díjas rendező, Ke Huy Quan belecsap az első főszerepébe egy valószerűtlen hős alakjában: ő a látszólag simulékony ingatlanos, aki sötét titkot rejteget, amit kétségbeesetten próbál maga mögött hagyni. Quan alakítja Marvin Gable-t, az ingatlanost, aki Milwaukee kertvárosi részén próbál boldogulni, ahol több „Eladó” tábla van a kertekben, mint fa. Gable kap egy vörös borítékot Rose-tól, egykori bűntársától, akit a sorsára hagyott, meghalni. És aki nem örül. Így hát Marvin most visszacsöppen a könyörtelen bérgyilkosok átverésekkel teli világába, és az ingatlanbemutatók háborús övezetekké válnak. Saját fivére, Knuckles, a lobbanékony alvilági góré veszi üldözőbe Marvint, akinek szembe kell néznie a döntéseivel, melyek most kísértik, és a múltjával, amit sosem temetett el.",
+      "genre_ids": [
+        28,
+        35,
+        10749
+      ],
+      "popularity": 11.8843,
+      "adult": false
+    },
+    {
+      "id": 1140535,
+      "title": "Jelenlét",
+      "original_title": "Presence",
+      "poster_path": "/8EfX8rWDfHQRV8kW3qJEEdKVGkZ.jpg",
+      "backdrop_path": "/eT1L3IVcHUL58wLn48E5dxlea3Z.jpg",
+      "release_date": "2025-02-06",
+      "vote_average": 6.101,
+      "vote_count": 641,
+      "overview": "A Jelenlét cselekménye egy külvárosi házban játszódik, melybe új család költözik, akik hamar rájönnek, hogy nincsenek egyedül. A film különlegessége, hogy a történetet az entitás szemszögén keresztül látjuk.",
+      "genre_ids": [
+        27,
+        53,
+        18
+      ],
+      "popularity": 11.5064,
+      "adult": false
+    },
+    {
+      "id": 324544,
+      "title": "A Kárhozott Vidék",
+      "original_title": "In the Lost Lands",
+      "poster_path": "/AehDEThsitF4TMUHKGgju18esaQ.jpg",
+      "backdrop_path": "/jb7yM17VZvDqUJVS4JR77EOfgEM.jpg",
+      "release_date": "2025-02-27",
+      "vote_average": 6.43,
+      "vote_count": 675,
+      "overview": "A történet középpontjában Gray Alys (Milla Jovovich), egy hatalmas és rettegett boszorkány áll, akit egy királynő megbíz, hogy szerezzen számára egy mágikus képességet, amely lehetővé teszi az alakváltást vérfarkassá. Gray Alys társa a rejtélyes vándor, Boyce (Dave Bautista), akivel együtt indulnak el Lost Lands kísérteties és veszélyes vidékére. Útjuk során emberi és démoni ellenfelekkel kell szembenézniük, miközben felfedezik a kívánságok teljesítésének váratlan következményeit.  (csd)",
+      "genre_ids": [
+        28,
+        14,
+        37
+      ],
+      "popularity": 11.2694,
+      "adult": false
+    },
+    {
+      "id": 1083433,
+      "title": "Tudom, mit tettél tavaly nyáron",
+      "original_title": "I Know What You Did Last Summer",
+      "poster_path": "/aM5wiL4iuP1xZaPYkbjO9EFGiO2.jpg",
+      "backdrop_path": "/gVPjIcYo1gTaACF43OMsralrcUS.jpg",
+      "release_date": "2025-07-17",
+      "vote_average": 5.802,
+      "vote_count": 572,
+      "overview": "Amikor öt barát véletlenül halálos autóbalesetet okoz, eltitkolják a részvételt, és egyezséget kötnek, hogy inkább titokban tartják a dolgot, minthogy szembenézzenek a következményekkel. Egy évvel később a múltjuk újra kísérti őket, és kénytelenek szembesülni a szörnyű igazsággal: valaki tudja, mit tettek tavaly nyáron... és bosszúra szomjazik. Ahogy a barátokat egymás után üldözi a gyilkos, rájönnek, hogy ez már korábban is megtörtént, és az 1997-es legendás southporti mészárlás két túlélőjéhez fordulnak segítségért.",
+      "genre_ids": [
+        27,
+        9648,
+        53
+      ],
+      "popularity": 11.2367,
+      "adult": false
+    },
+    {
+      "id": 1124620,
+      "title": "A majom",
+      "original_title": "The Monkey",
+      "poster_path": "/gXyCAQevthfv1yEm6i6YndHODqO.jpg",
+      "backdrop_path": "/cjZ7No0DX2L3ielLSoUOMYPw7C.jpg",
+      "release_date": "2025-02-27",
+      "vote_average": 6.003,
+      "vote_count": 1137,
+      "overview": "Amikor az ikertestvérek, Bill és Hal megtalálják apjuk régi cintányéros majomjátékát a padláson, szörnyű halálesetek sorozata kezdődik. A testvérek úgy döntenek, hogy kidobják a játékot, és folytatják az életüket. Az évek során eltávolodnak egymástól, ám felnőtt korukban titokzatos halálesetek sorozata kezdődik újra. A fivéreknek össze kell fogniuk a majom végső megsemmisítésére, mielőtt mindenkit elveszítenek, aki a szívüknek kedves.",
+      "genre_ids": [
+        27,
+        35
+      ],
+      "popularity": 11.1186,
+      "adult": false
+    },
+    {
+      "id": 1265063,
+      "title": "Vadászat után",
+      "original_title": "After the Hunt",
+      "poster_path": "/ysEcwS7MwXWTIUL4lvNO6Gsc2V5.jpg",
+      "backdrop_path": "/x0J0OMKwnX1eeVRQWeb2D05yd3K.jpg",
+      "release_date": "2025-11-20",
+      "vote_average": 5.687,
+      "vote_count": 343,
+      "overview": "Egy ragyogó elméjű egyetemi professzor (Julia Roberts) élete vészhelyzetbe kerül, amikor tanítványa szexuális zaklatással vádolja meg egyik kollégáját. Mindeközben sötét titkok is felszínre bukkannak a múltból. A történet az etikai dilemmák, társadalmi igazságosság és személyes felelősségvállalás bonyolult hálóját tárja fel, mindezt egy feszült, egyetemi miliőben.  (Csillag Lajos)",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 11.0132,
+      "adult": false
+    },
+    {
+      "id": 1245993,
+      "title": "Rajtakapva",
+      "original_title": "Caught Stealing",
+      "poster_path": "/88KaWChfcq8LZF5srbCjxhCnKbW.jpg",
+      "backdrop_path": "/zWO3B2CTDguZqCrVQ2u5Xnp9VRS.jpg",
+      "release_date": "2025-08-26",
+      "vote_average": 6.939,
+      "vote_count": 629,
+      "overview": "A történet főszereplője Hank ( Austin Butler ), aki korábban baseballtehetség volt, most azonban New Yorkban tengeti napjait egy lepukkant lakásban, és egy kocsmában dolgozik. Élete unalmas és kiábrándító, mígnem a szomszédja rábízza a macskáját – és ezzel minden megy a levesbe. Hamarosan különféle gengszterek üldözik, ő pedig menekülni kényszerül, egyre zavarosabb ügybe keveredik New York bűnözői alvilágában. Úgy tűnik, a macska kulcsfontosságú valamiben…vagy mégsem?",
+      "genre_ids": [
+        80,
+        53,
+        35
+      ],
+      "popularity": 10.9927,
+      "adult": false
+    },
+    {
+      "id": 801937,
+      "title": "Csendes éj, véres éj",
+      "original_title": "Silent Night, Deadly Night",
+      "poster_path": "/k29Nm2ZdSL4AL2mhGaI5pAIH4If.jpg",
+      "backdrop_path": "/qG2uiyOgXkqWhAG7EpfNgwaYTJ3.jpg",
+      "release_date": "2025-12-18",
+      "vote_average": 5.958,
+      "vote_count": 24,
+      "overview": "Egy kissrác szemtanúja lesz szülei meggyilkolásának, amit egy Mikulás ruhás férfi követ el. Évekkel később, felnőttként, ő maga is Mikulás ruhát ölt, és erőszakos bosszúhadjáratba kezd azok ellen, akik felelősek gyermekkori traumájáért.",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "popularity": 10.8215,
+      "adult": false
+    },
+    {
+      "id": 1088166,
+      "title": "Kontakt",
+      "original_title": "Relay",
+      "poster_path": "/zi4pvq1HJYj851svkeqJCmCrMTH.jpg",
+      "backdrop_path": "/1ZnEOaOUj2e2Fq6Y7wo9KeH5rS6.jpg",
+      "release_date": "2025-08-21",
+      "vote_average": 7.072,
+      "vote_count": 221,
+      "overview": "A Relay-ben Riz Ahmed egy világklasszis „fixert” alakít, aki arra specializálódott, hogy jövedelmező kifizetéseket közvetítsen korrupt vállalatok és a tönkremenetelüket fenyegető személyek között. Személyazonosságát aprólékos tervezéssel tartja titokban, és mindig szigorú szabályokat követ. Amikor azonban egy nap üzenet érkezik egy potenciális ügyféltől (Lily James), akinek a védelmére van szüksége, csak hogy életben maradjon, a szabályok gyorsan megváltoznak.  (Szarka Károly)",
+      "genre_ids": [
+        28,
+        18,
+        53
+      ],
+      "popularity": 10.6552,
+      "adult": false
+    },
+    {
+      "id": 19913,
+      "title": "500 nap nyár",
+      "original_title": "(500) Days of Summer",
+      "poster_path": "/uGgXCjgrMWs9QpHNq9X2wpfAh3p.jpg",
+      "backdrop_path": "/1M2i4Mxd03elGOTmEkIvqrHfmyS.jpg",
+      "release_date": "2010-04-01",
+      "vote_average": 7.296,
+      "vote_count": 10728,
+      "overview": "A bájos Summer kiadja Tom útját. Ötszáz napot töltöttek együtt, a fiatalember azóta is képtelen felfogni, hogy a felhőtlen boldogságtól hogyan fajulhattak idáig a dolgok. A lány pedig nem érti, hogy a fiú mit nem ért ezen: ő nem vágyott sem házasságra, sem tartós kapcsolatra, számára pusztán csak egy hosszúra nyúlt kaland volt mindez. Tom megpróbálja végiggondolni a múltat, elemezni az együtt töltött időt, hátha megtalálja a szakítás okát, hol követett el hibát. Felidézi találkozásukat, amikor Summer belibbent az irodába, és ő első pillantásra fülig beleszeretett...",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "popularity": 9.5617,
+      "adult": false
+    },
+    {
+      "id": 1316147,
+      "title": "Egérfutam",
+      "original_title": "Grand Prix of Europe",
+      "poster_path": "/hOYJVHdC9tsG8WgHHw0SmErTIH9.jpg",
+      "backdrop_path": "/keToI4XlwYVtImAXjoeoaLJKnfc.jpg",
+      "release_date": "2025-07-24",
+      "vote_average": 7.1,
+      "vote_count": 23,
+      "overview": "A fiatal egér, Edda állandóan versenyautókról álmodik. Amikor közeledik az Európa Nagydíj, megragadja a lehetőséget, hogy részt vegyen a versenyen, találkozzon bálványaival, dacoljon az esélyekkel, s megvalósítsa álmát, ugyanakkor segítsen családja küzdelmes vásári vállalkozásának a jövőjét bebiztosítani.",
+      "genre_ids": [
+        16,
+        12,
+        35
+      ],
+      "popularity": 8.5707,
+      "adult": false
+    },
+    {
+      "id": 1214028,
+      "title": "Lili és a kenguru",
+      "original_title": "Kangaroo",
+      "poster_path": "/pNHpDkFPlObUfyWpuz3tC6xBYm3.jpg",
+      "backdrop_path": "/eRCQlvPGmrm6wciksedf1RDNhwM.jpg",
+      "release_date": "2025-08-21",
+      "vote_average": 6.5,
+      "vote_count": 7,
+      "overview": "Ebben az elragadó és szívmelengető családi vígjátékban az egykori televíziós sztár, Chris Masterman váratlanul egy távoli Outback-városban, Alice Springs közelében találja magát. A valószínűtlen páros Charlie-val, egy 12 éves, lelkes őslakos lánnyal összefogva egy átformáló utazásra indul, hogy megmentsék és felneveljék az árva rókákat a lélegzetelállító vadonban – ez a vállalkozás mindkettőjük életét gyökeresen megváltoztatja.  (Csillag Lajos)",
+      "genre_ids": [
+        10751,
+        35
+      ],
+      "popularity": 8.4636,
+      "adult": false
+    },
+    {
+      "id": 1285965,
+      "title": "Veszélyes állatok",
+      "original_title": "Dangerous Animals",
+      "poster_path": "/eIK9VeT67s5gSI4VVUAXnlUtkyu.jpg",
+      "backdrop_path": "/6bfas8v3FzZ3qpzR2RWpw4z9DT7.jpg",
+      "release_date": "2025-08-14",
+      "vote_average": 6.458,
+      "vote_count": 401,
+      "overview": "Egy fiatal szörfös lányt elrabol egy sorozatgyilkos. A férfi a hajóján tartja fogva a lányt, s hamarosan kiderül, nemcsak a gyilkosság a szenvedélye, hanem a cápák is. A lánynak ki kell találnia, hogyan szabadulhat meg, mielőtt a gyilkos rituálisan megetetné a hajó körül úszkáló cápákkal. Az ideje rohamosan fogy, és csak magára számíthat.",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "popularity": 8.2622,
+      "adult": false
+    },
+    {
+      "id": 549509,
+      "title": "A brutalista",
+      "original_title": "The Brutalist",
+      "poster_path": "/gtrrJeDONGIm5cFaEoq7Jrxq9ua.jpg",
+      "backdrop_path": "/hmZnqijPaaACjenDkrbWcCmcADI.jpg",
+      "release_date": "2025-01-23",
+      "vote_average": 7,
+      "vote_count": 1454,
+      "overview": "A háború utáni Európából elmenekülve a nagy ívű víziókkal megáldott építész, Tóth László Amerikába érkezik, hogy újra építse az életét, a karrierjét, valamint a házasságát Erzsébettel, miután a háború közben elszakadtak egymástól, határokon és rezsimeken átlépve. Az új, idegen országban magára utalva László Pennsylvaniában állapodik meg, ahol a gazdag és befolyásos gyáros, Harrison Lee Van Buren felismeri építészi tehetségét. Ám a hatalomnak és az örökségnek nagy ára van…",
+      "genre_ids": [
+        18,
+        36
+      ],
+      "popularity": 8.0411,
+      "adult": false
+    },
+    {
+      "id": 604685,
+      "title": "Gengszterzsaruk: Pantera",
+      "original_title": "Den of Thieves 2: Pantera",
+      "poster_path": "/wHxsLsI5iP2zMnVxdYitMNBNI2E.jpg",
+      "backdrop_path": "/aXLxxKVZA37sntSQwOyUEwA48a9.jpg",
+      "release_date": "2025-01-09",
+      "vote_average": 6.6,
+      "vote_count": 697,
+      "overview": "A Los Angeles-i zsaru, \"Nagy\" Nick (Gerald Butler) legutóbb nem aratott teljes sikert… Most ismét beleveti magát a hajszába, hogy kézrekerítse a markából kicsúszó Donnie-t (O’Shea Jackson Jr.). Donnie Európában a gyémánttolvajok veszedelmes és kiszámíthatatlan világába merül alá, a hírhedt Pantera maffia fenyegető árnyékában tervezi végrehajtani az évszázad rablását a világ gyémántközpontjában.",
+      "genre_ids": [
+        28,
+        80,
+        53
+      ],
+      "popularity": 7.8871,
+      "adult": false
+    },
+    {
+      "id": 1249213,
+      "title": "Gyilkos randi",
+      "original_title": "Drop",
+      "poster_path": "/z4vVKHVEsNlgGQrevxO5QwGF3nD.jpg",
+      "backdrop_path": "/n4R5Ad6rwf87lmllFNuYR3io30V.jpg",
+      "release_date": "2025-04-10",
+      "vote_average": 6.358,
+      "vote_count": 690,
+      "overview": "Egy megözvegyült anya évek óta az első randevúján vesz részt. Egy előkelő étterembe érkezik, ahol megkönnyebbülve tapasztalja, hogy a partnere, Henry sokkal sármosabb és jóképűbb, mint amire számított. Kettejük között azonban kezd megromlani a kémia, amikor Violet-et előbb irritálni, majd terrorizálni kezdi a telefonjára érkező névtelen hívások sorozata.  (szarka84)",
+      "genre_ids": [
+        9648,
+        53
+      ],
+      "popularity": 7.8706,
+      "adult": false
+    },
+    {
+      "id": 1337562,
+      "title": "Páratlan párosok",
+      "original_title": "Splitsville",
+      "poster_path": "/gxCv6kUdywxYzIXX6xYcmX5APUV.jpg",
+      "backdrop_path": "/5iLtvZuiM7QmNjIUXVajdjtCXwb.jpg",
+      "release_date": "2025-08-21",
+      "vote_average": 6.34,
+      "vote_count": 122,
+      "overview": "Carey (Kyle Marvin) kedves, jóhiszemű férj. Váratlanul hagyja el felesége, Ashley (Adria Arjona), aki bejelenti, hogy válni szeretne, és megcsalta őt. Carey zavarodottan felkeresi barátait, Julie-t (Dakota Johnson) és Pault (Michael Angelo Covino), akik nyitott házasságban élnek.\r Carey számára ez a kapcsolat először felszabadítónak tűnik, ám amikor túl messzire megy, Carey és Julie egymásba keverednek, az ő kapcsolataik és barátságaik is kaotikus katasztrófa felé sodródnak.  (Csillag Lajos)",
+      "genre_ids": [
+        35
+      ],
+      "popularity": 7.8152,
+      "adult": false
+    },
+    {
+      "id": 1108336,
+      "title": "Csiszolatlan gyémánt",
+      "original_title": "Diamant brut",
+      "poster_path": "/vUI4SKASFD73FKpwk4lurw7SAAk.jpg",
+      "backdrop_path": "/rCwzI7prQhPMRxOY2r5x7Zb34Yq.jpg",
+      "release_date": "2025-04-24",
+      "vote_average": 6.381,
+      "vote_count": 84,
+      "overview": "A 19 éves Liane édesanyjával és húgával él egy dél-francia városban. Minden vágya, hogy felfedezzék, hogy szeressék, hogy „valakivé” váljon. Ezért teljesen a szépség megszállottjává válik, mert úgy érzi, hogy ez az útja a celebbé váláshoz. Úgy tűnik, hogy a valóságshowk világáról ábrándozó lányra rámosolyog a szerencse: egy nap behívják egy meghallgatásra.. A fiatal úgy érzi, ez a lehetőség lesz az ugródeszka a hírnév és gazdagság felé.",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 7.7075,
+      "adult": false
+    },
+    {
+      "id": 713364,
+      "title": "Óvakodj a bohóctól",
+      "original_title": "Clown in a Cornfield",
+      "poster_path": "/766qEYvfQaVoG6t6xRVCvjj3JoP.jpg",
+      "backdrop_path": "/zrIE7qg61W2KEwDRCW83VtkhSeo.jpg",
+      "release_date": "2025-06-05",
+      "vote_average": 6.096,
+      "vote_count": 429,
+      "overview": "Quinn és az apja egy unalmas kisvárosba költöznek, hogy új életet kezdjenek. Ám a kisváros a felnőttek és a randalírozó gyerekek viszályától hangos. A rendet, Frendo, a hátborzongató bohóc akarja helyreállítani, azzal, hogy megöli a fiatalokat, hogy a kisváros újra nagyszerű hellyé váljon.",
+      "genre_ids": [
+        27,
+        9648,
+        53
+      ],
+      "popularity": 7.5839,
+      "adult": false
+    },
+    {
+      "id": 1241894,
+      "title": "Woodwalkers",
+      "original_title": "Woodwalkers",
+      "poster_path": "/n84V8SLmc7242ltKRePD5uvP8Xb.jpg",
+      "backdrop_path": "/d53MM15mO9EEiHzNlfvJK0otaaM.jpg",
+      "release_date": "2024-10-17",
+      "vote_average": 6.369,
+      "vote_count": 61,
+      "overview": "",
+      "genre_ids": [
+        10751,
+        14
+      ],
+      "popularity": 7.3513,
+      "adult": false
+    },
+    {
+      "id": 774370,
+      "title": "Szimat naplója",
+      "original_title": "Dog Man",
+      "poster_path": "/uFX80BmAXjrFyRXcEhUq0NnyUSu.jpg",
+      "backdrop_path": "/iXU87IdtNsYt7n6OigPJBDdbFf1.jpg",
+      "release_date": "2025-02-20",
+      "vote_average": 7.565,
+      "vote_count": 321,
+      "overview": "Egy kutya és egy rendőr együtt sérül meg a munkában. Ezt követően egy életmentő műtét megváltoztatja a történelem menetét, amikor is megszületik Dog Man, a félig kutya, félig ember, és – amíg nem zavarják meg a mókusok – kitartóan üldözi ősellenségét, a főgonoszt, Petey-t, a macskát. Ám a Dog Man és Petey közötti rivalizálás felborul, amikor megérkezik Petey imádnivaló cicaklónja, Lil Petey.",
+      "genre_ids": [
+        10751,
+        35,
+        12,
+        16,
+        28
+      ],
+      "popularity": 7.2788,
+      "adult": false
+    },
+    {
+      "id": 9361,
+      "title": "Az utolsó mohikán",
+      "original_title": "The Last of the Mohicans",
+      "poster_path": "/kGF7VPAiIzd5JRlNlT7VuwNEUN4.jpg",
+      "backdrop_path": "/fUYxUbxnDH5r6vLc6eqkHhPltYv.jpg",
+      "release_date": "1992-08-26",
+      "vote_average": 7.382,
+      "vote_count": 3299,
+      "overview": "A James F. Cooper regényéből készült kalandos és egyben romantikus film még abban az időben játszódik, amikor Anglia és Franciaország egymás ellen háborúzott Amerikában. Az örökös háború megosztotta az indián törzseket, és arra kényszerítette őket, hogy állást foglaljanak valamelyik fél mellett. Sólyomszem, a mohikánok között nevelkedett sápadtarcú beleszeret egy angol tiszt lányába, Corába. A huron Maguának is szüksége van a lányra, hogy sakkba tudja tartani az angolokat. Sólyomszem (Daniel Day- Lewis), Csingacsguk, Unkasz, Alice és Cora (Madeleine Stowe) megkezdik véget nem érő menekülésüket.",
+      "genre_ids": [
+        28,
+        36,
+        10749,
+        10752
+      ],
+      "popularity": 7.2299,
+      "adult": false
+    },
+    {
+      "id": 476669,
+      "title": "King's Man: A kezdetek",
+      "original_title": "The King's Man",
+      "poster_path": "/zUU09C3JE1SfsFDZcEzrNwLxQmI.jpg",
+      "backdrop_path": "/oQPbZ5e6J9fuAyv4Gl0mMZMIyPI.jpg",
+      "release_date": "2021-12-23",
+      "vote_average": 6.727,
+      "vote_count": 4890,
+      "overview": "Mikor a történelem legszörnyűbb zsarnokai és bűnöző lángelméi összegyűlnek, hogy háborút kirobbantva emberek milliót tüntessék el a föld színéről, egyetlen férfi képes rá, hogy versenyt futva az idővel megállítsa őket.",
+      "genre_ids": [
+        28,
+        12,
+        53
+      ],
+      "popularity": 7.181,
+      "adult": false
+    },
+    {
+      "id": 516729,
+      "title": "Paddington Peruban",
+      "original_title": "Paddington in Peru",
+      "poster_path": "/nK3zyv9LBodv4EKhuegN3BWqJHa.jpg",
+      "backdrop_path": "/7N7CtZftqEvgojR3QloukU0oWPg.jpg",
+      "release_date": "2025-01-23",
+      "vote_average": 6.835,
+      "vote_count": 585,
+      "overview": "Paddingtonnal mindig történik valami.  Pedig boldogan és elégedetten él Londonban a Brown család padlásszobájában, ám kap egy levelet, és minden a feje tetejére áll. A levél Peruból érkezik, és arról értesíti a kis medvét, hogy eltűnt imádott nagynénje, aki egy Nyugdíjas Medvék Otthonában éldegélt, és bingózással töltötte öreg napjait. Paddington nem habozik, és azonnal Peruba indul, hogy felkutassa Lucy nénit. A Brown család habozik, de azért vele megy. Kalandos, veszélyes és fordulatos útjuk során átvágnak a dzsungelen, hajótörést szenvednek, felkutatják Eldorádót, az elveszett aranyvárost, megküzdenek egy kóros aranylázban szenvedő kalandorral (Antonio Banderas), és végül szembesülnek egy olyan nagy titokkal, ami Paddington egész addigi életét megváltoztathatja…",
+      "genre_ids": [
+        10751,
+        35,
+        12
+      ],
+      "popularity": 7.1018,
+      "adult": false
+    },
+    {
+      "id": 1196470,
+      "title": "Túlélők",
+      "original_title": "Survivre",
+      "poster_path": "/ksLRiatHvxVL4oOmavJItnS8IkH.jpg",
+      "backdrop_path": "/2xnLwNvea2TSH0M0oc9iEq2KEVp.jpg",
+      "release_date": "2025-03-13",
+      "vote_average": 5.817,
+      "vote_count": 334,
+      "overview": "Egy négy fős család születésnapot ünnepel egy hajón, a Karib-tenger közepén. Heves vihar támad, majd váratlanul eltűnik a tenger vize. A katasztrófát túlélő család megpróbál alkalmazkodni az extrém körülményekhez és veszélyes expedícióba kezd, hogy találkozzon a civilizációval. Ám nem számolnak azzal, hogy a tenger éhes lényeket hozott fel a mélyből, amik szintén a túlélésükért küzdenek és ezzel hatalmas veszélyt jelentenek az emberekre. Az élethalálharc még csak most kezdődik igazán.",
+      "genre_ids": [
+        878,
+        53,
+        12,
+        28
+      ],
+      "popularity": 7.0251,
+      "adult": false
+    },
+    {
+      "id": 710295,
+      "title": "Farkasember",
+      "original_title": "Wolf Man",
+      "poster_path": "/y2X5bQIarGWcVFaHnDqjmZeIXIW.jpg",
+      "backdrop_path": "/wwARk7hRIfHfh2n2ubN6N7lvTne.jpg",
+      "release_date": "2025-01-16",
+      "vote_average": 6.236,
+      "vote_count": 869,
+      "overview": "A Farkasember egy hátborzongató új film a Blumhouse-tól és Leigh Whannell író-rendezőtől, A láthatatlan ember alkotóitól. A Golden Globe-jelölt Christopher Abbott főszereplésével készült horror főszereplője Blake, a San Franciscó-i férj és apa, aki egy távoli oregoni vidéki házat örököl, miután apját halottnak nyilvánítják. Mivel házassága a befolyásos Charlotte-tal (az Emmy-díjas Julia Garner) válságban van, Blake rábeszéli a nőt, hogy lányukkal, Gingerrel (Mathilda Firth) együtt hagyják el a várost és költözzenek a birtokra. Ahogy éjszaka megérkeznek a házhoz, egy láthatatlan lény támadja meg őket, arra kényszerítve a családot, hogy elbarikádozzák magukat odabent, míg a lény odakint várakozik. Az éjszaka folyamán Blake egyre furcsábban kezd viselkedni, és felismerhetetlenné változik, így Charlotte-nak súlyos döntést kell meghoznia.",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "popularity": 6.8794,
+      "adult": false
+    },
+    {
+      "id": 1319969,
+      "title": "Firkák",
+      "original_title": "Sketch",
+      "poster_path": "/sxiDj3dTgZuCPkx30Jvyq8K9QUV.jpg",
+      "backdrop_path": "/3htgvJ6d0GV633oHYueeISk8J7w.jpg",
+      "release_date": "2025-10-09",
+      "vote_average": 7.13,
+      "vote_count": 77,
+      "overview": "Amikor egy fiatal lány vázlatfüzete egy különös tóba esik, rajzai életre kelnek – kiszámíthatatlanul, kaotikusan és veszélyesen valóságosan. Miközben a város felbolydul, a lány és a bátyjának fel kell kutatniuk a lényeket, mert azok maradandó károkat okoznak. Apjuk versenyt fut az idővel, hogy ebben a felfordulásban megtalálja őket és megállítsák a katasztrófát, amit soha nem akartak előidézni.",
+      "genre_ids": [
+        12,
+        14,
+        35,
+        10751
+      ],
+      "popularity": 6.8167,
+      "adult": false
+    },
+    {
+      "id": 757725,
+      "title": "Árnyékosztag",
+      "original_title": "Shadow Force",
+      "poster_path": "/v26ih5EEzzfV7LXAtBoLLPMvqyY.jpg",
+      "backdrop_path": "/lBsbWXGn9maPKGhN3fozTU3BH0r.jpg",
+      "release_date": "2025-06-12",
+      "vote_average": 6.361,
+      "vote_count": 230,
+      "overview": "Kyrah és Isaac egykor az Árnyékosztag nevű különleges alakulat vezetői voltak. Szerelmükkel viszont megszegték a szabályokat, fiuk védelmében pedig rejtőzködni kényszerülnek. Azonban mikor vérdíjat tűznek ki a fejükre és nyomukba ered az Árnyékosztag, elszabadul a pokol és véres küzdelemmé válik a túlélésük.",
+      "genre_ids": [
+        28,
+        53
+      ],
+      "popularity": 6.786,
+      "adult": false
+    },
+    {
+      "id": 1289936,
+      "title": "Downton Abbey: A nagy finálé",
+      "original_title": "Downton Abbey: The Grand Finale",
+      "poster_path": "/7tPnUYP7TXGSzGSTNFRyNd5xb5w.jpg",
+      "backdrop_path": "/jvzPTf0nhsqAXodYT6ILKb99IA2.jpg",
+      "release_date": "2025-09-11",
+      "vote_average": 7.182,
+      "vote_count": 176,
+      "overview": "Történetünk az 1930-as évek elején játszódik. Lady Violet Crawley halála és a gazdasági válság nyomán a Grantham-ház lakói új irányokat keresnek. Lady Mary már London társasági életének része, miközben visszatér Guy Dexter és Thomas is, új érzelmi szálakat hozva. Megérkezik Harold és Martha Levinson, akik régi titkokkal és családi kötelékekkel szembesülnek. A történet a Crawley-család és személyzet személyes fejlődését, a múlt lezárását és egy új korszak kezdetét mutatja be. A film megható módon búcsúzik Lady Violettől, Maggie Smith emlékére, méltó lezárást adva a Downton Abbey-trilógiának.",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "popularity": 6.719,
+      "adult": false
+    },
+    {
+      "id": 1427833,
+      "title": "Karácsonyi egércsata",
+      "original_title": "Hvis ingen går i fella",
+      "poster_path": "/qj0U2QijhKjMo1AqdiFRkKuTIb.jpg",
+      "backdrop_path": "/hO7PRUf7QpCXDX1AsAZO9KM89g9.jpg",
+      "release_date": "2025-12-18",
+      "vote_average": 6.167,
+      "vote_count": 6,
+      "overview": "Egy apró egércsalád örömmel készülődik az ünnepre vidéki otthonukban. A hangulat azonban villámgyorsan megváltozik, amikor hatalmas árnyak bukkannak fel körülöttük: emberek. Bár mindenki békés karácsonyi együttlétre számít, a helyzet hamarosan kegyetlen harccá fajulhat. Az elszánt egerek nem nyugszanak, és rafinált pszichológiai hadviselésbe kezdenek az emberekkel szemben. Ebben a játékosan pörgős és akciódús ütközetben semmilyen néző nem tud nemet mondani arra, hogy a bolondos kis rágcsálók mellé álljon.  (Csillag Lajos)R3",
+      "genre_ids": [
+        35,
+        10751,
+        16
+      ],
+      "popularity": 6.7123,
+      "adult": false
+    },
+    {
+      "id": 9300,
+      "title": "Orlando",
+      "original_title": "Orlando",
+      "poster_path": "/a5e98JHLu3l6502k7XP7K0lC31n.jpg",
+      "backdrop_path": "/pm2rPN1yfmVDMVFDFNmn7DEFMqM.jpg",
+      "release_date": "1992-12-11",
+      "vote_average": 6.888,
+      "vote_count": 361,
+      "overview": "",
+      "genre_ids": [
+        18,
+        14
+      ],
+      "popularity": 6.5901,
+      "adult": false
+    },
+    {
+      "id": 1064486,
+      "title": "Egy csiga emlékiratai",
+      "original_title": "Memoir of a Snail",
+      "poster_path": "/eOKeDEji1DhgnvNPOeMlrKVJ7MB.jpg",
+      "backdrop_path": "/jl2YIADk391yc6Qjy9JhgCRkHJk.jpg",
+      "release_date": "2025-01-09",
+      "vote_average": 8.064,
+      "vote_count": 707,
+      "overview": "Grace Pudel története egy szívszorító utazás a testvéri szeretet, veszteség és újrakezdés útján. Az 1970-es évek Ausztráliájában játszódó filmben Grace és ikertestvére, Gilbert nehézségek ellenére is próbálnak megmaradni egymásnak, még akkor is, amikor árván és egymástól elválasztva különböző nevelőcsaládokhoz kerülnek. A felnőtté válás során Grace szenvedélye a csigagyűjtés iránt válik az egyetlen vigaszává, míg Gilbert a kegyetlenséggel és elnyomással küzd új családjában.  Amikor egy tragédia és egy elárult szerelem Grace életét darabokra töri, egyetlen támasza egy kedves, bölcs idős nő lesz, aki arra ösztönzi, hogy szembenézzen múltjával és újraépítse az életét. A testvérétől kapott ígéretet követve Grace végül megtalálja a saját útját, mígnem sorsfordító találkozás hozza meg számára a reményt. Az emberi kitartásról és szeretetről szóló film magával ragadó története nem hagy senkit közömbösen.",
+      "genre_ids": [
+        16,
+        18,
+        35
+      ],
+      "popularity": 6.4455,
+      "adult": false
+    },
+    {
+      "id": 661539,
+      "title": "Sehol se otthon",
+      "original_title": "A Complete Unknown",
+      "poster_path": "/854kExJU9Pgi1RUaU70ZxTtPXjW.jpg",
+      "backdrop_path": "/kcCy5tKTe6WepVQ6SQaSewpmoCj.jpg",
+      "release_date": "2025-05-07",
+      "vote_average": 7.1,
+      "vote_count": 1287,
+      "overview": "New York, 1960-as évek eleje. Az élénk zenei élet és a viharos kulturális felfordulás hátterében egy rejtélyes, 19 éves minnesotai fiatal érkezik West Village-be gitárjával és forradalmi tehetségével, akinek az a sorsa, hogy megváltoztassa az amerikai zene irányvonalát.",
+      "genre_ids": [
+        18,
+        10402
+      ],
+      "popularity": 5.9153,
+      "adult": false
+    },
+    {
+      "id": 1205229,
+      "title": "Haláli állatok hajnala",
+      "original_title": "Night of the Zoopocalypse",
+      "poster_path": "/pKZNk7TX4oue3S4MOE8lPJ0U3Ks.jpg",
+      "backdrop_path": "/h2SEtzuABKmcZAnKBJ1za3kETTY.jpg",
+      "release_date": "2025-03-06",
+      "vote_average": 6.6,
+      "vote_count": 60,
+      "overview": "Egy meteor rejtélyes vírust szabadít az állatkert békés lakóira, akik egy éjszaka leforgása alatt, sorra változnak át rémületes zombikká. A vírus ellen harcoló állatok összefognak, hogy megállítsák az állati apokalipszis eljövetelét.",
+      "genre_ids": [
+        16,
+        35,
+        27,
+        12,
+        878
+      ],
+      "popularity": 5.6,
+      "adult": false
+    },
+    {
+      "id": 1272149,
+      "title": "Bridget Jones: Bolondulásig",
+      "original_title": "Bridget Jones: Mad About the Boy",
+      "poster_path": "/tSW4GXL89mzD4tJXnZysFhrrGpq.jpg",
+      "backdrop_path": "/zwSDvbnN51JqU1ULzPnEc22DkqV.jpg",
+      "release_date": "2025-02-12",
+      "vote_average": 6.5,
+      "vote_count": 455,
+      "overview": "Bridget Jones végre szerencsés az életben. Van egy remek forgatókönyvírói állása, kis, bár apátlan családja és egy új barátja. Ám hamarosan nem csak az okoz gondot, hogy a férfi több mint húsz évvel fiatalabb nála...  (csd)",
+      "genre_ids": [
+        10749,
+        35,
+        18
+      ],
+      "popularity": 5.5866,
+      "adult": false
+    },
+    {
+      "id": 1078249,
+      "title": "Q-ügyosztály 6 - Határtalanul",
+      "original_title": "Den grænseløse",
+      "poster_path": "/rgV7nhrOjNENn1ssWEdmKMD378q.jpg",
+      "backdrop_path": "/48wrf9AAI6K2f7gsKVTh1UT81XW.jpg",
+      "release_date": "2024-02-01",
+      "vote_average": 6,
+      "vote_count": 71,
+      "overview": "Carl Mørck felügyelő Bornholm szigetére utazik, hogy megnyisson egy döglött aktát. Évekkel korábban meggyilkoltak egy lányt, akit egy fa tetején találtak. A megoldatlan esetet közlekedési balesetként kezelték. Mørck nyomozása során azonban az esetet összefüggésbe hozza egy szektával, az ügyet pedig még bonyolítja, hogy a szigeten az évek során több nő is nyomtalanul eltűnt.",
+      "genre_ids": [
+        53,
+        80
+      ],
+      "popularity": 5.4171,
+      "adult": false
+    },
+    {
+      "id": 1419229,
+      "title": "Silent Zone",
+      "original_title": "Silent Zone",
+      "poster_path": "/7YZ0JRRD7mt8Ov9eIEGWMbDybx2.jpg",
+      "backdrop_path": "/rH60D4bS64CYGBIXps9OgSDl3RT.jpg",
+      "release_date": "2025-03-07",
+      "vote_average": 6.2,
+      "vote_count": 58,
+      "overview": "Egy zombik által elpusztított világban egy leleményes tinédzser és a védelmezője a túlélésért harcol, könyörtelen veszélyekkel szembesülve, és próbára téve a remény és a hűség határait.",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "popularity": 5.1422,
+      "adult": false
+    },
+    {
+      "id": 1001736,
+      "title": "Barbárok a szomszédban",
+      "original_title": "Les Barbares",
+      "poster_path": "/w8Lk5xqBo1nt2p2NnGZmrfo4Mk.jpg",
+      "backdrop_path": "/pfslsIEGkNNkm88N4O0z8cNUH8a.jpg",
+      "release_date": "2025-03-27",
+      "vote_average": 6.1,
+      "vote_count": 65,
+      "overview": "Bretagne festői kisvárosában, Paimpontban a helyiek életét harmónia és nyugalom járja át. Joëlle, a szókimondó tanítónő, Anne, az aperitifeket kedvelő boltos, Hervé, az elzászi vízvezeték-szerelő, aki már szinte bretonabb, mint a bretonok, és Johnny, a Johnny Hallyday-rajongó vadőr mind-mind hozzátartoznak a közösség színes mindennapjaihoz.\r Amikor a város lakói elhatározzák, hogy segítő kezet nyújtanak néhány ukrán menekültnek, kezdetben mindenki lelkesen üdvözli az új jövevényeket. Ám hamar kiderül, hogy az érkezők valójában nem ukránok, hanem szíriaiak! Ez a váratlan fordulat felforgatja a nyugodt kisváros életét, és hamarosan a barátságos szomszédok között is feszült pillanatokat szül. A kérdés adott: kik is valójában a barbárok?",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "popularity": 5.0564,
+      "adult": false
+    },
+    {
+      "id": 1079310,
+      "title": "Boldogok a sajtkészítők",
+      "original_title": "Vingt Dieux",
+      "poster_path": "/8JFQg7F8E0LKwaZTED1UKJwSPCV.jpg",
+      "backdrop_path": "/AllcXFGjhy3NbZSLCnb55LFlNQo.jpg",
+      "release_date": "2024-12-11",
+      "vote_average": 6.966,
+      "vote_count": 296,
+      "overview": "Érett sajtok, éretlen kamaszok. A zűrös életű Totone pontosan ugyanarra vágyik, mint bármelyik vidéki francia tinédzser: felelőtlenül bulizni, motorozni és csajozni. Korlátlan szabadsága azonban egyik pillanatról a másikra véget ér, amikor egyedül marad hétéves húgával, vállán a megörökölt sajtkészítő műhellyel. A hirtelen családfővé váló Totone és barátai 30.000 euró nyeremény reményében belevágnak a lehetetlenbe: elkészíteni a tökéletes Comté sajtot. Totone-t nem tántoríthatja el a tény, hogy fogalma sincs a sajtkészítésről, vagy hogy lassan beleszeret a lányba, akitől éjszakánként a tejet lopják.",
+      "genre_ids": [
+        18,
+        35
+      ],
+      "popularity": 5.0164,
+      "adult": false
+    },
+    {
+      "id": 1013850,
+      "title": "Rokonszenvedés",
+      "original_title": "A Real Pain",
+      "poster_path": "/YFBxGIHoiNFrUSRSwUkzky7mSU.jpg",
+      "backdrop_path": "/fViElUGfdoZjtnVxvSpJX8TwxY6.jpg",
+      "release_date": "2025-02-27",
+      "vote_average": 6.769,
+      "vote_count": 1244,
+      "overview": "A két unokatestvér, David és Benji igazi össze nem illő páros. Együtt vágnak neki egy lengyelországi túrának, hogy adózzanak szeretett nagymamájuk emléke előtt. A kaland nem várt fordulatot vesz, amikor családjuk viszontagságos történetében elmerülve a köztük lévő, régre visszanyúló feszültség is felszínre tör.",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "popularity": 4.8756,
+      "adult": false
+    },
+    {
+      "id": 720321,
+      "title": "Lélegezz",
+      "original_title": "Breathe",
+      "poster_path": "/6ceXNcISyt58dy06I3C4m5Wo0iT.jpg",
+      "backdrop_path": "/v2oPRCnWADeQhEAAUKD7DfMdScP.jpg",
+      "release_date": "2024-04-04",
+      "vote_average": 5.677,
+      "vote_count": 268,
+      "overview": "Miután a Föld oxigénhiány miatt lakhatatlanná vált, Maya és lánya Zora kénytelenek a föld alatt élni, a felszínen tett rövid kiruccanásokat pedig csak egy korszerű oxigénruha teszi lehetővé, amelyet Maya férje, Darius készített, akiről Maya azt feltételezi, hogy már meghalt. Amikor egy titokzatos pár érkezik, akik azt állítják, hogy ismerik Dariust, Maya beleegyezik, hogy információért cserébe beengedik őket a bunkerükbe, de kiderül, hogy ezek a látogatók nem azok, akiknek mondják magukat – ennek következtében hamarosan anya és lánya már a túlélésért küzdenek.",
+      "genre_ids": [
+        28,
+        878,
+        9648,
+        53
+      ],
+      "popularity": 4.6228,
+      "adult": false
+    },
+    {
+      "id": 1218032,
+      "title": "Szuper bébi",
+      "original_title": "Super Charlie",
+      "poster_path": "/9mUEmjxRzkRj34PpS0NrDV2q3b7.jpg",
+      "backdrop_path": "/o1j7fmpHPV38u0rkFOfPyRZjToZ.jpg",
+      "release_date": "2025-08-14",
+      "vote_average": 6.1,
+      "vote_count": 10,
+      "overview": "A 10 éves Wille mindig arról álmodozott, hogy szuperhős lesz, és rendőr édesapja oldalán harcol a bűnözés ellen. Álma azonban szertefoszlik, amikor megszületik kisöccse, Charlie. A fiúnak nemcsak az nem tetszik, hogy Charlie kap meg minden figyelmet, de arra is rájön, hogy kistestvérének szuperei vannak. Amikor azonban egy őrült tudós kieszel egy gonosz tervet a város ellen, a két testvérnek félre kell tennie a nézeteltéréseit és kell fognia. De vajon egy kisbaba és az irigykedő tesója meg tudja menteni a várost? A családi animáció Camilla Läckberg, svéd krimi írónő gyerekkönyvsorozatán alapul.",
+      "genre_ids": [
+        16,
+        10751,
+        28,
+        35
+      ],
+      "popularity": 4.4954,
+      "adult": false
+    },
+    {
+      "id": 814757,
+      "title": "A fény birodalma",
+      "original_title": "Empire of Light",
+      "poster_path": "/7r9iXHYCbaXi9c4fxa0puZmwdN8.jpg",
+      "backdrop_path": "/frV7YxDmZizcFjP5kKMFK37OrCC.jpg",
+      "release_date": "2023-02-23",
+      "vote_average": 6.628,
+      "vote_count": 599,
+      "overview": "Egy szerelmi történet, amely Anglia déli partján, egy régi moziban és környékén játszódik az 1980-as években.",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "popularity": 4.3558,
+      "adult": false
+    },
+    {
+      "id": 1247353,
+      "title": "Bekövet a halál",
+      "original_title": "Killer Influence",
+      "poster_path": "/1HJ5axaMWfQ3PHLM9OXWt2qew6I.jpg",
+      "backdrop_path": "/6SuTVWadQoVf07Aejxpqf9Qsy6l.jpg",
+      "release_date": "2025-01-02",
+      "vote_average": 2.2,
+      "vote_count": 11,
+      "overview": "A nyár közepén Alex, a menő influenszer meghívja a barátait egy elhagyott vidéki házba. A horror éjszakájának elnevezett streamelés igazi horrorba csap át, amikor egy ismeretlen fanatikus terrorizálni kezdni őket. A rettegésbe átforduló éjszakán a fiatalok számára hamarosan az életük lesz a tét – miközben rajongók sokasága követi őket élő videóközvetítésben.",
+      "genre_ids": [
+        27
+      ],
+      "popularity": 4.2599,
+      "adult": false
+    },
+    {
+      "id": 1249423,
+      "title": "Fekete kutya",
+      "original_title": "狗阵",
+      "poster_path": "/mzxCLmIZbEFnObwXvn3mKjowFys.jpg",
+      "backdrop_path": "/70OLwlzUhlZ8JNX4SFo5xHbX3d1.jpg",
+      "release_date": "2024-06-15",
+      "vote_average": 7.2,
+      "vote_count": 187,
+      "overview": "A volt kaszkadőrmotoros Lang visszatér szülővárosába, a Gobi-sivatag szélén, ahol a börtönbe kerülése előtt helyi híresség volt. Jelenleg apjával él, Langnak el kell kerülnie a gonosz helyi gengsztert, \"Butcher Hu\"-t, aki bosszút akar állni Langon unokaöccse halálában betöltött szerepéért. Lang úgy dönt, hogy egy vadkutyára kihelyezett vérdíjat egy nagyobb program részeként keresi a nem kívánt állatok eltávolítására a 2008-as pekingi nyári olimpiára való felkészülésként, és végül egy váratlan barátságot köt a kutyával.",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 4.1414,
+      "adult": false
+    },
+    {
+      "id": 1219576,
+      "title": "Goebbels, a manipuláció művészete",
+      "original_title": "Führer und Verführer",
+      "poster_path": "/wn6y23glGFpUzdSJE8TWvvrcMFd.jpg",
+      "backdrop_path": "/6xqvokwceVpLJ2ms06Adrs6sNa6.jpg",
+      "release_date": "2025-05-01",
+      "vote_average": 6.705,
+      "vote_count": 73,
+      "overview": "Joseph Göebbels propagandaminiszter hét éven keresztül kitartott Hitler mellett: az 1938 márciusában zajlott Anschlusstól egészen az 1945 májusában, a Führerbunkerben elkövetett öngyilkosságáig. Miközben Hitler a hatalma csúcsán van, Goebbels megrendeli a Jud Süß és Az örök zsidó (Der ewige Jude) című antiszemita filmeket, amelyek a zsidók tömeges meggyilkolására készítik fel az embereket. A sztálingrádi vereség és az 1944 végén egyre kilátástalanabbá váló helyzet után Göebbels a legradikálisabb propagandaakciót állítja színpadra: Hitler öngyilkosságát, családja meggyilkolását, valamint saját öngyilkosságát.",
+      "genre_ids": [
+        36,
+        18
+      ],
+      "popularity": 4.1414,
+      "adult": false
+    },
+    {
+      "id": 1239140,
+      "title": "Random",
+      "original_title": "Random",
+      "poster_path": "/cDmtbb3NgcjhrXF3Ee7uO16LBxa.jpg",
+      "backdrop_path": "/rUpUTNSspPEtp5dBIfgNYcTxHvn.jpg",
+      "release_date": "2025-09-04",
+      "vote_average": 0,
+      "vote_count": 0,
+      "overview": "A Random egy őrült nap sokszereplős történetét meséli el. Egy apokalipszis felé sodródó világban az élni akarásról, érzelmekről, magányról, vágyakról beszél.",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 4.1381,
+      "adult": false
+    },
+    {
+      "id": 1137245,
+      "title": "Barátnők",
+      "original_title": "Trois amies",
+      "poster_path": "/hpg8C1yZ9QBB8xjCR6n0m1p4h2C.jpg",
+      "backdrop_path": "/nVMpA0JPnfeu6R9sf7sTDwhTh5L.jpg",
+      "release_date": "2025-03-13",
+      "vote_average": 6.248,
+      "vote_count": 115,
+      "overview": "Joan már nem érez mély szenvedélyt Victor iránt, és bűntudat nyomasztja, ami miatt igazságtalannak érzi magát vele szemben. Legjobb barátnője, Alice megpróbálja megnyugtatni, és ragaszkodik hozzá, hogy bár a szikra az ő és Eric kapcsolatában elhalványult, a kötelékük továbbra is erős. Sem Joan, sem Alice nem sejti, hogy Eric titokban közös barátnőjükkel, Rebeccával van viszonyban. Aztán egy nap Joan úgy dönt, hogy elhagyja Victort, csakhogy a férfi nyomtalanul eltűnik. A három barátnő élete hirtelen felborul...",
+      "genre_ids": [
+        35,
+        10749,
+        18
+      ],
+      "popularity": 4.0574,
+      "adult": false
+    },
+    {
+      "id": 1171634,
+      "title": "Ha megérkezik az ősz",
+      "original_title": "Quand vient l'automne",
+      "poster_path": "/rr2SfDwTeLZCARGiMrt7Cnhr1H3.jpg",
+      "backdrop_path": "/2uoIsJ7CqdUT9evZp6arTkVbdPQ.jpg",
+      "release_date": "2025-06-26",
+      "vote_average": 6.6,
+      "vote_count": 211,
+      "overview": "Michelle, az idős nagymama békés nyugdíjas éveit éli egy kis burgundi faluban, nem messze legjobb barátnőjétől, Marie-Claude-tól. Mindenszentek napján lánya, Valérie meglátogatja őt, és elviszi a vakációra fiát, Lucast is. De semmi sem a terv szerint alakul.",
+      "genre_ids": [
+        18,
+        53,
+        35
+      ],
+      "popularity": 4.0403,
+      "adult": false
+    },
+    {
+      "id": 1410189,
+      "title": "Kontinental '25",
+      "original_title": "Kontinental '25",
+      "poster_path": "/9NMekIITIoYAHmyYA0iPEQYNZ7e.jpg",
+      "backdrop_path": "/1FOSov1BN00fJAWl3fF91Bihykr.jpg",
+      "release_date": "2025-09-24",
+      "vote_average": 6.528,
+      "vote_count": 18,
+      "overview": "",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "popularity": 3.9227,
+      "adult": false
+    },
+    {
+      "id": 1172265,
+      "title": "O Último Azul",
+      "original_title": "O Último Azul",
+      "poster_path": "/n0Xw9kDKgQfgxl6BZmjFzvOK14L.jpg",
+      "backdrop_path": "/2UXrkv2G1aXMyn3VY70krD9Anid.jpg",
+      "release_date": "2025-08-28",
+      "vote_average": 7.243,
+      "vote_count": 37,
+      "overview": "",
+      "genre_ids": [
+        18,
+        878,
+        35
+      ],
+      "popularity": 3.859,
+      "adult": false
+    },
+    {
+      "id": 1032472,
+      "title": "Érintés",
+      "original_title": "Snerting",
+      "poster_path": "/h0YtCb0hBvS9MPz8EpBY0ebccnf.jpg",
+      "backdrop_path": "/yexLinpa15gWj3LGYOcpFwOHbnU.jpg",
+      "release_date": "2024-05-29",
+      "vote_average": 7.4,
+      "vote_count": 101,
+      "overview": "Egy romantikus és izgalmas történet, amely több évtizeden és kontinensen átível, és egy özvegyember érzelmes útját követi, hogy megtalálja ötven évvel ezelőtt eltűnt első szerelmét, mielőtt lejárna az ideje.",
+      "genre_ids": [
+        10749,
+        18
+      ],
+      "popularity": 3.6923,
+      "adult": false
+    },
+    {
+      "id": 1020896,
+      "title": "Élőhalottak!",
+      "original_title": "Håndtering av udøde",
+      "poster_path": "/nZrXmXgGkHOaVSM3FoaBxQeKTTo.jpg",
+      "backdrop_path": "/c2Gd2QwQx7IITMUoJgcckqMniqd.jpg",
+      "release_date": "2024-02-09",
+      "vote_average": 5.885,
+      "vote_count": 157,
+      "overview": "Egy forró nyári napon váratlan áramkimaradás történik Oslóban, majd titokzatos módon feltámadnak a halottak. A váratlan esemény káoszba taszít három családot, akik éppen gyászolják az elhunyt rokonaikat, amikor azok visszatérnek a halálból.",
+      "genre_ids": [
+        27,
+        18,
+        9648
+      ],
+      "popularity": 3.6833,
+      "adult": false
+    },
+    {
+      "id": 976576,
+      "title": "Emmanuelle",
+      "original_title": "Emmanuelle",
+      "poster_path": "/hdYYIilSx9XrruL7DUKbNtFLQ9v.jpg",
+      "backdrop_path": "/xqIstzB0ELbYyfzKcYaSwLb4Whs.jpg",
+      "release_date": "2025-02-06",
+      "vote_average": 4.7,
+      "vote_count": 88,
+      "overview": "Az Emmanuelle egy fiatal nőről szól, aki megéli szexuális fantáziáit és egyre merészebb vágyai valósulnak meg.",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "popularity": 3.6311,
+      "adult": false
+    },
+    {
+      "id": 974950,
+      "title": "Emilia Pérez",
+      "original_title": "Emilia Pérez",
+      "poster_path": "/oTP2moPeA5AKR7rANqkh2SrUkGm.jpg",
+      "backdrop_path": "/u2eA9pqi1q3DvevT7RuDuJHxxBT.jpg",
+      "release_date": "2025-02-27",
+      "vote_average": 6.5,
+      "vote_count": 1851,
+      "overview": "Mexikó, napjainkban. Rita, az ügyvédnő visszautasíthatatlan ajánlatot kap egy kartellfőnöktől, hogy segítsen neki visszavonulni az üzlettől és örökre eltűnni, hogy azzá a nővé váljon, akiről mindig is álmodott.",
+      "genre_ids": [
+        18,
+        53
+      ],
+      "popularity": 3.6025,
+      "adult": false
+    },
+    {
+      "id": 25221,
+      "title": "Kopaszoknak szeretettel",
+      "original_title": "For the Boys",
+      "poster_path": "/7cMupruGQjcm43mC30fTazT7pOe.jpg",
+      "backdrop_path": "/vU9OyKHqfCaRWjgUp2ocyZFzcZg.jpg",
+      "release_date": "1991-11-22",
+      "vote_average": 6.2,
+      "vote_count": 80,
+      "overview": "Dixie Leonard visszaemlékezése fellépéseire a második a koreai és a vietnami háborúkban, az amerikai katonák előtt.",
+      "genre_ids": [
+        18,
+        10402,
+        35,
+        10752
+      ],
+      "popularity": 3.5235,
+      "adult": false
+    },
+    {
+      "id": 803208,
+      "title": "Árva",
+      "original_title": "Árva",
+      "poster_path": "/2j2Jr5WyDEsHXPJ5PwV7WT5aNyH.jpg",
+      "backdrop_path": "/xTEzPjdoHc3qpcFb2QuUlyUrhci.jpg",
+      "release_date": "2025-10-23",
+      "vote_average": 0,
+      "vote_count": 0,
+      "overview": "Andor 12 éves fiúként éli meg az '56 utáni helyzetet. Fél évvel a forradalom után járunk. Andor reménykedik apja hazatérésében, aki a háború után nem tért haza. Aztán egy napon egy férfi jelenik meg, aki állítja, ő Andor apja. A gyerek nem hiszi, hogy valóban az édesapja tért haza. A férfi beköltözik hozzájuk, és a fiúnak nincs más választása, mint megmentenie a családját, még ha anyjával is kell ezért szembeszállnia.  (Emmersson)",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 3.4846,
+      "adult": false
+    },
+    {
+      "id": 1148298,
+      "title": "Bonzsúr, Svájc!",
+      "original_title": "Bon Schuur Ticino",
+      "poster_path": "/uY18xLWTSM77oMbcaJOs1hrJvCZ.jpg",
+      "backdrop_path": "/ozjvm9t1q6BWeWeEDhCu0J5izzZ.jpg",
+      "release_date": "2025-09-04",
+      "vote_average": 6.304,
+      "vote_count": 23,
+      "overview": "Egy őrült népszavazás vészhelyzetbe sodorja Svájcot. A No Bilangue nevű kezdeményezés elfogadása nyomán a korábbi négyhez képest egyetlen hivatalos nyelve lesz az országnak: a francia. Emiatt sok svájci német anyanyelvű ember súlyos válságot él át. Walter Egli is, aki a rendőrségnél dolgozik, és arról kell gondoskodnia, hogy az egynyelvűségre való áttérés zökkenőmentes legyen. Bár alig tud franciául, egy franciául beszélő kollégájával kell Tessinbe mennie, hogy közösen felderítsenek egy ottani ellenállócsoportot, amely minden lehetséges eszközzel küzd az egynyelvűség ellen.  A Bonzsúr, Svájc! ironikus és szatirikus stílusban dolgozza fel a nyelvpolitikai kérdések abszurditását.",
+      "genre_ids": [
+        35
+      ],
+      "popularity": 3.3983,
+      "adult": false
+    },
+    {
+      "id": 1093237,
+      "title": "Hurry Up Tomorrow - Az éjszaka határán",
+      "original_title": "Hurry Up Tomorrow",
+      "poster_path": "/vDvTwvNKAHnxvn06YIZI9lHrywn.jpg",
+      "backdrop_path": "/iqQSRP52a8q7CNViVyXz6nC5CJP.jpg",
+      "release_date": "2025-05-15",
+      "vote_average": 5.19,
+      "vote_count": 137,
+      "overview": "A Trey Edward Shults rendezésében készülő film egy feszültséggel teli thriller, melyet lazán inspirált a torontói születésű popsztár, The Weeknd karrierje. Főszereplője egy idegösszeomlás szélén álló sztár, akit álmatlanság gyötör, és egy idegen nővel karöltve kezdi kibogozni saját létezésének legmélyebb lényegét.",
+      "genre_ids": [
+        10402,
+        53,
+        18
+      ],
+      "popularity": 3.3784,
+      "adult": false
+    },
+    {
+      "id": 1187308,
+      "title": "Julie hallgat",
+      "original_title": "Julie zwijgt",
+      "poster_path": "/pnF7Bc4nkgGY5XrIDHY5JMdKd2B.jpg",
+      "backdrop_path": "/yXwJzc6beR82pg6R3BMaurH4lwq.jpg",
+      "release_date": "2024-10-16",
+      "vote_average": 6.3,
+      "vote_count": 23,
+      "overview": "Julie egy elit teniszakadémia sztárjátékosa, aki előtt fényes jövő áll. Amikor a lány edzőjével szemben vizsgálat kezdődik és váratlanul felfüggesztik, a klub minden játékosát arra bíztatják, hogy mondják el saját tapasztalataikat. Julie azonban úgy dönt, csendben marad. Lassan minden barátnője, játékostársa elmondja a véleményét az edzőről, ám Julie még mindig hallgat. Senki nem tudja, hogy a tiniben mi játszódik le, mit gondol, mit él át, mi történt vele. Egy dolog biztos: Julie kitartóan hallgat.",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 3.2684,
+      "adult": false
+    },
+    {
+      "id": 1018728,
+      "title": "Éretlenségi",
+      "original_title": "Bis Repetita",
+      "poster_path": "/iEpg1d53zBxXyn21X6K2qZiJM2K.jpg",
+      "backdrop_path": "/es42GOqfcaUgF1duI81ZsMdHjvU.jpg",
+      "release_date": "2025-01-23",
+      "vote_average": 5.083,
+      "vote_count": 66,
+      "overview": "Delphine, a kiábrándult irodalomtanárnő jól bevált üzletet köt a diákjaival: békén hagyják, ő pedig 20-ból 19 pontot ad nekik. Ám a terv visszafelé sül el, amikor kiváló, de nem valós eredményeivel az osztálya kijut a nápolyi latin világbajnokságra. Súlyosbítja a helyzetet, hogy az igazgatónő túlbuzgó unokaöccsét választják ki kísérőnek. Hogy ne hagyja veszni lehetőséget, és mindenekelőtt megmentse kényelmes pozícióját, Delphine csak egyetlen megoldást lát: csalni!",
+      "genre_ids": [
+        35
+      ],
+      "popularity": 3.1892,
+      "adult": false
+    },
+    {
+      "id": 1059128,
+      "title": "Queer",
+      "original_title": "Queer",
+      "poster_path": "/6RZMjGgNppsHKL7Kw9r5EWx9E0c.jpg",
+      "backdrop_path": "/7bUYzlDz8eel1BVL1Y0YcF9NQmd.jpg",
+      "release_date": "2025-04-24",
+      "vote_average": 6.6,
+      "vote_count": 457,
+      "overview": "",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "popularity": 3.1778,
+      "adult": false
+    },
+    {
+      "id": 1035657,
+      "title": "Svéd torpedó",
+      "original_title": "Den svenska torpeden",
+      "poster_path": "/kYrkMuMSKSyGmSJnulkzU1BtkJv.jpg",
+      "backdrop_path": "/Ab594kjUfnPei6H1M9KJRJyFzMp.jpg",
+      "release_date": "2025-10-16",
+      "vote_average": 7,
+      "vote_count": 6,
+      "overview": "1939 nyarán, a második világháború küszöbén, Svédországban a 30 éves egyedülálló anya, Sally Bauer elhatározza, hogy első skandináv atlétaként átússza a La Manche csatornát. Célja, hogy segítség nélkül Franciaországból Angliába jusson a nyílt vízen át.",
+      "genre_ids": [
+        36,
+        18
+      ],
+      "popularity": 3.1301,
+      "adult": false
+    },
+    {
+      "id": 1235304,
+      "title": "Rokonidők",
+      "original_title": "La Venue de l'avenir",
+      "poster_path": "/rTCVxe0GjsCU9p4lhhv5fNzS9C3.jpg",
+      "backdrop_path": "/lUUQXoOyR6BQD9HatKz63wec2QT.jpg",
+      "release_date": "2025-09-05",
+      "vote_average": 7.588,
+      "vote_count": 170,
+      "overview": "Unokatestvérek életét követhetjük nyomon, akik egy régi házat örökölnek Normandiában, minek következtében kutatni kezdik őseik nyomdokait a XIX. századi Párizsban.",
+      "genre_ids": [
+        18,
+        35
+      ],
+      "popularity": 3.0873,
+      "adult": false
+    },
+    {
+      "id": 1054283,
+      "title": "Minden rendben",
+      "original_title": "Minden rendben",
+      "poster_path": "/gxKSFJlojevBdzafTDMPJRj5iRD.jpg",
+      "backdrop_path": "/sC0wfQ2fXVHTQk0TTQ6wy2NILua.jpg",
+      "release_date": "2025-03-20",
+      "vote_average": 5.8,
+      "vote_count": 3,
+      "overview": "A Minden Rendben egy tragédia egy apáról, aki súlyos morális dilemmába keveredik. Az egyetlen szemtanúja lesz egy súlyos balesetnek, amit kisfia okoz és döntenie kell: vállalja az igazság terhét és a fia életét romokba döntő retorziót, vagy hazudja el a tettet, ami viszont a fiú lelkivilágát torzítja el egy életre? Apai ösztönei az utóbbiba hajszolják bele, ám a hazugság egyre nagyobb áldozatokkal jár. A pokolba vezető út is jószándékkal van kikövezve - ezt a gondolatot boncolgatja a film, olyan helyzeteken keresztül, melyek a nézők szilárdnak hitt meggyőződéseit is felkavarják.",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 3.0809,
+      "adult": false
+    },
+    {
+      "id": 1261616,
+      "title": "Mennyei zűrzavar",
+      "original_title": "Anges & Cie",
+      "poster_path": "/d3AO6twCId5iYwaU4FM4cSpZaVp.jpg",
+      "backdrop_path": "/pVVyTL0O3VlRO14quS516Aqg4Jr.jpg",
+      "release_date": "2025-06-19",
+      "vote_average": 6.359,
+      "vote_count": 39,
+      "overview": "A láthatatlan, mégis mindig jelenlévő őrangyalok titokban védenek és vezetnek bennünket. Paul és Léa útjainak soha nem szabadott volna keresztezniük egymást, ám ellenálhatatlan vonzalmuk nem csillapodik; ezzel pedig az égieknél válságot idéznek elő. Belép tehát Raphaëlle és Gabriel, akikben semmi közös nincs, és akiknek feladata a románc megszüntetése. Amennyiben kudarcot vallanak, Raphaëlle arkangyali álmai szertefoszlanak, Gabrielre pedig a halálnál is rosszabb sors vár – egy örökkévalóság a Földön. Az óra ketyeg, és a tét még soha nem volt hatalmasabb az akaratok ezen mennyei csatájában!",
+      "genre_ids": [
+        35,
+        14
+      ],
+      "popularity": 3.0513,
+      "adult": false
+    },
+    {
+      "id": 1278263,
+      "title": "Les Graines du figuier sauvage",
+      "original_title": "Les Graines du figuier sauvage",
+      "poster_path": "/1DKK0YGGzK8B7iW2iV2eXMPLNk3.jpg",
+      "backdrop_path": "/zqZzYVE4DWv92xrYSCEELPcLnUP.jpg",
+      "release_date": "2024-09-18",
+      "vote_average": 7.558,
+      "vote_count": 399,
+      "overview": "",
+      "genre_ids": [
+        18,
+        53,
+        80
+      ],
+      "popularity": 2.9985,
+      "adult": false
+    },
+    {
+      "id": 1153111,
+      "title": "Oxana",
+      "original_title": "Oxana",
+      "poster_path": "/2275Go34dzcuDNLqK1XHKJL9otU.jpg",
+      "backdrop_path": "/o8FCHWNsvPA6UjxHi8TgoeLDXJP.jpg",
+      "release_date": "2025-04-16",
+      "vote_average": 7,
+      "vote_count": 10,
+      "overview": "",
+      "genre_ids": [
+        36,
+        18
+      ],
+      "popularity": 2.9917,
+      "adult": false
+    },
+    {
+      "id": 927547,
+      "title": "പ്രഭയായ് നിനച്ചതെല്ലാം",
+      "original_title": "പ്രഭയായ് നിനച്ചതെല്ലാം",
+      "poster_path": "/sAauhrxPGQT2iJoGDFzFKFkQivg.jpg",
+      "backdrop_path": "/xrIicBg0Ac4oQ6cwUPKJxwtqhOQ.jpg",
+      "release_date": "2024-09-21",
+      "vote_average": 6.843,
+      "vote_count": 201,
+      "overview": "",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "popularity": 2.9338,
+      "adult": false
+    },
+    {
+      "id": 1214502,
+      "title": "Mindörökké tiéd",
+      "original_title": "Eternal You",
+      "poster_path": "/qCsrnPjDWuHfVD73cv1zHyH3FTQ.jpg",
+      "backdrop_path": "/tHKnsTPGU34qmXh5Ba1Ko8ukUrV.jpg",
+      "release_date": "2025-03-06",
+      "vote_average": 6.25,
+      "vote_count": 8,
+      "overview": "Az induló vállalkozások mesterséges intelligencia segítségével avatarokat hoznak létre, amelyek lehetővé teszik, hogy haláluk után beszélgethessenek szeretteikkel. A halhatatlanság iránti emberi vágy megkérdőjelezhető következményekkel találkozik.",
+      "genre_ids": [
+        99
+      ],
+      "popularity": 2.7803,
+      "adult": false
+    },
+    {
+      "id": 1312157,
+      "title": "Túlagyalt randevú",
+      "original_title": "FolleMente",
+      "poster_path": "/yFcSVxvUqLnMmJEp6GO3H0j3Q6V.jpg",
+      "backdrop_path": "/tOwffsVVkPWaQGmWDoZxKhGmrNi.jpg",
+      "release_date": "2025-09-25",
+      "vote_average": 7.2,
+      "vote_count": 520,
+      "overview": "Mennyit ismerünk valójában önmagunkból, amikor döntést hozunk? Mi van, ha több „én” létezik bennünk egymás mellett, és mindegyiknek megvan a maga mondanivalója? A Túlagyalt randevú utazás Piero és Lara tudatának mélyére: a két szerelmes belső énje összecsap, és feltárulnak azok a rejtett gondolatok és belső konfliktusok, amelyek döntéseinket alakítják.",
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "popularity": 2.7513,
+      "adult": false
+    },
+    {
+      "id": 988361,
+      "title": "Pásztorok",
+      "original_title": "Bergers",
+      "poster_path": "/uyPKQZjCNSkJqiaxyOFnBajcFMj.jpg",
+      "backdrop_path": "/oerIAQCV2GjF4fdYZB8bhbwgQnU.jpg",
+      "release_date": "2025-06-12",
+      "vote_average": 7.438,
+      "vote_count": 49,
+      "overview": "A huszonéves Mathyas hátrahagyja kényelmes montreali életét, hogy javarészt számítógép előtt töltött munkáját természetközelire cserélje. Dél-Franciaországba utazik, és a lenyűgöző tájak ölelésében pásztorként kezd új életet. A festői provence-i környezet azonban tartogat kihívásokat: nem csak a helyiekkel kell elfogadtatnia magát, de a változó időjárási körülmények, a nehéz terepviszonyok és a farkasok rendszeres támadásai árnyalják a természetről alkotott romantikus elképzeléseit. Hamarosan csatlakozik hozzá Elise, akinek imponál a fiú eltökéltsége. Mathyas vándorútja a nyájjal ettől kezdve nem csak évszakokon átívelő fizikai próbatétel, de egy szerelem kezdete is. A valós élettörténeten alapuló Pásztorok a Torontói Nemzetközi Filmfesztiválon a legjobb kanadai film díját nyerte.",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 2.6916,
+      "adult": false
+    },
+    {
+      "id": 1092506,
+      "title": "Vágtázó lovakról",
+      "original_title": "On Swift Horses",
+      "poster_path": "/3CvPyQPYTgBQebWGqTFSj5CiY9e.jpg",
+      "backdrop_path": "/1ziTzm2GV8C1ATzhekHOxbq5kdw.jpg",
+      "release_date": "2025-07-03",
+      "vote_average": 6.287,
+      "vote_count": 87,
+      "overview": "Muriel és férje, Lee épp közös életük egy új fejezete előtt állnak, amikor váratlanul megérkezik az életükbe Lee testvére, Julius. A fiatal feleség titkos kettős életet kezd élni: egy váratlan románc felforgatja addigi mindennapjait, miközben a szerelem korábban ismeretlen magasságait tapasztalja meg. Eközben a gyors pénzszerzés reményében ügetőkre jár ki, hogy versenylovakra fogadjon, így az érzelmek mellett a szerencsejáték-szenvedély is hatalmába keríti.",
+      "genre_ids": [
+        10749,
+        18
+      ],
+      "popularity": 2.6909,
+      "adult": false
+    },
+    {
+      "id": 1130402,
+      "title": "Családi terápia",
+      "original_title": "Jamais sans mon psy",
+      "poster_path": "/oDGnRDe7LmAwZYQr7SpTMHEhLFx.jpg",
+      "backdrop_path": "/8gULQzYQtlTKdchPCKbQAb5tBjG.jpg",
+      "release_date": "2025-01-09",
+      "vote_average": 4.92,
+      "vote_count": 114,
+      "overview": "Béranger doktor elismert pszichológus, akinek éppen sikerül leráznia legkellemetlenebb páciensét, a neurotikus Damient, azzal az indokkal, hogy a terápia folytatása előtt előbb találja meg az igaz szerelmet. A pszichológus élete és családja nem is lehetne tökéletesebb, ám amikor a 30. házassági évfordulóját ünnepelné meg családja körében, a lánya megjelenik álmai pasijával. A férfi pedig nem más, mint Damien. A megdöbbent Béranger elhatározza, hogy szétszakítja a szerelmespárt, és ennek érdekében szó szerint bármit képes megtenni.",
+      "genre_ids": [
+        35,
+        10751
+      ],
+      "popularity": 2.6401,
+      "adult": false
+    },
+    {
+      "id": 1063881,
+      "title": "Bámulatosak",
+      "original_title": "Prodigieuses",
+      "poster_path": "/p8F0DpeBTHqHGqacQMlJfXNbVn6.jpg",
+      "backdrop_path": "/wTbpXWyGut0WG3tHG0X1xVr8pnH.jpg",
+      "release_date": "2025-04-03",
+      "vote_average": 6.7,
+      "vote_count": 44,
+      "overview": "Az igaz történet alapján készült film főszereplője egy virtuóz zongorista ikerpár, Claire és Jeanne, akik felvételt nyernek egy tekintélyes zenei egyetemre, amelyet a szigorú Klaus Lenhardt professzor vezet. Akárcsak az apjuk, az ikrek is mindent feláldoznának azért, hogy a legjobbak legyenek. Ám egy betegség miatt fokozatosan gyengülni kezd a kezük, ami a teljesítményükre is kihat. Mivel nem hajlandók feladni az álmukat, ezért új módszereket találnak ki, hogy minden eddiginél bámulatosabbak legyenek.",
+      "genre_ids": [
+        18,
+        10402
+      ],
+      "popularity": 2.5818,
+      "adult": false
+    },
+    {
+      "id": 1026227,
+      "title": "Miénk lesz a holnap",
+      "original_title": "C'è ancora domani",
+      "poster_path": "/es2zVDm00J5rcSgAe9in0N4VfVK.jpg",
+      "backdrop_path": "/fNXUCk54vGcoKr34olN14ohUSFY.jpg",
+      "release_date": "2023-10-26",
+      "vote_average": 8.089,
+      "vote_count": 1467,
+      "overview": "Delia, háromgyermekes anya az 1940-es évek második felében Rómában él. A város a felszabadulásból fakadó remény és az éppen csak véget ért háború okozta anyagi nehézségek között vergődik.  A tekintélyelvű és erőszakos férjével, Ivanoval szemben Delia csak barátnőjében, Marisában talál vigaszt, akivel megosztja a könnyed pillanatok és a bizalmas beszélgetések pillanatait.  A komor hétköznapok tavasszal érnek véget, amikor az egész család a legidősebb lány, Marcella közelgő eljegyzésének megünneplésére készül.  Ám egy titokzatos levél érkezése mindent a feje tetejére állít, és arra sarkallja Deliát, hogy bátorságot merítsen egy jobb jövő elképzeléséhez, és ne csak saját maga számára.",
+      "genre_ids": [
+        18,
+        35,
+        36
+      ],
+      "popularity": 2.5788,
+      "adult": false
+    },
+    {
+      "id": 18230,
+      "title": "Szupervulkán - A végső kitörés",
+      "original_title": "Supervolcano",
+      "poster_path": "/lW3qLHLTiRpHXPn7yNGQzuqCVMC.jpg",
+      "backdrop_path": "/gxaaYsRmBSuTaiTlw2BJfqPILVw.jpg",
+      "release_date": "2005-10-19",
+      "vote_average": 6.2,
+      "vote_count": 39,
+      "overview": "Hatalmas, szupervulkán-kitörés várható a Yellowstone-i turistaközpont alatt. Rick Lieberman vezető tudós felkészült a legrosszabbra. Amennyiben a vulkán kitör, a hamueső százkilométeres körzetben elsöpör mindent, de nem ez a legrosszabb. A hamu belepi az egész Egyesült Államokat, ami belélegezve mérgező, és megszüntet minden elektromosságot. Liebermanra vár a feladat, hogy a katasztrófahelyzetet elhárítsa, ám a vulkánnak lehetetlen az útját állni",
+      "genre_ids": [
+        28,
+        18,
+        53,
+        10770
+      ],
+      "popularity": 2.5523,
+      "adult": false
+    },
+    {
+      "id": 1211472,
+      "title": "Szeptember 5",
+      "original_title": "September 5",
+      "poster_path": "/vwKSNGBP0bGuwIT9jF5dldetvCk.jpg",
+      "backdrop_path": "/nEH7XUCeWsEuJtGgWUVUl6MEQW0.jpg",
+      "release_date": "2025-02-20",
+      "vote_average": 7,
+      "vote_count": 474,
+      "overview": "A Szeptember 5 feltárja azt a döntő pillanatot, amely örökre megváltoztatta a tévés közvetítések világát, és a mai napig hatással van az élő tudósításokra. Az 1972-es müncheni nyári olimpiai játékok alatt játszódó film az amerikai sportközvetítő stábot követi nyomon, akik gyorsan átálltak a sportközvetítésről a túszul ejtett izraeli sportolókról való tudósításra. A film az ő lencséjükön keresztül kínál friss nézőpontot ahhoz a közvetítéshez, melyet a becslések szerint egymilliárd ember követett élőben.",
+      "genre_ids": [
+        53,
+        18,
+        36
+      ],
+      "popularity": 2.5197,
+      "adult": false
+    },
+    {
+      "id": 1187294,
+      "title": "Nem hiszek a szemednek",
+      "original_title": "¿Quién es quién?",
+      "poster_path": "/o4T0QAgm9bBWaU7kHWGD3o5b4M2.jpg",
+      "backdrop_path": "/khOuNCWIlYQyjmwg2NNC25qqmwQ.jpg",
+      "release_date": "2025-05-15",
+      "vote_average": 5.75,
+      "vote_count": 22,
+      "overview": "A szülőket felemészti a rutin és a karrierjük, a tini ikrek ki nem állhatják egymást, s ezzel mindenki életét megkeserítik maguk körül; a legkisebb lány elhanyagoltnak érzi magát, a nagymama pedig éli világát. De mivel még ennél is van lejjebb, a legkisebb családtag a kilencedik születésnapján egy igazán különös titkos kívánsággal áll elő.\r Másnap már nem a saját testükben ébrednek fel. Őrült kalamajka kerekedik, és a család elképesztő kalandokba bonyolódik. Itt az idő, most valóban össze kell tartaniuk úgy, mint még soha.",
+      "genre_ids": [
+        35,
+        10751
+      ],
+      "popularity": 2.4735,
+      "adult": false
+    },
+    {
+      "id": 1152014,
+      "title": "Szeretetreméltók",
+      "original_title": "Un p'tit truc en plus",
+      "poster_path": "/9XnnA2ax0bYVBOqt42xdmKhycJ4.jpg",
+      "backdrop_path": "/rTNMyZ5JcrfKnPamaYOo9wzq3m5.jpg",
+      "release_date": "2025-02-20",
+      "vote_average": 7.125,
+      "vote_count": 793,
+      "overview": "Egy apa és fia életük nagy rablását akarják végrehajtani, ám a menekülés során hiba csúszik a tervükbe. Hogy a rendőrök elől elbújjanak, elrejtőznek egy sérülteknek szervezett nyári táborban. A táborozók humoros helyzetek sorában jönnek rá, hogy a két férfi nem közéjük való. Az oda nem illő páros pedig hamarosan megtanulja, hogy vannak az életben fontosabb értékek, mint a pénz és gazdagság. A szeretetreméltó társaságban kezdetét veszi egy életre szóló élmény, amely sokkal inspirálóbb, mint valaha remélték, s örökre megváltoztatja mindkettejüket.",
+      "genre_ids": [
+        35,
+        10751
+      ],
+      "popularity": 2.1628,
+      "adult": false
+    },
+    {
+      "id": 1127648,
+      "title": "Jó reggelt, búbánat!",
+      "original_title": "Bonjour Tristesse",
+      "poster_path": "/bHqkaTLL1aPcpMzbvu8kFckEpi.jpg",
+      "backdrop_path": "/gEWw5gy1i2jhXthQulNiGAWtB1q.jpg",
+      "release_date": "2025-03-13",
+      "vote_average": 6.132,
+      "vote_count": 38,
+      "overview": "Egy 18 éves lány, Cécile (Lily McInerny) történetét ismerhetjük meg, aki özvegy édesapjával, Raymonddal (Claes Bang) és annak barátnőjével, Elsával (Nailia Harzoune) tölti a nyarat a francia Riviérán. Az idilli vakációt megzavarja Anne (Chloë Sevigny), Cécile elhunyt édesanyja régi barátjának érkezése, aki felborítja a család dinamikáját, és próbára teszi Cécile kapcsolatát az apjával.  (Csillag Lajos)",
+      "genre_ids": [
+        10749,
+        18
+      ],
+      "popularity": 2.1441,
+      "adult": false
+    },
+    {
+      "id": 1082900,
+      "title": "Szerethető",
+      "original_title": "Elskling",
+      "poster_path": "/4DHpXjhMwfwpaldge4OcISjQTX7.jpg",
+      "backdrop_path": "/sY44GAYod3VSUEVJYSgJiHvIQvE.jpg",
+      "release_date": "2025-01-16",
+      "vote_average": 7.024,
+      "vote_count": 42,
+      "overview": "A négygyerekes norvég nő, Maria mindennapjai az anyaság és karrier közötti zsonglőrködéssel telnek, miközben második férje, Sigmund állandóan úton van a munkája miatt. Bár a házasságuk kezdetén minden a szerelemről és a harmóniáról szólt, az évek során elkezdtek megjelenni a repedések a kapcsolatukon. Egy nap hatalmas veszekedés tör ki köztük. Sigmund bejelenti, hogy válni szeretne, Maria pedig kénytelen szembenézni a legnagyobb félelmeivel. Segíthet-e a terápia a gyógyulásban és a veszteség utáni talpraállásban?",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "popularity": 2.1138,
+      "adult": false
+    },
+    {
+      "id": 1084816,
+      "title": "Vágyak és vonzások",
+      "original_title": "Les Filles désir",
+      "poster_path": "/kRlYPRjLbLfePVEQCjyRNlxLLJd.jpg",
+      "backdrop_path": "/5PVtW56jKYf7bDJkl024mQWji54.jpg",
+      "release_date": "2025-11-13",
+      "vote_average": 7.2,
+      "vote_count": 15,
+      "overview": "Marseille, nyár közepén. A 20 éves Omar és bandája, a környék elismert ifjúsági központ-tanácsadói, két kategóriába sorolják a lányokat: akikkel lefeküdnének és akikkel összeházasodnának.",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 2.053,
+      "adult": false
+    },
+    {
+      "id": 1081077,
+      "title": "Riefenstahl",
+      "original_title": "Riefenstahl",
+      "poster_path": "/as1cK8wQZN35gMFMmYWW5baGG2t.jpg",
+      "backdrop_path": "/hllN6WP6WpVe5Eu6gzFIzITKfk4.jpg",
+      "release_date": "2024-08-29",
+      "vote_average": 7.273,
+      "vote_count": 33,
+      "overview": "",
+      "genre_ids": [
+        99
+      ],
+      "popularity": 2.0255,
+      "adult": false
+    },
+    {
+      "id": 1128752,
+      "title": "Bird",
+      "original_title": "Bird",
+      "poster_path": "/wKshd6n8EKrwbE2fLOUqC4TSG6O.jpg",
+      "backdrop_path": "/wwtZN9fy6BaFguj6wGPV0ZtCLHD.jpg",
+      "release_date": "2024-11-08",
+      "vote_average": 7.242,
+      "vote_count": 184,
+      "overview": "",
+      "genre_ids": [
+        18,
+        14
+      ],
+      "popularity": 1.9846,
+      "adult": false
+    },
+    {
+      "id": 1119625,
+      "title": "Felfüggesztett idő",
+      "original_title": "Hors du temps",
+      "poster_path": "/rJf74EY7ATFLKj01FOGPA9c5Y6z.jpg",
+      "backdrop_path": "/aBCLfNjO7PLuusVrJ8hPF70JVqf.jpg",
+      "release_date": "2025-04-17",
+      "vote_average": 4.9,
+      "vote_count": 18,
+      "overview": "A 2020-as COVID idején két házaspár egy vidéki házba vonul el, hogy mindentől távol várja a járvány végét. A két férfi, Etienne és Paul, testvérek és gyerekkorukat a házban töltötték. A bezártsággal felszínre kerülnek a gyerekkori emlékek, eszükbe jutnak szomszédok, régi ismerősök. A fivérek számot vetnek azzal is, hogy milyen távol kerültek egymástól és közös gyökereiktől. A beszélgetések egyre nyugtalanítóbb érzéseket és növekvő feszültségeket hoznak elő a négy emberből.",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "popularity": 1.972,
+      "adult": false
+    },
+    {
+      "id": 820707,
+      "title": "A vörös sziget",
+      "original_title": "L'Île rouge",
+      "poster_path": "/reGKBKUFeqpOsmJk9WKlLSUOLhG.jpg",
+      "backdrop_path": "/gjw5QlQ1WCHzIUFjLea2pSuAq30.jpg",
+      "release_date": "2025-01-23",
+      "vote_average": 5.529,
+      "vote_count": 52,
+      "overview": "A hetvenes évek elején Madagaszkáron néhány fegyveres és családjuk él az egyik utolsó francia katonai támaszponton, az egykori hatalmas gyarmatbirodalom maradványán. A tízéves kisfiú, Thomas olvasmányélménye, a rettenthetetlen képregényhősnő, Fantômette hatására kíváncsi pillantással söpör végig mindazon, ami körülveszi. A gondtalan élet mögött fokozatosan kinyílik a szeme egy másik valóságra.",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 1.9588,
+      "adult": false
+    },
+    {
+      "id": 1142501,
+      "title": "Véletlenül írtam egy könyvet",
+      "original_title": "Véletlenül írtam egy könyvet",
+      "poster_path": "/fFya2L7H7XK333IISu1Ds8BFFWd.jpg",
+      "backdrop_path": "/dMbTVD7ylqa9p7o0QN7bCoPZeGT.jpg",
+      "release_date": "2025-01-30",
+      "vote_average": 8.2,
+      "vote_count": 2,
+      "overview": "A családi film főszereplője, Katinka még csak 12 éves, de már tudja, hogy író szeretne lenni, méghozzá híres író. Ebben a szomszédjában élő, épp alkotói válságban szenvedő írónő segít neki, némi kertészkedésért cserébe. Miközben Katinka írni tanul, felfedezi családjának történetét, megismeri önmagát és feldolgozza anyukája elvesztésének traumáját, míg azon veszi észre magát, hogy az életéből egy kalandokkal teli, izgalmas könyv lett.",
+      "genre_ids": [
+        10751
+      ],
+      "popularity": 1.9397,
+      "adult": false
+    },
+    {
+      "id": 1082424,
+      "title": "Jane Austen tönkretette az életem",
+      "original_title": "Jane Austen a gâché ma vie",
+      "poster_path": "/fUMqTyut3RSnGedOCqBCjk1YEIe.jpg",
+      "backdrop_path": "/tS3iQRpGvQOgTuz7xPXqSidi19B.jpg",
+      "release_date": "2025-01-22",
+      "vote_average": 6.336,
+      "vote_count": 73,
+      "overview": "Agathe a legendás párizsi Shakespeare & Co. könyvesboltban dolgozik, polgári állása mellett pedig írói álmokat dédelget, igaz, már jó ideje alkotói válságban szenved. Az irodalom iránti rajongás mellett türelmetlenül vár a nagy, Jane Austen-i típusú, lángoló szerelemre, és mivel épp szingli, így élvezettel merül el az írónő érzelmekkel teli műveiben.\r Amikor legjobb barátja, Félix elintézi, hogy meghívást kapjon az angliai Jane Austen Írótáborba, Agathe esélyt kap arra, hogy végre megélje a saját Jane Austen-pillanatát… ám ehelyett összehozza a sors az írónő ük-ük-ük-ük unokájával, Oliverrel, és hamar egy váratlan szerelmi háromszög közepén találja magát. Ahhoz, hogy beteljesítse szerelmi és szakmai álmait, Agathénak szembe kell néznie a saját bizonytalanságaival, és el kell döntenie, mit is akar valójában.",
+      "genre_ids": [
+        35,
+        10749,
+        18
+      ],
+      "popularity": 1.9223,
+      "adult": false
+    },
+    {
+      "id": 1297002,
+      "title": "Emma és a halálfejes lepke",
+      "original_title": "Ema a smrtihlav",
+      "poster_path": "/mrB5LWrILOFaGTomMlPva4nbDz2.jpg",
+      "backdrop_path": "/ukyggCE8Iq1VfWWaHHjbz6prezB.jpg",
+      "release_date": "2024-09-26",
+      "vote_average": 7.4,
+      "vote_count": 5,
+      "overview": "A második világháború és a háborús szlovák állam viharos esztendőiben a magyar özvegy Marika egy zsidó fiút rejteget a szlovák-magyar határon lévő házában, miközben két férfi - egy szlovák Hlinkagárdista százados és egy német náci tiszt - figyelmének kereszttüzébe kerül.",
+      "genre_ids": [
+        18,
+        10752
+      ],
+      "popularity": 1.901,
+      "adult": false
+    },
+    {
+      "id": 1512292,
+      "title": "Egykutya",
+      "original_title": "Egykutya",
+      "poster_path": "/fGPouchPqzEiVOTHRi1VdnqpkMe.jpg",
+      "backdrop_path": "/cDCUWrxokhp7vAfIlV7DtcMmI0C.jpg",
+      "release_date": "2025-09-24",
+      "vote_average": 0,
+      "vote_count": 0,
+      "overview": "A film valós időben meséli el egy viharos este történetét, amikor hosszú évek után, egyikük váratlan meghívására találkozik négy kollégiumi jó barát. Bár már azt hitték, sosem állnak szóba egymással újra, ezen az estén élet-halál kérdése lehet, hogy ismét szót értsenek. A nézők a csavaros, csípős humorú szócsatákból lassan összerakhatják a rejtvény megfejtését: azt, hogy miként lehetett négy ennyire különböző ember ekkora hatással egymás életére",
+      "genre_ids": [
+        18,
+        35
+      ],
+      "popularity": 1.7579,
+      "adult": false
+    },
+    {
+      "id": 70247,
+      "title": "Leselkedők 2.",
+      "original_title": "Watchers II",
+      "poster_path": "/mvcG8nBYuYrGfsHc9s9lNJJsnuQ.jpg",
+      "backdrop_path": "/xYAGzJjN1LYutNhXTxkK2WpMHpy.jpg",
+      "release_date": "1990-08-16",
+      "vote_average": 4.7,
+      "vote_count": 37,
+      "overview": "Egy elbocsátott tudós félresikerült bosszújának köszönhetően az amerikai hadsereg által létrehozott gyilkos szörnyeteg és az őt irányító szuper-intelligens kutya megszökik a laboratóriumból.",
+      "genre_ids": [
+        27,
+        878
+      ],
+      "popularity": 1.7266,
+      "adult": false
+    },
+    {
+      "id": 1506277,
+      "title": "Szenvedélyes nők",
+      "original_title": "Szenvedélyes nők",
+      "poster_path": "/rQV3WscBSQGZZnvGLaDKTCda7yu.jpg",
+      "backdrop_path": "/sCxQewhPYEcZRqDMu1OoYDwX93C.jpg",
+      "release_date": "2025-11-27",
+      "vote_average": 0,
+      "vote_count": 0,
+      "overview": "A negyvenes Lilla párterapeutaként dolgozik, és egész életét a családjának szentelte. Ezért is éri váratlanul, amikor elhagyja a férje egy fiatal műkörmösért. Lilla lánya, Zsófi és az anyja, az egykor ismert színésznő, Vilma elhatározzák, hogy kirángatják a nőt a depresszióból és az önsajnálatból és ráveszik, hogy kezdjen el újra randizni. Lilla évtizedek óta nem volt szingli, így kezdetben ellenáll, és titokban még mindig abban reménykedik, hogy a férje visszatér hozzá. Ezért az anyja cselhez folyamodik, és elhívja a lányát és az unokáját a vidéki nyaralójukba, ahol bemutat neki egy sármos újságírót, aki Vilma önéletrajzi könyvét írja. A helyzetet bonyolítja, hogy Zsófi barátja is próbálja összehozni Lillát egy nagyszájú kollégájával, aki teljesen váratlanul toppan be és még jobban összekuszálja az eseményeket.",
+      "genre_ids": [
+        10749,
+        35
+      ],
+      "popularity": 1.6893,
+      "adult": false
+    },
+    {
+      "id": 1183761,
+      "title": "Szicíliai randevú",
+      "original_title": "Fino alla fine",
+      "poster_path": "/1lCerwhKerAP5s9pDNbfM7IXr9b.jpg",
+      "backdrop_path": "/b7phUFLTBr3CBQl0ZND9eOmFljL.jpg",
+      "release_date": "2025-01-23",
+      "vote_average": 5.6,
+      "vote_count": 71,
+      "overview": "Sophie és a nővére Kaliforniából Szicíliába megy nyaralni. A vakáció csodásan alakul, a lányok találkoznak egy csapat helyi sráccal, Sophie pedig összejön Giulio-val. Ám a paradicsomi kaland váratlan fordulatot vesz, és elkezdődik Sophie életének legfélelmetesebb éjszakája.",
+      "genre_ids": [
+        18,
+        53,
+        80
+      ],
+      "popularity": 1.6001,
+      "adult": false
+    },
+    {
+      "id": 1178532,
+      "title": "Moon, a panda",
+      "original_title": "Moon le Panda",
+      "poster_path": "/ogiqgutcOYcwYIxdIsW1LAxFtXb.jpg",
+      "backdrop_path": "/qZmBjWUQDw0s7oUIDRT3hWkcWlO.jpg",
+      "release_date": "2025-04-10",
+      "vote_average": 6.3,
+      "vote_count": 30,
+      "overview": "A 12-éves Tiant és húgát szülei a nagymamához küldik a kínai Sichuan-hegyekbe. Apja szerint Tiannak sokkal komolyabban kell vennie a tanulást, ám a fiú szíve szerint inkább a környező erdőben tesz hosszú sétákat. Ott hihetetlen módon találkozik egy pandakölyökkel, akit Moonnak nevez el. Ahogy telnek a napok, titkos és szoros kötelék alakul ki közöttük. De miután Tiant apja arra kényszeríti, hogy visszatérjen a városba, el kell válnia pajtásától. Amikor Tian rájön, hogy Moon élőhelye nem biztonságos, minden követ megmozgat, hogy a bocsot sikerüljön elköltöztetni, és végső búcsút vehessen szőrös barátjától.",
+      "genre_ids": [
+        10751,
+        12
+      ],
+      "popularity": 1.5981,
+      "adult": false
+    },
+    {
+      "id": 1181161,
+      "title": "Nászkáosz",
+      "original_title": "Avec ou sans enfants ?",
+      "poster_path": "/cADQXTnGVtJd3J98gzPm4JRAY3N.jpg",
+      "backdrop_path": "/7StcR1Wrxtr95HJ5Iyb6mYrDK5i.jpg",
+      "release_date": "2025-08-07",
+      "vote_average": 5.5,
+      "vote_count": 22,
+      "overview": "Amikor Pio és Anaïs elhatározzák, hogy összeházasodnak, kijelentik a barátaiknak: az esküvő gyerekmentes lesz. A barátaik azonban mégis viszik a csemetéket, azt remélve, hogy elrejthetik őket a menyasszony és a vőlegény elől. A terv nem jön be és a várva várt többnapos mulatozás hamar katasztrófába fullad.",
+      "genre_ids": [
+        35
+      ],
+      "popularity": 1.4282,
+      "adult": false
+    },
+    {
+      "id": 966238,
+      "title": "A konyha",
+      "original_title": "La cocina",
+      "poster_path": "/zla3AUXbFEkvHzQ1XyI7hXaBzsR.jpg",
+      "backdrop_path": "/eiNqZH0UMV8nJk9TbP4fpTJQVJD.jpg",
+      "release_date": "2025-03-06",
+      "vote_average": 7.013,
+      "vote_count": 75,
+      "overview": "A La Cocina a turisták által kedvelt The Grill nevű manhattani étteremben játszódik, ahol az amerikai pincérnő, Julia  mellett számos illegális bevándorló is dolgozik. Köztük van az álmodozó szakács, Pedró, aki szerelmes lesz Juliába, a kapcsolat azonban akadályokba ütközik, amikor lopással vádolják a papírok nélküli férfit.",
+      "genre_ids": [
+        18,
+        35
+      ],
+      "popularity": 1.3686,
+      "adult": false
+    },
+    {
+      "id": 1432812,
+      "title": "A Mikulás nyomában",
+      "original_title": "À la poursuite du Père Noël !",
+      "poster_path": "/jQev7aQ6iVJnR0BAliIoxy0kuSL.jpg",
+      "backdrop_path": "/qRtGtGfcmjak0MvVR0zbSKPE9Gy.jpg",
+      "release_date": "2025-12-10",
+      "vote_average": 7,
+      "vote_count": 2,
+      "overview": "A nyolcéves Zoé arról álmodik, hogy a Mikulás hoz neki egy légpuskát, amivel bosszút állhat Timothée-n, az osztálytársán. Timothée állandóan azzal idegesíti Zoét, hogy az ő Lego robotjával játszik. Zoé édesanyja, Nadia, Timothée szüleinél dolgozik, ami megnehezíti a bosszú megvalósítását. Amikor Zoé rájön, hogy karácsonyi kívánsága nem teljesült, elhatározza, hogy felkeresi a Mikulást, és rábírja, hogy teljesítse a kérését. Szerencséje csak akkor fordul meg igazán, amikor egy reklámból megtudja, hogy a Mikulás mindennap felvonul a híres Parc Enchanté vidámparkban...  (Csillag Lajos) (R3)",
+      "genre_ids": [
+        35,
+        10751
+      ],
+      "popularity": 1.3602,
+      "adult": false
+    },
+    {
+      "id": 1171153,
+      "title": "Köln 75",
+      "original_title": "Köln 75",
+      "poster_path": "/oMeg1capgysYPHVOnZq7HfoIXzE.jpg",
+      "backdrop_path": "/90BfOJl7EVi6LyWbVyJfRFw5ixt.jpg",
+      "release_date": "2025-03-13",
+      "vote_average": 7.177,
+      "vote_count": 31,
+      "overview": "",
+      "genre_ids": [
+        18,
+        36,
+        10402
+      ],
+      "popularity": 1.239,
+      "adult": false
+    },
+    {
+      "id": 1543414,
+      "title": "Fesztiválország",
+      "original_title": "Fesztiválország",
+      "poster_path": "/xrPbQuotvxhyqCEuL6QamvI0cYN.jpg",
+      "backdrop_path": null,
+      "release_date": "2025-09-18",
+      "vote_average": 0,
+      "vote_count": 0,
+      "overview": "",
+      "genre_ids": [
+        99,
+        10402
+      ],
+      "popularity": 1.1566,
+      "adult": false
+    },
+    {
+      "id": 1134680,
+      "title": "A gőgös hercegnő",
+      "original_title": "Pyšná princezna",
+      "poster_path": "/rN6EJrS3yZG4voGb2NO54rwEvW1.jpg",
+      "backdrop_path": "/nnDVfcM9J6FNBerIm0rjUsljwCx.jpg",
+      "release_date": "2025-10-30",
+      "vote_average": 6.5,
+      "vote_count": 6,
+      "overview": "Eljött az idő, hogy az ifjú Benedikt herceg végre megházasodjon. Amikor meglát egy festményt Karolina hercegnőről, teljesen elbűvöli őt, és azonnal a lányba szeret. Kertésznek öltözve elvegyül a hercegnő udvarában, és álruhájában próbálja meg elnyerni szívét.",
+      "genre_ids": [
+        16,
+        10751,
+        14
+      ],
+      "popularity": 1.0523,
+      "adult": false
+    },
+    {
+      "id": 842859,
+      "title": "A legértékesebb áru",
+      "original_title": "La plus précieuse des marchandises",
+      "poster_path": "/tPakN7T2T6VHd3Q7kPmASbHfq9P.jpg",
+      "backdrop_path": "/bKhhWhoV6B1Kq1wKRSWGDBhLv9Z.jpg",
+      "release_date": "2025-04-10",
+      "vote_average": 7.6,
+      "vote_count": 164,
+      "overview": "A második világháború idején egy hatalmas erdő eldugott kunyhójában igyekszik átvészelni a zord időket egy szegény favágó és a felesége. Az erdőn naponta haladnak át az ismeretlen úti cél felé robogó vonatok. Egy nap az asszony megment egy kisbabát, akit az egyik száguldó vonatból dobnak ki. Ez a baba lesz a legértékesebb áru, aki megváltoztatja a férfi és a nő életét. A házaspár igyekszik életben tartani és megvédeni az ártatlan csöppséget, ám a háború nemcsak a legjobbat, de a legrosszabbat is felszínre hozza az emberekből.",
+      "genre_ids": [
+        16,
+        18,
+        36
+      ],
+      "popularity": 1.0295,
+      "adult": false
+    },
+    {
+      "id": 1266781,
+      "title": "Égen-földön Natacha",
+      "original_title": "Natacha (presque) hôtesse de l'air",
+      "poster_path": "/mvqZY9g8yxwlCLLLvOIupQEwjzw.jpg",
+      "backdrop_path": "/fu9PqKZvAAawuGdchsISzjaSbm3.jpg",
+      "release_date": "2025-04-02",
+      "vote_average": 5.355,
+      "vote_count": 31,
+      "overview": "Történetünk 1963-ban játszódik Franciaországban, és Natacha (Camille Lou) életét követi nyomon, aki gyermekkora óta arról álmodik, hogy légiutas-kísérő legyen, hogy kitörhessen a kor nőkre vonatkozó hagyományos elvárásai közül. Bár mindent megtesz álma megvalósításáért, Natacha nem felel meg az akkori légikísérőkkel szemben támasztott elvárásoknak, ezért a talált tárgyak osztályára helyezik. ​Amikor váratlanul lehetőséget kap egy Párizs–New York járaton dolgozni, Natacha izgatottan vág bele az új kalandba. Azonban hamarosan belekeveredik egy Mona Lisa ellopására irányuló bűnügybe, és egy ügyetlen stewarddal, Walterrel (Vincent Dedienne) együtt üldözőbe veszik a tolvajokat, kalandos utazásra indulva Franciaországon és Olaszországon keresztül.  (csd)",
+      "genre_ids": [
+        35,
+        12
+      ],
+      "popularity": 0.9911,
+      "adult": false
+    },
+    {
+      "id": 1214052,
+      "title": "Az ismeretlenbe",
+      "original_title": "Σε μια άγνωστη χώρα",
+      "poster_path": "/AclLuJFxIIwyUY7AyRIxNh6kUb2.jpg",
+      "backdrop_path": "/49CjA88b278yvTswsJs1jUJTAbx.jpg",
+      "release_date": "2025-07-17",
+      "vote_average": 7.1,
+      "vote_count": 9,
+      "overview": "A tét nem is lehetne nagyobb két palesztin menekült számára. Az unokatestvérek hamis útlevelekre gyűjtenek, hogy kijuthassanak Athénból. Amikor azonban egyikük elveszíti a nehezen megkeresett pénzüket, szélsőséges tervet eszelnek ki: csempészeknek adják ki magukat, hogy megpróbáljanak elmenekülni kétségbeesett helyzetükből, mielőtt túl késő lenne.",
+      "genre_ids": [
+        53,
+        80
+      ],
+      "popularity": 0.8743,
+      "adult": false
+    },
+    {
+      "id": 562685,
+      "title": "Utunk a Marsra a SpaceX-szel",
+      "original_title": "MARS: Inside SpaceX",
+      "poster_path": "/2o2dTQYbKQUEL1LiydU5rrQlfnz.jpg",
+      "backdrop_path": "/j8dTrPsq0zjLBVjmnBeP7jAVpIb.jpg",
+      "release_date": "2018-11-11",
+      "vote_average": 7.466,
+      "vote_count": 44,
+      "overview": "A \" Mars  - Utunk a vörös bolygóra \" c. sorozat első évadában izgalmas tudósításokat láthattunk az Elon Musk alapította, egy leendő marsi misszió előkészítésén dolgozó SpaceX vállalat életéből. A filmben most újraélhetjük a legizgalmasabb pillanatokat, és vadonatúj felvételeket láthatunk a forradalmi Falcon Heavy rakétáról.",
+      "genre_ids": [
+        36,
+        10770,
+        99
+      ],
+      "popularity": 0.7131,
+      "adult": false
+    },
+    {
+      "id": 1218193,
+      "title": "Tűz a tengerparton",
+      "original_title": "Casa en flames",
+      "poster_path": "/qhvU1BAlj6oKJpWBSZMc4x0dYfr.jpg",
+      "backdrop_path": "/8xVvEvOrtxVSWN3wpIdHozozyMb.jpg",
+      "release_date": "2025-07-03",
+      "vote_average": 6.848,
+      "vote_count": 115,
+      "overview": "Az elvált nőnek, Montsénak két gyermeke van, akik már régóta nem törődnek vele. Most rendhagyó összejövetelre készül a Costa Brava-i otthonában, és semmi, de semmi sem akadályozhatja meg abban, hogy egy utolsó hétvégét a családjával töltsön. A rokoni találkozó azonban káoszba fullad, és hamar előtörnek az indulatok.",
+      "genre_ids": [
+        35
+      ],
+      "popularity": 0.6838,
+      "adult": false
+    },
+    {
+      "id": 1098709,
+      "title": "Grand Tour",
+      "original_title": "Grand Tour",
+      "poster_path": "/qRq22hYo3PRDGyFpdASUJKGH8eJ.jpg",
+      "backdrop_path": "/gQ272LEg56jcIPx9gNBtfvyF5aq.jpg",
+      "release_date": "2024-11-27",
+      "vote_average": 6.598,
+      "vote_count": 41,
+      "overview": "",
+      "genre_ids": [
+        18,
+        12
+      ],
+      "popularity": 0.6571,
+      "adult": false
+    },
+    {
+      "id": 1214539,
+      "title": "Soundtrack to a Coup d'Etat",
+      "original_title": "Soundtrack to a Coup d'Etat",
+      "poster_path": "/7GgbhEmmVkDeCDqfPWf6O46KWVY.jpg",
+      "backdrop_path": "/fUlzONyAzageVzf2ruxkw3RWEiM.jpg",
+      "release_date": "2024-09-11",
+      "vote_average": 7.6,
+      "vote_count": 56,
+      "overview": "",
+      "genre_ids": [
+        99,
+        36,
+        10402
+      ],
+      "popularity": 0.5815,
+      "adult": false
+    },
+    {
+      "id": 1518222,
+      "title": "Stars of Little Importance",
+      "original_title": "Minden csillag",
+      "poster_path": "/3lSzop1VFOr7vEGCxeuCAoOStnr.jpg",
+      "backdrop_path": null,
+      "release_date": "2025-11-06",
+      "vote_average": 0,
+      "vote_count": 0,
+      "overview": "Egy testvérpár, Bianka és Milán Budapesten élnek, de hosszú évek után hazamennek vidékre  karácsonyozni, hogy újra találkozzanak a gyerekkori barátaikkal, az első szerelmeikkel.  Buliznak. Nagyon sokat isznak. Semmi sem olyan, mint régen. Pedig de jó lenne, nem? A  testvérpár szemén keresztül magyar vidéki sorsokkal találkozunk. És hát muszáj  szembesülniük a kérdéssel: 30 évesek vagyunk, hová tartunk? Tizenévesen ilyennek  képzeltük az életünket?",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 0.5725,
+      "adult": false
+    },
+    {
+      "id": 620741,
+      "title": "Ruby Herring esetei - Az utolsó lehelet",
+      "original_title": "Ruby Herring Mysteries: Her Last Breath",
+      "poster_path": "/kEj8yQRLm4FJgZRtEUG418Zwq6G.jpg",
+      "backdrop_path": "/tFI1sro93bpkDMy7zP8BAqQ38fh.jpg",
+      "release_date": "2019-09-20",
+      "vote_average": 7.197,
+      "vote_count": 33,
+      "overview": "Ruby Herring és Jake Killian nyomozó egy igen gyanús és halálos kimenetelű autóbalesetet vizsgálnak, miután megoldják az esetet, Ruby új bizonyítékokat talál, amelyek kétségbe vonják első következtetésüket.",
+      "genre_ids": [
+        10770,
+        9648,
+        53,
+        80
+      ],
+      "popularity": 0.507,
+      "adult": false
+    },
+    {
+      "id": 1094942,
+      "title": "Csongor és Tünde",
+      "original_title": "Csongor és Tünde",
+      "poster_path": "/2HbnVJmqVF8OPLzyARpkbxI7D7.jpg",
+      "backdrop_path": "/mPvV2kTnuukM7pmyatXh3Yaa3Fd.jpg",
+      "release_date": "2025-04-17",
+      "vote_average": 0,
+      "vote_count": 0,
+      "overview": "A Cinemon Entertainment gyártásában, Temple Réka producer vezetésével, Máli Csaba és Pálfi Zsolt rendezésében a Nemzeti Filmintézet támogatásával készül a CSONGOR ÉS TÜNDE mozifilm Dargay Attila terveiből.",
+      "genre_ids": [
+        16,
+        10751,
+        14,
+        10749
+      ],
+      "popularity": 0.4336,
+      "adult": false
+    },
+    {
+      "id": 1293086,
+      "title": "Balhés nyaralás",
+      "original_title": "On aurait dû aller en Grèce",
+      "poster_path": "/rJxDnqvbnDoM1e2vHksxPKHhTn4.jpg",
+      "backdrop_path": "/jaKu167LZTLEym8Kv1tCoOMTMR7.jpg",
+      "release_date": "2025-07-10",
+      "vote_average": 5.176,
+      "vote_count": 34,
+      "overview": "Egy előkelő család minden évben Görögországba utazik nyaralni, ám anyagi gondok miatt most a franciaországi Korzika mellett döntenek, a családfő ugyanis a legrosszabbkor vásárolt bitcoint. A szinte pénz nélkül maradt férfinak sikerül kölcsönkérnie egy korzikai villát, hogy a balszerencséjét megpróbálja valamivel ellensúlyozni. A férfi azonban véletlenül elüt egy tehenet, ami rendkívül feldühíti a szomszédokat, a baleset után pedig képtelen és mókás félreértések sorozata kezdődik a szigetlakók és a család tagjai között.",
+      "genre_ids": [
+        35
+      ],
+      "popularity": 0.4154,
+      "adult": false
+    },
+    {
+      "id": 373441,
+      "title": "Jim: James Foley története",
+      "original_title": "Jim: The James Foley Story",
+      "poster_path": "/ng7aABnVoUp9dUHv92E3Uo5nqul.jpg",
+      "backdrop_path": "/FwV7sa7Qs7rN5ack1fSgAGscAa.jpg",
+      "release_date": "2016-01-23",
+      "vote_average": 7.357,
+      "vote_count": 42,
+      "overview": "James Foley-t, az amerikai újságírót 2014-ben gyilkolta meg az ISIS terroristacsoport. Barátai, családja és kollégái mesélnek James életéről, és részletesen beszámolnak a halála előtti, fogságban töltött időszakról is.",
+      "genre_ids": [
+        99
+      ],
+      "popularity": 0.4031,
+      "adult": false
+    },
+    {
+      "id": 1567629,
+      "title": "My Father's Daughter",
+      "original_title": "Apám lánya",
+      "poster_path": "/9Pa5maRzLLkBwI537VAhq2fjYPw.jpg",
+      "backdrop_path": null,
+      "release_date": "2025-12-04",
+      "vote_average": 0,
+      "vote_count": 0,
+      "overview": "Az Apám lánya egy filmes nyomozás, melynek célja az elhallgatott igazság feltárása és  egy generációkon átívelő családi trauma feldolgozása.",
+      "genre_ids": [
+        99,
+        18,
+        80
+      ],
+      "popularity": 0.2774,
+      "adult": false
+    },
+    {
+      "id": 1526122,
+      "title": "Emma karácsonya",
+      "original_title": "Emma karácsonya",
+      "poster_path": "/70m2cArAUjpcBaYCGqx3PPcdF1y.jpg",
+      "backdrop_path": null,
+      "release_date": "2025-11-06",
+      "vote_average": 0,
+      "vote_count": 0,
+      "overview": "Emma egy huszonegyedik századi 13 éves, aki sokat lóg a barátaival, a kelleténél többet telefonozik és hogy el tudja játszani kedvenc dalait gitározni is tanul.\r A zeneiskolában idén karácsonykor párokba osztják a gyerekeket, hogy így adjanak elő egy-egy dalt az ünnepi gálán. Emmát a felette járó művészlélek Ábel mellé osztják be. Ábel profin zongorázik és gyönyörűen énekel, ami hamar megérinti Emma szívét. Emma életében először tapasztalja meg, hogy a szerelembe esés több, mint két fiatal cukiskodása… megtapasztalja, hogy a felnőtté válás egy fontos lépcsője ez. Hirtelen egy  össze-vissza tekergő érzelmi hullámvasúton találja magát a szülei kapcsolatának elromlása és a saját szerelmi életének sűrűjében.",
+      "genre_ids": [
+        10749,
+        10751,
+        10402
+      ],
+      "popularity": 0.2369,
+      "adult": false
+    },
+    {
+      "id": 1559897,
+      "title": "Legénybúcsú",
+      "original_title": "Legénybúcsú",
+      "poster_path": "/hvcJ0tAZEJb6WOBR3YzM8qBHVnc.jpg",
+      "backdrop_path": "/l4eO0DmXdoMLFRUO3Xhro39dxTd.jpg",
+      "release_date": "2025-12-11",
+      "vote_average": 0,
+      "vote_count": 0,
+      "overview": "Alex és Simon mindketten háziorvosok és huszonegy éve elválaszthatatlanok. Most azonban Simon megnősül, így legjobb barátja egy igazán emlékezetes legénybúcsút szervez számára. A buli azonban minden lesz, csak nem szokványos: a Balaton partjától egy luxus golf resortig, pókerjátszmáktól vadnyugati kocsmákig sodródik a történet, miközben egy titokzatos széf, egy híres színésznő, egy rendőrnő, egy kommandós és Simon menyasszonya is bonyolítja az eseményeket. A kérdés csak az: vajon kibírja-e a barátság ezt a hétvégét – és lesz-e egyáltalán esküvő?",
+      "genre_ids": [
+        35
+      ],
+      "popularity": 0.1333,
+      "adult": false
+    }
+  ]
+}

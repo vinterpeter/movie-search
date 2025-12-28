@@ -3,6 +3,7 @@ export const hu = {
   appTitle: 'Film Kereső',
   movies: 'Filmek',
   tvShows: 'Sorozatok',
+  theaters: 'Mozi',
   searchMoviePlaceholder: 'Film keresése...',
   searchTvPlaceholder: 'Sorozat keresése...',
   watchlist: 'Watchlist',

@@ -39,3 +39,6 @@ export const getImageUrl = (
 // Magyar régió és nyelv beállítások
 export const REGION = 'HU';
 export const LANGUAGE = 'hu-HU';
+
+// Hungarian Cinema API (Cloudflare Worker)
+export const CINEMA_API_URL = import.meta.env.VITE_CINEMA_API_URL || 'https://hungarian-cinema-api.your-subdomain.workers.dev';
