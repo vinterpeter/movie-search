@@ -238,6 +238,7 @@ function App() {
           item={selectedItem}
           mediaType={selectedMediaType}
           browseMode={browseMode}
+          initialCity={selectedCity}
           onClose={() => setSelectedItem(null)}
         />
       )}

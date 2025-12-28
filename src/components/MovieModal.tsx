@@ -12,6 +12,7 @@ interface MovieModalProps {
   item: Movie | TVShow;
   mediaType: MediaType;
   browseMode?: BrowseMode;
+  initialCity?: string;
   onClose: () => void;
 }
 
@@ -24,7 +25,7 @@ const isMovieDetails = (details: MovieDetails | TVShowDetails): details is Movie
   return 'runtime' in details;
 };
 
-export const MovieModal = ({ item, mediaType, browseMode, onClose }: MovieModalProps) => {
+export const MovieModal = ({ item, mediaType, browseMode, initialCity, onClose }: MovieModalProps) => {
   const [details, setDetails] = useState<MovieDetails | TVShowDetails | null>(null);
   const [providers, setProviders] = useState<WatchProviderResult | null>(null);
   const [trailer, setTrailer] = useState<Video | null>(null);
@@ -86,15 +87,19 @@ export const MovieModal = ({ item, mediaType, browseMode, onClose }: MovieModalP
           const movie = data.movies.find(m => m.id === item.id);
           if (movie) {
             setCinemaMovie(movie);
-            // Set default city to first available city
+            // Set default city: use initialCity if available for this movie, otherwise first available
             if (movie.cities.length > 0 && !selectedCity) {
-              setSelectedCity(movie.cities[0]);
+              if (initialCity && movie.cities.includes(initialCity)) {
+                setSelectedCity(initialCity);
+              } else {
+                setSelectedCity(movie.cities[0]);
+              }
             }
           }
         }
       });
     }
-  }, [browseMode, mediaType, item.id, selectedCity]);
+  }, [browseMode, mediaType, item.id, selectedCity, initialCity]);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
