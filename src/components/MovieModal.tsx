@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { X, Play, Star, Check, Plus, ExternalLink, Loader2, ThumbsUp, Heart } from 'lucide-react';
-import type { Movie, TVShow, MovieDetails, TVShowDetails, WatchProviderResult, Video, MediaType } from '../types/movie';
-import { getMovieDetails, getMovieWatchProviders, getTVDetails, getTVWatchProvidersForShow, getVideos, getBestTrailer } from '../api/tmdb';
+import { X, Play, Star, Check, Plus, ExternalLink, Loader2, ThumbsUp, Heart, MapPin, Calendar, Ticket } from 'lucide-react';
+import type { Movie, TVShow, MovieDetails, TVShowDetails, WatchProviderResult, Video, MediaType, BrowseMode, Screening, CinemaMovie } from '../types/movie';
+import { getMovieDetails, getMovieWatchProviders, getTVDetails, getTVWatchProvidersForShow, getVideos, getBestTrailer, getHungarianCinemaData } from '../api/tmdb';
 import { getImageUrl, IMAGE_SIZES } from '../api/config';
 import { useWatchlist } from '../hooks/useWatchlist';
 import { useFavorites } from '../hooks/useFavorites';
@@ -11,6 +11,7 @@ import './MovieModal.css';
 interface MovieModalProps {
   item: Movie | TVShow;
   mediaType: MediaType;
+  browseMode?: BrowseMode;
   onClose: () => void;
 }
 
@@ -23,12 +24,15 @@ const isMovieDetails = (details: MovieDetails | TVShowDetails): details is Movie
   return 'runtime' in details;
 };
 
-export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
+export const MovieModal = ({ item, mediaType, browseMode, onClose }: MovieModalProps) => {
   const [details, setDetails] = useState<MovieDetails | TVShowDetails | null>(null);
   const [providers, setProviders] = useState<WatchProviderResult | null>(null);
   const [trailer, setTrailer] = useState<Video | null>(null);
   const [showTrailer, setShowTrailer] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [cinemaMovie, setCinemaMovie] = useState<CinemaMovie | null>(null);
+  const [selectedCity, setSelectedCity] = useState<string>('');
+  const [selectedDate, setSelectedDate] = useState<string>('');
 
   const { t } = useI18n();
   const { addItem, removeItem, isInWatchlist } = useWatchlist();
@@ -74,6 +78,24 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
     fetchDetails();
   }, [item.id, mediaType]);
 
+  // Fetch cinema data when in theaters mode
+  useEffect(() => {
+    if (browseMode === 'theaters' && mediaType === 'movie') {
+      getHungarianCinemaData().then(data => {
+        if (data) {
+          const movie = data.movies.find(m => m.id === item.id);
+          if (movie) {
+            setCinemaMovie(movie);
+            // Set default city to first available city
+            if (movie.cities.length > 0 && !selectedCity) {
+              setSelectedCity(movie.cities[0]);
+            }
+          }
+        }
+      });
+    }
+  }, [browseMode, mediaType, item.id, selectedCity]);
+
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -92,6 +114,52 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
       document.body.style.overflow = '';
     };
   }, [onClose, showTrailer]);
+
+  // Get filtered screenings for selected city and date
+  const getFilteredScreenings = (): Screening[] => {
+    if (!cinemaMovie || !selectedCity) return [];
+    const cityScreenings = cinemaMovie.screenings[selectedCity] || [];
+    if (!selectedDate) return cityScreenings;
+    return cityScreenings.filter(s => s.date === selectedDate);
+  };
+
+  // Group screenings by cinema and date
+  const getGroupedScreenings = () => {
+    const screenings = getFilteredScreenings();
+    const grouped: Record<string, Record<string, Screening[]>> = {};
+
+    screenings.forEach(s => {
+      if (!grouped[s.date]) grouped[s.date] = {};
+      if (!grouped[s.date][s.cinemaName]) grouped[s.date][s.cinemaName] = [];
+      grouped[s.date][s.cinemaName].push(s);
+    });
+
+    // Sort screenings by time within each group
+    Object.values(grouped).forEach(dateGroup => {
+      Object.values(dateGroup).forEach(cinemaScreenings => {
+        cinemaScreenings.sort((a, b) => a.time.localeCompare(b.time));
+      });
+    });
+
+    return grouped;
+  };
+
+  // Format date for display
+  const formatDateForDisplay = (dateStr: string): string => {
+    const date = new Date(dateStr);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+
+    if (date.toDateString() === today.toDateString()) {
+      return t('today');
+    } else if (date.toDateString() === tomorrow.toDateString()) {
+      return t('tomorrow');
+    } else {
+      return date.toLocaleDateString('hu-HU', { weekday: 'short', month: 'short', day: 'numeric' });
+    }
+  };
 
   // Runtime display
   const getRuntimeDisplay = () => {
@@ -279,6 +347,78 @@ export const MovieModal = ({ item, mediaType, onClose }: MovieModalProps) => {
                     {t('viewOnJustWatch')} <ExternalLink size={14} />
                   </a>
                 )}
+              </div>
+            )}
+
+            {/* Cinema Screenings Section */}
+            {browseMode === 'theaters' && cinemaMovie && (
+              <div className="modal-screenings">
+                <h3><Ticket size={18} /> {t('screenings')}</h3>
+
+                {/* City and Date filters */}
+                <div className="screenings-filters">
+                  <div className="screenings-filter">
+                    <MapPin size={16} />
+                    <select
+                      value={selectedCity}
+                      onChange={(e) => setSelectedCity(e.target.value)}
+                      className="screenings-select"
+                    >
+                      {cinemaMovie.cities.map(city => (
+                        <option key={city} value={city}>{city}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="screenings-filter">
+                    <Calendar size={16} />
+                    <select
+                      value={selectedDate}
+                      onChange={(e) => setSelectedDate(e.target.value)}
+                      className="screenings-select"
+                    >
+                      <option value="">{t('allDates')}</option>
+                      {cinemaMovie.dates.map(date => (
+                        <option key={date} value={date}>{formatDateForDisplay(date)}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                {/* Screenings list */}
+                <div className="screenings-list">
+                  {Object.entries(getGroupedScreenings()).length > 0 ? (
+                    Object.entries(getGroupedScreenings())
+                      .sort(([a], [b]) => a.localeCompare(b))
+                      .map(([date, cinemas]) => (
+                        <div key={date} className="screenings-date-group">
+                          <div className="screenings-date-header">
+                            {formatDateForDisplay(date)}
+                          </div>
+                          {Object.entries(cinemas).map(([cinemaName, screenings]) => (
+                            <div key={cinemaName} className="screenings-cinema-group">
+                              <div className="screenings-cinema-name">{cinemaName}</div>
+                              <div className="screenings-times">
+                                {screenings.map((s, idx) => (
+                                  <a
+                                    key={idx}
+                                    href={s.bookingLink || '#'}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="screening-time"
+                                    title={s.auditorium}
+                                  >
+                                    {s.time}
+                                  </a>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      ))
+                  ) : (
+                    <p className="no-screenings">{t('noScreeningsFound')}</p>
+                  )}
+                </div>
               </div>
             )}
           </div>

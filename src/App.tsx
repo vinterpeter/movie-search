@@ -237,6 +237,7 @@ function App() {
         <MovieModal
           item={selectedItem}
           mediaType={selectedMediaType}
+          browseMode={browseMode}
           onClose={() => setSelectedItem(null)}
         />
       )}

@@ -325,6 +325,114 @@
   text-decoration: underline;
 }
 
+/* Cinema Screenings */
+.modal-screenings {
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.modal-screenings h3 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.screenings-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.screenings-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+}
+
+.screenings-select {
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.screenings-select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.screenings-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.screenings-date-group {
+  margin-bottom: 16px;
+}
+
+.screenings-date-header {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.screenings-cinema-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding-left: 8px;
+}
+
+.screenings-cinema-name {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  min-width: 100px;
+  font-weight: 500;
+}
+
+.screenings-times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.screening-time {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--primary-color);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.screening-time:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.no-screenings {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 16px;
+}
+
 @media (max-width: 768px) {
   .modal-content {
     max-height: 95vh;
@@ -344,5 +452,20 @@
 
   .modal-info {
     padding: 24px;
+  }
+
+  .screenings-filters {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .screenings-cinema-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .screenings-cinema-name {
+    min-width: auto;
+    margin-bottom: 4px;
   }
 }

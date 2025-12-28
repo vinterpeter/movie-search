@@ -135,4 +135,10 @@ export const en: Record<TranslationKeys, string> = {
   allDates: 'All dates',
   today: 'Today',
   tomorrow: 'Tomorrow',
+
+  // Cinema screenings in modal
+  screenings: 'Screenings',
+  noScreeningsFound: 'No screenings found with the current filters.',
+  buyTickets: 'Buy Tickets',
+  selectCityForScreenings: 'Select a city to see screenings',
 };

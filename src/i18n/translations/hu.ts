@@ -133,6 +133,12 @@ export const hu = {
   allDates: 'Összes nap',
   today: 'Ma',
   tomorrow: 'Holnap',
+
+  // Cinema screenings in modal
+  screenings: 'Vetítések',
+  noScreeningsFound: 'Nincs vetítés a kiválasztott szűrőkkel.',
+  buyTickets: 'Jegyvásárlás',
+  selectCityForScreenings: 'Válassz várost a vetítések megtekintéséhez',
 };
 
 export type TranslationKeys = keyof typeof hu;
