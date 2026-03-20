@@ -103,10 +103,15 @@ export const discoverMovies = async (
   const params: Record<string, string> = {
     page: page.toString(),
     region: REGION,
-    watch_region: REGION,
-    with_watch_monetization_types: 'flatrate',
     sort_by: filters.sortBy || 'popularity.desc',
   };
+
+  // Csak akkor szűrünk streamingre, ha van kiválasztott szolgáltató
+  if (filters.providers && filters.providers.length > 0) {
+    params.watch_region = REGION;
+    params.with_watch_monetization_types = 'flatrate';
+    params.with_watch_providers = filters.providers.join('|');
+  }
 
   if (filters.genres && filters.genres.length > 0) {
     params.with_genres = filters.genres.join(',');
@@ -115,10 +120,6 @@ export const discoverMovies = async (
   if (filters.certification) {
     params.certification_country = 'HU';
     params.certification = filters.certification;
-  }
-
-  if (filters.providers && filters.providers.length > 0) {
-    params.with_watch_providers = filters.providers.join('|');
   }
 
   if (filters.minRating && filters.minRating > 0) {
@@ -208,17 +209,18 @@ export const discoverTV = async (
 ): Promise<TMDBResponse<TVShow>> => {
   const params: Record<string, string> = {
     page: page.toString(),
-    watch_region: REGION,
-    with_watch_monetization_types: 'flatrate',
     sort_by: filters.sortBy || 'popularity.desc',
   };
 
-  if (filters.genres && filters.genres.length > 0) {
-    params.with_genres = filters.genres.join(',');
+  // Csak akkor szűrünk streamingre, ha van kiválasztott szolgáltató
+  if (filters.providers && filters.providers.length > 0) {
+    params.watch_region = REGION;
+    params.with_watch_monetization_types = 'flatrate';
+    params.with_watch_providers = filters.providers.join('|');
   }
 
-  if (filters.providers && filters.providers.length > 0) {
-    params.with_watch_providers = filters.providers.join('|');
+  if (filters.genres && filters.genres.length > 0) {
+    params.with_genres = filters.genres.join(',');
   }
 
   if (filters.minRating && filters.minRating > 0) {
@@ -338,6 +340,21 @@ export const getUpcomingMovies = async (page: number = 1): Promise<TMDBResponse<
   });
 };
 
+// Legjobban értékelt filmek (top rated)
+export const getTopRatedMovies = async (page: number = 1): Promise<TMDBResponse<Movie>> => {
+  return fetchFromTMDB<TMDBResponse<Movie>>('/movie/top_rated', {
+    page: page.toString(),
+    region: REGION,
+  });
+};
+
+// Legjobban értékelt sorozatok (top rated)
+export const getTopRatedTV = async (page: number = 1): Promise<TMDBResponse<TVShow>> => {
+  return fetchFromTMDB<TMDBResponse<TVShow>>('/tv/top_rated', {
+    page: page.toString(),
+  });
+};
+
 // Most a mozikban (now playing) - TMDB fallback
 export const getNowPlayingMovies = async (page: number = 1): Promise<TMDBResponse<Movie>> => {
   return fetchFromTMDB<TMDBResponse<Movie>>('/movie/now_playing', {
@@ -454,4 +471,37 @@ export const getOnTheAirTV = async (page: number = 1): Promise<TMDBResponse<TVSh
   return fetchFromTMDB<TMDBResponse<TVShow>>('/tv/on_the_air', {
     page: page.toString(),
   });
+};
+
+// ===== RECOMMENDATIONS (AJÁNLÁSOK) =====
+
+// Film ajánlások egy adott film alapján
+export const getMovieRecommendations = async (
+  movieId: number,
+  page: number = 1
+): Promise<TMDBResponse<Movie>> => {
+  return fetchFromTMDB<TMDBResponse<Movie>>(`/movie/${movieId}/recommendations`, {
+    page: page.toString(),
+  });
+};
+
+// Sorozat ajánlások egy adott sorozat alapján
+export const getTVRecommendations = async (
+  tvId: number,
+  page: number = 1
+): Promise<TMDBResponse<TVShow>> => {
+  return fetchFromTMDB<TMDBResponse<TVShow>>(`/tv/${tvId}/recommendations`, {
+    page: page.toString(),
+  });
+};
+
+// Általános ajánlás lekérés média típus alapján
+export const getRecommendations = async (
+  mediaType: MediaType,
+  id: number,
+  page: number = 1
+): Promise<TMDBResponse<Movie | TVShow>> => {
+  return mediaType === 'movie'
+    ? getMovieRecommendations(id, page)
+    : getTVRecommendations(id, page);
 };

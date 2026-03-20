@@ -6,7 +6,11 @@ import {
   getTrendingMovies,
   getTrendingTV,
   getUpcomingMovies,
+  getTopRatedMovies,
+  getTopRatedTV,
   getHungarianCinemaMovies,
+  searchMovies,
+  searchTV,
 } from '../api/tmdb';
 
 interface UseMoviesOptions {
@@ -22,6 +26,8 @@ interface UseMoviesOptions {
   // Cinema filters
   city?: string;
   date?: string;
+  // Search query
+  searchQuery?: string;
 }
 
 interface UseMoviesReturn {
@@ -54,8 +60,16 @@ export const useMovies = (options: UseMoviesOptions = {}): UseMoviesReturn => {
       try {
         let data: TMDBResponse<Movie | TVShow>;
 
+        // Keresés mód
+        if (options.searchQuery && options.searchQuery.trim()) {
+          if (mediaType === 'tv') {
+            data = await searchTV(options.searchQuery.trim(), pageNum);
+          } else {
+            data = await searchMovies(options.searchQuery.trim(), pageNum);
+          }
+        }
         // Speciális browse módok kezelése
-        if (browseMode === 'trending') {
+        else if (browseMode === 'trending') {
           if (mediaType === 'tv') {
             data = await getTrendingTV('week');
           } else {
@@ -63,6 +77,12 @@ export const useMovies = (options: UseMoviesOptions = {}): UseMoviesReturn => {
           }
         } else if (browseMode === 'upcoming' && mediaType === 'movie') {
           data = await getUpcomingMovies(pageNum);
+        } else if (browseMode === 'top_rated') {
+          if (mediaType === 'tv') {
+            data = await getTopRatedTV(pageNum);
+          } else {
+            data = await getTopRatedMovies(pageNum);
+          }
         } else if (browseMode === 'theaters' && mediaType === 'movie') {
           // Magyar mozikban játszott filmek (Cinema City API)
           data = await getHungarianCinemaMovies({
@@ -109,7 +129,7 @@ export const useMovies = (options: UseMoviesOptions = {}): UseMoviesReturn => {
         setLoading(false);
       }
     },
-    [mediaType, browseMode, options.genres, options.certification, options.providers, options.sortBy, options.minRating, options.yearFrom, options.yearTo, options.city, options.date]
+    [mediaType, browseMode, options.genres, options.certification, options.providers, options.sortBy, options.minRating, options.yearFrom, options.yearTo, options.city, options.date, options.searchQuery]
   );
 
   useEffect(() => {

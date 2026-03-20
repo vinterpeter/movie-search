@@ -118,3 +118,22 @@
 .movie-card__love.active {
   background: #ec4899;
 }
+
+/* Mobile: always show favorites buttons (no hover on touch devices) */
+@media (max-width: 768px) {
+  .movie-card__favorites {
+    opacity: 1;
+  }
+
+  .movie-card__fav-btn {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Touch device detection - coarse pointer means touch */
+@media (pointer: coarse) {
+  .movie-card__favorites {
+    opacity: 1;
+  }
+}

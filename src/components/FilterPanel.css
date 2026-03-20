@@ -5,6 +5,81 @@
   height: fit-content;
   position: sticky;
   top: 24px;
+  transition: width 0.3s ease, padding 0.3s ease;
+}
+
+/* Collapse toggle button */
+.filter-panel__toggle {
+  display: none;
+  position: absolute;
+  top: 12px;
+  right: -16px;
+  width: 32px;
+  height: 32px;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.filter-panel__toggle:hover {
+  background: var(--primary-hover);
+  transform: scale(1.1);
+}
+
+.filter-panel__badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ef4444;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content wrapper */
+.filter-panel__content {
+  transition: opacity 0.2s ease;
+}
+
+/* Collapsed state */
+.filter-panel.collapsed {
+  width: 48px;
+  padding: 20px 8px;
+  overflow: hidden;
+}
+
+.filter-panel.collapsed .filter-panel__content {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.filter-panel.collapsed .filter-panel__toggle {
+  right: 8px;
+}
+
+/* Show toggle button on desktop */
+@media (min-width: 1025px) {
+  .filter-panel {
+    position: relative;
+  }
+
+  .filter-panel__toggle {
+    display: flex;
+  }
 }
 
 .filter-panel__header {
@@ -142,6 +217,49 @@
 .filter-provider.active {
   border-color: var(--primary-color);
   box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+}
+
+/* Provider section header with toggle button */
+.filter-section__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.filter-section__header h3 {
+  margin: 0;
+}
+
+.filter-provider-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-provider-toggle {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.filter-provider-toggle:hover {
+  background: rgba(99, 102, 241, 0.1);
+  text-decoration: underline;
+}
+
+.filter-provider-info {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0 0 12px;
+  padding: 8px 12px;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 6px;
+  border-left: 3px solid var(--primary-color);
 }
 
 @media (max-width: 1024px) {

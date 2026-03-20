@@ -1,5 +1,7 @@
+import { EyeOff } from 'lucide-react';
 import type { Movie, TVShow, MediaType } from '../types/movie';
 import { MovieCard } from './MovieCard';
+import { SkeletonCard } from './SkeletonCard';
 import { useI18n } from '../i18n';
 import './MovieGrid.css';
 
@@ -10,7 +12,11 @@ interface MovieGridProps {
   onLoadMore?: () => void;
   hasMore?: boolean;
   mediaType: MediaType;
+  onHideItem?: (item: Movie | TVShow) => void;
 }
+
+// Number of skeleton cards to show during initial load
+const SKELETON_COUNT = 12;
 
 export const MovieGrid = ({
   items,
@@ -19,8 +25,22 @@ export const MovieGrid = ({
   onLoadMore,
   hasMore,
   mediaType,
+  onHideItem,
 }: MovieGridProps) => {
   const { t } = useI18n();
+
+  // Show skeleton cards during initial load
+  if (loading && items.length === 0) {
+    return (
+      <div className="movie-grid-container">
+        <div className="movie-grid">
+          {Array.from({ length: SKELETON_COUNT }).map((_, index) => (
+            <SkeletonCard key={index} />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   if (!loading && items.length === 0) {
     return (
@@ -35,12 +55,25 @@ export const MovieGrid = ({
     <div className="movie-grid-container">
       <div className="movie-grid">
         {items.map((item) => (
-          <MovieCard
-            key={item.id}
-            item={item}
-            onClick={onItemClick}
-            mediaType={mediaType}
-          />
+          <div key={item.id} className="movie-grid__item-wrapper">
+            <MovieCard
+              item={item}
+              onClick={onItemClick}
+              mediaType={mediaType}
+            />
+            {onHideItem && (
+              <button
+                className="movie-grid__hide-btn"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onHideItem(item);
+                }}
+                title={t('hideRecommendation')}
+              >
+                <EyeOff size={14} />
+              </button>
+            )}
+          </div>
         ))}
       </div>
 

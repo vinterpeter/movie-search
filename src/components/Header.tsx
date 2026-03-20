@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Film, X, Search, BookmarkCheck } from 'lucide-react';
+import { Film, X, Search, BookmarkCheck, Heart, SlidersHorizontal } from 'lucide-react';
 import type { MediaType, BrowseMode } from '../types/movie';
 import { useI18n } from '../i18n';
 import { LanguageSelector } from './LanguageSelector';
@@ -16,6 +16,9 @@ interface HeaderProps {
   watchlistCount: number;
   syncing?: boolean;
   onFavoritesClick?: () => void;
+  favoritesCount?: number;
+  showFilters?: boolean;
+  onFiltersToggle?: () => void;
 }
 
 export const Header = ({
@@ -28,8 +31,12 @@ export const Header = ({
   watchlistCount,
   syncing,
   onFavoritesClick,
+  favoritesCount = 0,
+  showFilters,
+  onFiltersToggle,
 }: HeaderProps) => {
   const [searchQuery, setSearchQuery] = useState('');
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const { t } = useI18n();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -40,6 +47,11 @@ export const Header = ({
   const handleClear = () => {
     setSearchQuery('');
     onSearch('');
+    setMobileSearchOpen(false);
+  };
+
+  const handleMobileSearchToggle = () => {
+    setMobileSearchOpen(!mobileSearchOpen);
   };
 
   return (
@@ -52,7 +64,11 @@ export const Header = ({
         </div>
 
         {/* Media type toggle */}
-        <div className="header__media-toggle">
+        <div className="header__media-toggle" data-active={
+          browseMode === 'theaters' ? 'theaters' :
+          (mediaType === 'tv' ? 'tv' : 'movie')
+        }>
+          <div className="header__media-slider" />
           <button
             className={`header__media-btn ${mediaType === 'movie' && browseMode !== 'theaters' ? 'active' : ''}`}
             onClick={() => onMediaTypeChange('movie')}
@@ -73,8 +89,28 @@ export const Header = ({
           </button>
         </div>
 
+        {/* Mobile search toggle button */}
+        <button
+          className="header__search-toggle"
+          onClick={handleMobileSearchToggle}
+          aria-label={t('searchMoviePlaceholder')}
+        >
+          <Search size={18} />
+        </button>
+
+        {/* Mobile filter toggle button */}
+        {onFiltersToggle && (
+          <button
+            className={`header__filter-toggle ${showFilters ? 'active' : ''}`}
+            onClick={onFiltersToggle}
+            aria-label={t('showFilters')}
+          >
+            <SlidersHorizontal size={18} />
+          </button>
+        )}
+
         {/* Search */}
-        <form className="header__search" onSubmit={handleSubmit}>
+        <form className={`header__search ${mobileSearchOpen ? 'mobile-open' : ''}`} onSubmit={handleSubmit}>
           <div className="header__search-wrapper">
             <Search size={16} className="header__search-icon" />
             <input
@@ -83,8 +119,9 @@ export const Header = ({
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="header__search-input"
+              autoFocus={mobileSearchOpen}
             />
-            {searchQuery && (
+            {(searchQuery || mobileSearchOpen) && (
               <button
                 type="button"
                 className="header__search-clear"
@@ -104,6 +141,17 @@ export const Header = ({
             <span className="header__watchlist-count">{watchlistCount}</span>
           )}
         </button>
+
+        {/* Favorites - next to watchlist */}
+        {onFavoritesClick && (
+          <button className="header__favorites-btn" onClick={onFavoritesClick}>
+            <Heart size={18} />
+            <span className="header__favorites-text">{t('favorites')}</span>
+            {favoritesCount > 0 && (
+              <span className="header__favorites-count">{favoritesCount}</span>
+            )}
+          </button>
+        )}
 
         {/* Right side actions */}
         <div className="header__actions">

@@ -1,3 +1,4 @@
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import type { Genre, WatchProvider, Certification, MediaType, BrowseMode } from '../types/movie';
 import { getImageUrl, IMAGE_SIZES } from '../api/config';
 import { useI18n } from '../i18n';
@@ -31,7 +32,12 @@ interface FilterPanelProps {
   onYearToChange?: (year: number | undefined) => void;
   onBrowseModeChange?: (mode: BrowseMode) => void;
   onClearFilters: () => void;
+  onResetProviders?: () => void;
+  onClearProviders?: () => void;
   mediaType: MediaType;
+  // Collapsible state
+  isCollapsed?: boolean;
+  onToggleCollapse?: () => void;
 }
 
 // Year options (1990 to current year)
@@ -68,7 +74,11 @@ export const FilterPanel = ({
   onYearToChange,
   onBrowseModeChange,
   onClearFilters,
+  onResetProviders,
+  onClearProviders,
   mediaType,
+  isCollapsed = false,
+  onToggleCollapse,
 }: FilterPanelProps) => {
   const { t } = useI18n();
 
@@ -156,29 +166,59 @@ export const FilterPanel = ({
     ? [
         { value: 'streaming' as BrowseMode, label: t('browseStreaming') },
         { value: 'trending' as BrowseMode, label: t('browseTrending') },
+        { value: 'top_rated' as BrowseMode, label: t('browseTopRated') },
         { value: 'theaters' as BrowseMode, label: t('browseTheaters') },
         { value: 'upcoming' as BrowseMode, label: t('browseUpcoming') },
+        { value: 'forYou' as BrowseMode, label: t('forYou') },
       ]
     : [
         { value: 'streaming' as BrowseMode, label: t('browseStreaming') },
         { value: 'trending' as BrowseMode, label: t('browseTrending') },
+        { value: 'top_rated' as BrowseMode, label: t('browseTopRated') },
+        { value: 'forYou' as BrowseMode, label: t('forYou') },
       ];
 
   const sortOptions = mediaType === 'tv' ? TV_SORT_OPTIONS : SORT_OPTIONS;
 
-  return (
-    <aside className="filter-panel">
-      <div className="filter-panel__header">
-        <h2>{t('filters')}</h2>
-        {hasActiveFilters && (
-          <button className="filter-panel__clear" onClick={onClearFilters}>
-            {t('clearFilters')}
-          </button>
-        )}
-      </div>
+  // Count active filters for collapsed badge
+  const activeFilterCount =
+    selectedGenres.length +
+    selectedProviders.length +
+    (selectedCertification ? 1 : 0) +
+    (minRating > 0 ? 1 : 0) +
+    (yearFrom ? 1 : 0) +
+    (yearTo ? 1 : 0) +
+    (selectedCity ? 1 : 0) +
+    (selectedDate ? 1 : 0);
 
-      {/* Browse Mode */}
-      {onBrowseModeChange && (
+  return (
+    <aside className={`filter-panel ${isCollapsed ? 'collapsed' : ''}`}>
+      {/* Collapse toggle button */}
+      {onToggleCollapse && (
+        <button
+          className="filter-panel__toggle"
+          onClick={onToggleCollapse}
+          title={isCollapsed ? t('showFilters') : t('hideFilters')}
+        >
+          {isCollapsed ? <ChevronRight size={20} /> : <ChevronLeft size={20} />}
+          {isCollapsed && activeFilterCount > 0 && (
+            <span className="filter-panel__badge">{activeFilterCount}</span>
+          )}
+        </button>
+      )}
+
+      <div className="filter-panel__content">
+        <div className="filter-panel__header">
+          <h2>{t('filters')}</h2>
+          {hasActiveFilters && (
+            <button className="filter-panel__clear" onClick={onClearFilters}>
+              {t('clearFilters')}
+            </button>
+          )}
+        </div>
+
+        {/* Browse Mode */}
+        {onBrowseModeChange && (
         <section className="filter-section">
           <h3>{t('browseMode')}</h3>
           <div className="filter-chips">
@@ -195,8 +235,8 @@ export const FilterPanel = ({
         </section>
       )}
 
-      {/* Sort - show for streaming and theaters modes */}
-      {(browseMode === 'streaming' || browseMode === 'theaters') && (
+      {/* Sort - show for streaming, theaters, and forYou modes */}
+      {(browseMode === 'streaming' || browseMode === 'theaters' || browseMode === 'forYou') && (
         <section className="filter-section">
           <h3>{t('sortBy')}</h3>
           <select
@@ -254,8 +294,8 @@ export const FilterPanel = ({
         </section>
       )}
 
-      {/* Minimum rating - show for streaming and theaters */}
-      {(browseMode === 'streaming' || browseMode === 'theaters') && onRatingChange && (
+      {/* Minimum rating - show for streaming, theaters, and forYou */}
+      {(browseMode === 'streaming' || browseMode === 'theaters' || browseMode === 'forYou') && onRatingChange && (
         <section className="filter-section">
           <h3>{t('minimumRating')}</h3>
           <div className="filter-chips">
@@ -272,8 +312,8 @@ export const FilterPanel = ({
         </section>
       )}
 
-      {/* Categories - show for streaming and theaters */}
-      {(browseMode === 'streaming' || browseMode === 'theaters') && (
+      {/* Categories - show for streaming, theaters, and forYou */}
+      {(browseMode === 'streaming' || browseMode === 'theaters' || browseMode === 'forYou') && (
         <section className="filter-section">
           <h3>{t('categories')}</h3>
           <div className="filter-chips">
@@ -290,8 +330,8 @@ export const FilterPanel = ({
         </section>
       )}
 
-      {/* Filters only for streaming mode */}
-      {browseMode === 'streaming' && (
+      {/* Filters for streaming and forYou modes */}
+      {(browseMode === 'streaming' || browseMode === 'forYou') && (
         <>
           {/* Release year */}
           {(onYearFromChange || onYearToChange) && (
@@ -348,9 +388,36 @@ export const FilterPanel = ({
             </section>
           )}
 
-          {/* Streaming providers */}
+          {/* Streaming providers - only for streaming mode */}
+          {browseMode === 'streaming' && (
           <section className="filter-section">
-            <h3>{t('streamingProviders')}</h3>
+            <div className="filter-section__header">
+              <h3>{t('streamingProviders')}</h3>
+              {(onResetProviders || onClearProviders) && (
+                <div className="filter-provider-actions">
+                  {selectedProviders.length === 0 ? (
+                    <button
+                      className="filter-provider-toggle"
+                      onClick={onResetProviders}
+                      title={t('resetProviders')}
+                    >
+                      {t('resetProviders')}
+                    </button>
+                  ) : (
+                    <button
+                      className="filter-provider-toggle"
+                      onClick={onClearProviders}
+                      title={t('showAllMovies')}
+                    >
+                      {t('showAllMovies')}
+                    </button>
+                  )}
+                </div>
+              )}
+            </div>
+            {selectedProviders.length === 0 && (
+              <p className="filter-provider-info">{t('showingAllMovies')}</p>
+            )}
             <div className="filter-providers">
               {providers.map((provider) => (
                 <button
@@ -367,8 +434,10 @@ export const FilterPanel = ({
               ))}
             </div>
           </section>
+          )}
         </>
       )}
+      </div>
     </aside>
   );
 };

@@ -283,6 +283,31 @@
   color: white;
 }
 
+.btn-restore {
+  background: transparent;
+  border: 1px solid var(--border-color);
+}
+
+.btn-restore:hover {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: white;
+}
+
+/* Blacklist filter and items */
+.favorites-filter--blacklist.active {
+  background: #6b7280;
+  border-color: #6b7280;
+}
+
+.favorites-item--blacklist {
+  opacity: 0.7;
+}
+
+.favorites-item--blacklist .favorites-item-poster img {
+  filter: grayscale(50%);
+}
+
 @media (max-width: 480px) {
   .favorites-panel {
     max-width: 100%;

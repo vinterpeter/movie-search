@@ -63,7 +63,7 @@ export interface Video {
 export type MediaType = 'movie' | 'tv';
 
 // Böngészési mód (milyen listát mutassunk)
-export type BrowseMode = 'streaming' | 'trending' | 'upcoming' | 'theaters';
+export type BrowseMode = 'streaming' | 'trending' | 'upcoming' | 'theaters' | 'top_rated' | 'forYou';
 
 export type MediaItem = Movie | TVShow;
 export type MediaDetails = MovieDetails | TVShowDetails;
@@ -130,6 +130,15 @@ export interface FavoriteItem {
   addedAt: string; // ISO date string
   liked: boolean;
   loved: boolean;
+}
+
+// Blacklist item típus (elutasított ajánlások)
+export interface BlacklistItem {
+  id: number;
+  mediaType: MediaType;
+  title: string;
+  posterPath: string | null;
+  addedAt: string; // ISO date string
 }
 
 // Cinema screening types (Cinema City)

@@ -1,6 +1,6 @@
 # Film & Sorozat Kereső / Movie & TV Show Search
 
-> **Verzió / Version: 1.1.0**
+> **Verzió / Version: 1.2.0**
 >
 > **Weboldal / Website: https://vinterpeter.github.io/movie-search/**
 
@@ -14,10 +14,15 @@ Multilingual (Hungarian/English) web application for searching movies and TV sho
 - **Keresés / Search**: Filmek és sorozatok keresése a TMDB API-n keresztül
 - **Film/Sorozat kapcsoló / Movie/TV toggle**: Váltás filmek és sorozatok között
 - **Szűrők / Filters**: Kategória, év, értékelés, streaming szolgáltató és korhatár szűrők
-- **Kívánságlista / Watchlist**: Filmek/sorozatok mentése helyi tárolásba
+- **Kívánságlista / Watchlist**: Filmek/sorozatok mentése
   - Megnézett jelölés / Watched marking
   - Automatikus elérhetőség ellenőrzés / Auto availability check
-  - Egyedi frissítés gomb / Individual refresh button
+  - Firestore szinkronizálás / Firestore sync
+- **Kedvencek / Favorites**: Like és Love funkció filmekhez/sorozatokhoz
+  - Kedvelt (👍) és Imádott (❤️) jelölés
+  - Kedvencek panel szűréssel
+  - Firestore szinkronizálás / Firestore sync
+- **Ajánlások / Recommendations**: Személyre szabott ajánlások a kedvencek alapján
 - **Streaming elérhetőség / Streaming availability**: Magyar streaming szolgáltatók ellenőrzése
   - Netflix, HBO Max, Disney+, Amazon Prime, Apple TV+ támogatás
   - JustWatch integráció
@@ -28,9 +33,9 @@ Multilingual (Hungarian/English) web application for searching movies and TV sho
 
 - React 18 + TypeScript
 - Vite
+- Firebase (Authentication + Firestore)
 - Lucide React (ikonok)
 - CSS változók (dark téma)
-- LocalStorage (kívánságlista perzisztencia)
 
 ## API-k
 
@@ -59,15 +64,26 @@ src/
 │   ├── config.ts            # API konfiguráció
 │   └── tmdb.ts              # TMDB API integráció
 ├── components/
+│   ├── Favorites.tsx/.css       # Kedvencek panel / Favorites panel
 │   ├── FilterPanel.tsx/.css     # Szűrő panel / Filter panel
 │   ├── Header.tsx/.css          # Fejléc / Header
 │   ├── LanguageSelector.tsx/.css # Nyelvválasztó / Language selector
 │   ├── MovieCard.tsx/.css       # Film kártya / Movie card
 │   ├── MovieGrid.tsx/.css       # Rácsos elrendezés / Grid layout
 │   ├── MovieModal.tsx/.css      # Részletek modal / Details modal
+│   ├── RecommendationsSection.tsx # Ajánlások szekció
+│   ├── UserMenu.tsx/.css        # Felhasználó menü / User menu
 │   └── Watchlist.tsx/.css       # Kívánságlista / Watchlist
+├── firebase/
+│   ├── config.ts            # Firebase konfiguráció
+│   ├── favoritesService.ts  # Kedvencek Firestore service
+│   └── watchlistService.ts  # Watchlist Firestore service
 ├── hooks/
+│   ├── useAuth.ts           # Firebase Auth hook
+│   ├── useBlacklist.ts      # Blacklist hook (ajánlások elrejtése)
+│   ├── useFavorites.ts      # Kedvencek hook / Favorites hook
 │   ├── useFilters.ts        # Szűrő hook / Filter hook
+│   ├── useRecommendations.ts # Ajánlások hook
 │   └── useWatchlist.ts      # Kívánságlista hook / Watchlist hook
 ├── i18n/
 │   ├── index.tsx            # I18n provider és hook
@@ -84,6 +100,19 @@ src/
 ---
 
 ## Változásnapló / Changelog
+
+### v1.2.0 (2025-12)
+- **Kedvencek rendszer / Favorites system**: Like és Love gombok filmekhez/sorozatokhoz
+  - Firestore szinkronizálás bejelentkezett felhasználóknak
+  - Kedvencek panel szűréssel (Összes/Kedvelt/Imádott)
+- **Ajánlások / Recommendations**: "Neked" mód a kedvencek alapján
+  - Hasonló filmek/sorozatok ajánlása
+  - Blacklist funkció (nem kívánt ajánlások elrejtése)
+- **UI fejlesztések / UI improvements**:
+  - Mobil kereső toggle ikon
+  - Szűrő panel toggle ikon a fejlécben
+  - Média toggle javítások (magyar szöveg megjelenítés)
+  - For You mód gomb állapot javítás
 
 ### v1.1.0 (2025-12)
 - **Többnyelvű támogatás / Multi-language support**: Magyar és angol nyelv

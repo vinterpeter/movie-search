@@ -39,6 +39,15 @@
   display: grid;
   grid-template-columns: 280px 1fr;
   gap: 32px;
+  transition: grid-template-columns 0.3s ease;
+}
+
+.content-layout.filters-collapsed {
+  grid-template-columns: 1fr;
+}
+
+.content-layout.filters-collapsed .filters-container {
+  display: none;
 }
 
 .filters-container {
@@ -49,10 +58,8 @@
   min-width: 0;
 }
 
+/* filters-toggle button hidden - using header icon instead */
 @media (max-width: 1024px) {
-  .filters-toggle {
-    display: block;
-  }
 
   .content-layout {
     grid-template-columns: 1fr;

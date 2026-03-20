@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import type { Genre, WatchProvider, Certification, MediaType } from '../types/movie';
 import { getGenres, getWatchProviders, getCertifications, getTVGenres, getTVWatchProviders } from '../api/tmdb';
 
-// Magyar streaming szolgáltatók ID-k (exportálva, hogy máshol is használható legyen)
-export const HUNGARIAN_PROVIDER_IDS = [
+// Alapértelmezett magyar streaming szolgáltatók ID-k
+export const DEFAULT_PROVIDER_IDS = [
   1899, // HBO Max (Magyarország)
   8,    // Netflix
   119,  // Amazon Prime Video
@@ -11,6 +11,9 @@ export const HUNGARIAN_PROVIDER_IDS = [
   1773, // SkyShowtime
   2,    // Apple TV+
 ];
+
+// Legacy export for backwards compatibility
+export const HUNGARIAN_PROVIDER_IDS = DEFAULT_PROVIDER_IDS;
 
 interface UseFiltersReturn {
   genres: Genre[];
@@ -42,11 +45,24 @@ export const useFilters = (mediaType: MediaType = 'movie'): UseFiltersReturn => 
 
         setGenres(genresData);
 
-        // Csak a kért magyar streaming szolgáltatók
-        const filteredProviders = providersData
-          .filter(p => HUNGARIAN_PROVIDER_IDS.includes(p.provider_id))
-          .sort((a, b) => HUNGARIAN_PROVIDER_IDS.indexOf(a.provider_id) - HUNGARIAN_PROVIDER_IDS.indexOf(b.provider_id));
-        setProviders(filteredProviders);
+        // Minden magyar szolgáltató, alapértelmezettek előre rendezve
+        const sortedProviders = providersData.sort((a, b) => {
+          const aIsDefault = DEFAULT_PROVIDER_IDS.includes(a.provider_id);
+          const bIsDefault = DEFAULT_PROVIDER_IDS.includes(b.provider_id);
+
+          // Alapértelmezettek előre
+          if (aIsDefault && !bIsDefault) return -1;
+          if (!aIsDefault && bIsDefault) return 1;
+
+          // Alapértelmezetteken belül eredeti sorrend
+          if (aIsDefault && bIsDefault) {
+            return DEFAULT_PROVIDER_IDS.indexOf(a.provider_id) - DEFAULT_PROVIDER_IDS.indexOf(b.provider_id);
+          }
+
+          // Többi népszerűség szerint (display_priority)
+          return (a.display_priority || 999) - (b.display_priority || 999);
+        });
+        setProviders(sortedProviders);
 
         setCertifications(certificationsData);
       } catch (err) {

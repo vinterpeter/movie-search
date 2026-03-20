@@ -4,6 +4,7 @@ export const hu = {
   movies: 'Filmek',
   tvShows: 'Sorozatok',
   theaters: 'Mozi',
+  forYou: 'Neked',
   searchMoviePlaceholder: 'Film keresése...',
   searchTvPlaceholder: 'Sorozat keresése...',
   watchlist: 'Watchlist',
@@ -25,6 +26,9 @@ export const hu = {
   ageRating: 'Korosztály',
   all: 'Mind',
   streamingProviders: 'Streaming szolgáltatók',
+  resetProviders: 'Alapértelmezett',
+  showAllMovies: 'Mind törlése',
+  showingAllMovies: 'Minden film megjelenik (nincs streaming szűrés)',
 
   // Age Rating descriptions (certifications)
   certKN: 'Korhatár nélkül',
@@ -123,6 +127,7 @@ export const hu = {
   browseMode: 'Lista típusa',
   browseStreaming: 'Streaming',
   browseTrending: 'Felkapott',
+  browseTopRated: 'Legjobb értékelés',
   browseTheaters: 'Mozikban',
   browseUpcoming: 'Hamarosan',
 
@@ -139,6 +144,17 @@ export const hu = {
   noScreeningsFound: 'Nincs vetítés a kiválasztott szűrőkkel.',
   buyTickets: 'Jegyvásárlás',
   selectCityForScreenings: 'Válassz várost a vetítések megtekintéséhez',
+
+  // Recommendations
+  recommendedForYou: 'Neked ajánljuk',
+  basedOn: 'Ezek alapján',
+  noRecommendations: 'Jelölj meg filmeket imádottnak az ajánlásokhoz!',
+  hideRecommendation: 'Elrejtés',
+
+  // Blacklist
+  blacklist: 'Elrejtett',
+  noBlacklistedItems: 'Nincs elrejtett film vagy sorozat.',
+  removeFromBlacklist: 'Visszaállítás',
 };
 
 export type TranslationKeys = keyof typeof hu;

@@ -1,7 +1,8 @@
 import { useRef } from 'react';
-import { ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import type { Movie, TVShow, MediaType } from '../types/movie';
 import { MovieCard } from './MovieCard';
+import { SkeletonCard } from './SkeletonCard';
 import './MovieSection.css';
 
 interface MovieSectionProps {
@@ -11,6 +12,9 @@ interface MovieSectionProps {
   mediaType: MediaType;
   onItemClick: (item: Movie | TVShow) => void;
 }
+
+// Number of skeleton cards to show in horizontal scroll
+const SKELETON_COUNT = 8;
 
 export const MovieSection = ({
   title,
@@ -35,8 +39,14 @@ export const MovieSection = ({
     return (
       <section className="movie-section">
         <h2 className="movie-section__title">{title}</h2>
-        <div className="movie-section__loading">
-          <Loader2 size={32} className="spin" />
+        <div className="movie-section__container">
+          <div className="movie-section__scroll">
+            {Array.from({ length: SKELETON_COUNT }).map((_, index) => (
+              <div key={index} className="movie-section__item">
+                <SkeletonCard />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     );

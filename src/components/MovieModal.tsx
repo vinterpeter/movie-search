@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { X, Play, Star, Check, Plus, ExternalLink, Loader2, ThumbsUp, Heart, MapPin, Calendar, Ticket } from 'lucide-react';
+import { X, Play, Star, Check, Plus, Loader2, ThumbsUp, Heart, MapPin, Calendar, Ticket } from 'lucide-react';
 import type { Movie, TVShow, MovieDetails, TVShowDetails, WatchProviderResult, Video, MediaType, BrowseMode, Screening, CinemaMovie } from '../types/movie';
 import { getMovieDetails, getMovieWatchProviders, getTVDetails, getTVWatchProvidersForShow, getVideos, getBestTrailer, getHungarianCinemaData } from '../api/tmdb';
 import { getImageUrl, IMAGE_SIZES } from '../api/config';
@@ -13,8 +13,56 @@ interface MovieModalProps {
   mediaType: MediaType;
   browseMode?: BrowseMode;
   initialCity?: string;
+  basedOn?: string[]; // Mely filmek alapján ajánljuk
   onClose: () => void;
 }
+
+// Streaming provider search URLs
+const getProviderUrl = (providerId: number, providerName: string, title: string): string => {
+  const encodedTitle = encodeURIComponent(title);
+
+  // Provider ID to search URL mapping
+  const providerUrls: Record<number, string> = {
+    // Netflix
+    8: `https://www.netflix.com/search?q=${encodedTitle}`,
+    // Amazon Prime Video
+    9: `https://www.amazon.com/s?k=${encodedTitle}&i=instant-video`,
+    119: `https://www.amazon.com/s?k=${encodedTitle}&i=instant-video`,
+    // Disney+ (Hungarian)
+    337: `https://www.disneyplus.com/hu-hu/browse/search`,
+    // HBO Max / Max (Hungarian)
+    384: `https://play.hbomax.com/search/result?q=${encodedTitle}`,
+    1899: `https://play.hbomax.com/search/result?q=${encodedTitle}`,
+    // Apple TV+
+    350: `https://tv.apple.com/search?term=${encodedTitle}`,
+    2: `https://tv.apple.com/search?term=${encodedTitle}`,
+    // Hulu
+    15: `https://www.hulu.com/search?q=${encodedTitle}`,
+    // Paramount+
+    531: `https://www.paramountplus.com/search/?q=${encodedTitle}`,
+    // Peacock
+    386: `https://www.peacocktv.com/search?q=${encodedTitle}`,
+    // Crunchyroll
+    283: `https://www.crunchyroll.com/search?q=${encodedTitle}`,
+    // YouTube Premium
+    188: `https://www.youtube.com/results?search_query=${encodedTitle}`,
+    // Google Play
+    3: `https://play.google.com/store/search?q=${encodedTitle}&c=movies`,
+    // Vudu / Fandango
+    7: `https://www.vudu.com/content/movies/search?searchString=${encodedTitle}`,
+    // Microsoft Store
+    68: `https://www.microsoft.com/en-us/search/shop/movies-tv?q=${encodedTitle}`,
+    // SkyShowtime
+    1773: `https://www.skyshowtime.com/search?q=${encodedTitle}`,
+  };
+
+  if (providerUrls[providerId]) {
+    return providerUrls[providerId];
+  }
+
+  // Fallback: Google search for provider + title
+  return `https://www.google.com/search?q=${encodeURIComponent(providerName + ' ' + title)}`;
+};
 
 // Type guards
 const isMovie = (item: Movie | TVShow): item is Movie => {
@@ -25,7 +73,7 @@ const isMovieDetails = (details: MovieDetails | TVShowDetails): details is Movie
   return 'runtime' in details;
 };
 
-export const MovieModal = ({ item, mediaType, browseMode, initialCity, onClose }: MovieModalProps) => {
+export const MovieModal = ({ item, mediaType, browseMode, initialCity, basedOn, onClose }: MovieModalProps) => {
   const [details, setDetails] = useState<MovieDetails | TVShowDetails | null>(null);
   const [providers, setProviders] = useState<WatchProviderResult | null>(null);
   const [trailer, setTrailer] = useState<Video | null>(null);
@@ -128,21 +176,21 @@ export const MovieModal = ({ item, mediaType, browseMode, initialCity, onClose }
     return cityScreenings.filter(s => s.date === selectedDate);
   };
 
-  // Group screenings by cinema and date
-  const getGroupedScreenings = () => {
+  // Group screenings by cinema (primary) then date
+  const getGroupedByCinema = () => {
     const screenings = getFilteredScreenings();
     const grouped: Record<string, Record<string, Screening[]>> = {};
 
     screenings.forEach(s => {
-      if (!grouped[s.date]) grouped[s.date] = {};
-      if (!grouped[s.date][s.cinemaName]) grouped[s.date][s.cinemaName] = [];
-      grouped[s.date][s.cinemaName].push(s);
+      if (!grouped[s.cinemaName]) grouped[s.cinemaName] = {};
+      if (!grouped[s.cinemaName][s.date]) grouped[s.cinemaName][s.date] = [];
+      grouped[s.cinemaName][s.date].push(s);
     });
 
     // Sort screenings by time within each group
-    Object.values(grouped).forEach(dateGroup => {
-      Object.values(dateGroup).forEach(cinemaScreenings => {
-        cinemaScreenings.sort((a, b) => a.time.localeCompare(b.time));
+    Object.values(grouped).forEach(cinemaGroup => {
+      Object.values(cinemaGroup).forEach(dateScreenings => {
+        dateScreenings.sort((a, b) => a.time.localeCompare(b.time));
       });
     });
 
@@ -270,6 +318,13 @@ export const MovieModal = ({ item, mediaType, browseMode, initialCity, onClose }
               </div>
             )}
 
+            {basedOn && basedOn.length > 0 && (
+              <div className="modal-based-on">
+                <span className="based-on-label">{t('basedOn')}:</span>
+                <span className="based-on-movies">{basedOn.join(', ')}</span>
+              </div>
+            )}
+
             {details?.tagline && (
               <p className="modal-tagline">"{details.tagline}"</p>
             )}
@@ -293,12 +348,19 @@ export const MovieModal = ({ item, mediaType, browseMode, initialCity, onClose }
                     <span className="provider-label">{t('withSubscription')}</span>
                     <div className="provider-list">
                       {providers.flatrate.map((p) => (
-                        <img
+                        <a
                           key={p.provider_id}
-                          src={getImageUrl(p.logo_path, IMAGE_SIZES.logo.medium)}
-                          alt={p.provider_name}
+                          href={getProviderUrl(p.provider_id, p.provider_name, title)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="provider-link-icon"
                           title={p.provider_name}
-                        />
+                        >
+                          <img
+                            src={getImageUrl(p.logo_path, IMAGE_SIZES.logo.medium)}
+                            alt={p.provider_name}
+                          />
+                        </a>
                       ))}
                     </div>
                   </div>
@@ -309,12 +371,19 @@ export const MovieModal = ({ item, mediaType, browseMode, initialCity, onClose }
                     <span className="provider-label">{t('rentable')}</span>
                     <div className="provider-list">
                       {providers.rent.map((p) => (
-                        <img
+                        <a
                           key={p.provider_id}
-                          src={getImageUrl(p.logo_path, IMAGE_SIZES.logo.medium)}
-                          alt={p.provider_name}
+                          href={getProviderUrl(p.provider_id, p.provider_name, title)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="provider-link-icon"
                           title={p.provider_name}
-                        />
+                        >
+                          <img
+                            src={getImageUrl(p.logo_path, IMAGE_SIZES.logo.medium)}
+                            alt={p.provider_name}
+                          />
+                        </a>
                       ))}
                     </div>
                   </div>
@@ -325,12 +394,19 @@ export const MovieModal = ({ item, mediaType, browseMode, initialCity, onClose }
                     <span className="provider-label">{t('purchasable')}</span>
                     <div className="provider-list">
                       {providers.buy.map((p) => (
-                        <img
+                        <a
                           key={p.provider_id}
-                          src={getImageUrl(p.logo_path, IMAGE_SIZES.logo.medium)}
-                          alt={p.provider_name}
+                          href={getProviderUrl(p.provider_id, p.provider_name, title)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="provider-link-icon"
                           title={p.provider_name}
-                        />
+                        >
+                          <img
+                            src={getImageUrl(p.logo_path, IMAGE_SIZES.logo.medium)}
+                            alt={p.provider_name}
+                          />
+                        </a>
                       ))}
                     </div>
                   </div>
@@ -342,16 +418,6 @@ export const MovieModal = ({ item, mediaType, browseMode, initialCity, onClose }
                   </p>
                 )}
 
-                {providers.link && (
-                  <a
-                    href={providers.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="provider-link"
-                  >
-                    {t('viewOnJustWatch')} <ExternalLink size={14} />
-                  </a>
-                )}
               </div>
             )}
 
@@ -389,35 +455,39 @@ export const MovieModal = ({ item, mediaType, browseMode, initialCity, onClose }
                   </div>
                 </div>
 
-                {/* Screenings list */}
+                {/* Screenings list - grouped by cinema */}
                 <div className="screenings-list">
-                  {Object.entries(getGroupedScreenings()).length > 0 ? (
-                    Object.entries(getGroupedScreenings())
+                  {Object.entries(getGroupedByCinema()).length > 0 ? (
+                    Object.entries(getGroupedByCinema())
                       .sort(([a], [b]) => a.localeCompare(b))
-                      .map(([date, cinemas]) => (
-                        <div key={date} className="screenings-date-group">
-                          <div className="screenings-date-header">
-                            {formatDateForDisplay(date)}
+                      .map(([cinemaName, dates]) => (
+                        <div key={cinemaName} className="screenings-cinema-block">
+                          <div className="screenings-cinema-header">{cinemaName}</div>
+                          <div className="screenings-dates-container">
+                            {Object.entries(dates)
+                              .sort(([a], [b]) => a.localeCompare(b))
+                              .map(([date, screenings]) => (
+                                <div key={date} className="screenings-date-row">
+                                  <span className="screenings-date-label">
+                                    {formatDateForDisplay(date)}
+                                  </span>
+                                  <div className="screenings-times">
+                                    {screenings.map((s, idx) => (
+                                      <a
+                                        key={idx}
+                                        href={s.bookingLink || '#'}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="screening-time"
+                                        title={s.auditorium}
+                                      >
+                                        {s.time}
+                                      </a>
+                                    ))}
+                                  </div>
+                                </div>
+                              ))}
                           </div>
-                          {Object.entries(cinemas).map(([cinemaName, screenings]) => (
-                            <div key={cinemaName} className="screenings-cinema-group">
-                              <div className="screenings-cinema-name">{cinemaName}</div>
-                              <div className="screenings-times">
-                                {screenings.map((s, idx) => (
-                                  <a
-                                    key={idx}
-                                    href={s.bookingLink || '#'}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="screening-time"
-                                    title={s.auditorium}
-                                  >
-                                    {s.time}
-                                  </a>
-                                ))}
-                              </div>
-                            </div>
-                          ))}
                         </div>
                       ))
                   ) : (

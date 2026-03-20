@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useFavorites } from '../hooks/useFavorites';
+import { useBlacklist } from '../hooks/useBlacklist';
 import { getImageUrl, IMAGE_SIZES } from '../api/config';
 import type { MediaType } from '../types/movie';
 import { useI18n } from '../i18n';
@@ -11,6 +12,8 @@ import {
   Loader2,
   ImageOff,
   Star,
+  EyeOff,
+  RotateCcw,
 } from 'lucide-react';
 import './Favorites.css';
 
@@ -19,7 +22,7 @@ interface FavoritesProps {
   onItemClick: (id: number, mediaType: MediaType) => void;
 }
 
-type FilterType = 'all' | 'liked' | 'loved';
+type FilterType = 'all' | 'liked' | 'loved' | 'blacklist';
 
 export const Favorites = ({ onClose, onItemClick }: FavoritesProps) => {
   const { t, language } = useI18n();
@@ -30,6 +33,12 @@ export const Favorites = ({ onClose, onItemClick }: FavoritesProps) => {
     toggleLike,
     toggleLove,
   } = useFavorites();
+
+  const {
+    items: blacklistItems,
+    loading: blacklistLoading,
+    removeFromBlacklist,
+  } = useBlacklist();
 
   const [filter, setFilter] = useState<FilterType>('all');
 
@@ -76,10 +85,79 @@ export const Favorites = ({ onClose, onItemClick }: FavoritesProps) => {
           >
             <Heart size={14} /> {t('loved')} ({lovedCount})
           </button>
+          <button
+            className={`favorites-filter favorites-filter--blacklist ${filter === 'blacklist' ? 'active' : ''}`}
+            onClick={() => setFilter('blacklist')}
+          >
+            <EyeOff size={14} /> {t('blacklist')} ({blacklistItems.length})
+          </button>
         </div>
 
         <div className="favorites-content">
-          {loading ? (
+          {filter === 'blacklist' ? (
+            // Blacklist content
+            blacklistLoading ? (
+              <div className="favorites-loading">
+                <Loader2 size={40} className="spin" />
+              </div>
+            ) : blacklistItems.length === 0 ? (
+              <div className="favorites-empty">
+                <p>{t('noBlacklistedItems')}</p>
+              </div>
+            ) : (
+              <div className="favorites-items">
+                {blacklistItems.map((item) => (
+                  <div
+                    key={`blacklist-${item.mediaType}-${item.id}`}
+                    className="favorites-item favorites-item--blacklist"
+                  >
+                    <div
+                      className="favorites-item-poster"
+                      onClick={() => onItemClick(item.id, item.mediaType)}
+                    >
+                      {item.posterPath ? (
+                        <img
+                          src={getImageUrl(item.posterPath, IMAGE_SIZES.poster.small)}
+                          alt={item.title}
+                        />
+                      ) : (
+                        <div className="no-poster">
+                          <ImageOff size={24} />
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="favorites-item-info">
+                      <h3
+                        className="favorites-item-title"
+                        onClick={() => onItemClick(item.id, item.mediaType)}
+                      >
+                        {item.title}
+                      </h3>
+                      <div className="favorites-item-meta">
+                        <span className="media-type-badge">
+                          {item.mediaType === 'movie' ? t('movie') : t('tvShow')}
+                        </span>
+                      </div>
+                      <div className="favorites-item-date">
+                        {t('addedOn')}: {formatDate(item.addedAt)}
+                      </div>
+                    </div>
+
+                    <div className="favorites-item-actions">
+                      <button
+                        className="btn-restore"
+                        onClick={() => removeFromBlacklist(item.id, item.mediaType)}
+                        title={t('removeFromBlacklist')}
+                      >
+                        <RotateCcw size={18} />
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )
+          ) : loading ? (
             <div className="favorites-loading">
               <Loader2 size={40} className="spin" />
             </div>

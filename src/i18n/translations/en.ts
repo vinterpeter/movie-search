@@ -6,6 +6,7 @@ export const en: Record<TranslationKeys, string> = {
   movies: 'Movies',
   tvShows: 'TV Shows',
   theaters: 'In Theaters',
+  forYou: 'For You',
   searchMoviePlaceholder: 'Search movies...',
   searchTvPlaceholder: 'Search TV shows...',
   watchlist: 'Watchlist',
@@ -27,6 +28,9 @@ export const en: Record<TranslationKeys, string> = {
   ageRating: 'Age Rating',
   all: 'All',
   streamingProviders: 'Streaming Providers',
+  resetProviders: 'Reset to default',
+  showAllMovies: 'Clear all',
+  showingAllMovies: 'Showing all movies (no streaming filter)',
 
   // Age Rating descriptions (certifications)
   certKN: 'No age restriction',
@@ -125,6 +129,7 @@ export const en: Record<TranslationKeys, string> = {
   browseMode: 'Browse',
   browseStreaming: 'Streaming',
   browseTrending: 'Trending',
+  browseTopRated: 'Top Rated',
   browseTheaters: 'In Theaters',
   browseUpcoming: 'Coming Soon',
 
@@ -141,4 +146,15 @@ export const en: Record<TranslationKeys, string> = {
   noScreeningsFound: 'No screenings found with the current filters.',
   buyTickets: 'Buy Tickets',
   selectCityForScreenings: 'Select a city to see screenings',
+
+  // Recommendations
+  recommendedForYou: 'Recommended for You',
+  basedOn: 'Based on',
+  noRecommendations: 'Mark movies as loved to get recommendations!',
+  hideRecommendation: 'Hide',
+
+  // Blacklist
+  blacklist: 'Hidden',
+  noBlacklistedItems: 'No hidden movies or TV shows.',
+  removeFromBlacklist: 'Restore',
 };
